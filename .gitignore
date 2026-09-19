@@ -1,0 +1,10 @@
+# 공개할 파일 8개만 포함합니다. 데이터·키·결과·추가 문서는 로컬에 둡니다.
+/*
+!/.gitignore
+!/README.md
+!/configure_tourapi_key.py
+!/fetch_tourapi.py
+!/fetch_pet_tourapi.py
+!/prepare_city_comparison.py
+!/select_development_region.py
+!/analyze_pet_supply.py
