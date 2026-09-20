@@ -22,7 +22,10 @@ from datetime import date, datetime, timedelta, timezone
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
-from select_development_region import months_between
+if __package__:
+    from .select_development_region import months_between
+else:
+    from select_development_region import months_between
 
 BASE_URL = "https://apis.data.go.kr/B551011/DataLabService"
 OPERATIONS = {"sido": "metcoRegnVisitrDDList", "sigungu": "locgoRegnVisitrDDList"}

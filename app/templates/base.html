@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#214c3b">
+  <title>{% block title %}우리 개와 끝까지 함께 · 대전 여행{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
+  {% block scripts %}{% endblock %}
+</head>
+<body data-demo="{{ 'true' if is_demo else 'false' }}">
+  <a class="skip" href="#main">본문으로 이동</a>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="우리 개와 끝까지 함께 홈"><span class="brand-mark" aria-hidden="true">🐾</span><span>우리 개와<br><strong>끝까지 함께</strong></span></a>
+    <nav aria-label="주 메뉴"><a href="/" class="nav-link">대전 여행 만들기</a><a href="/saved" class="saved-link">저장한 여행 <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  {% if is_demo %}<div class="demo-banner"><strong>체험용 데모</strong> 장소·동반 규정·이동시간은 모두 가상입니다. 실제 방문용으로 사용하지 마세요.</div>{% endif %}
+  <main id="main">{% block content %}{% endblock %}</main>
+  <footer><strong>우리 개와 끝까지 함께</strong><span>대전에서, 같은 방향으로.</span><small>자동차 기준 · 날짜 미지정 여행 계획 · 실제 운영 및 예약은 방문 전 확인</small></footer>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

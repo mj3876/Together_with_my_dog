@@ -1,10 +1,44 @@
-# 공개할 파일 8개만 포함합니다. 데이터·키·결과·추가 문서는 로컬에 둡니다.
-/*
-!/.gitignore
-!/README.md
-!/configure_tourapi_key.py
-!/fetch_tourapi.py
-!/fetch_pet_tourapi.py
-!/prepare_city_comparison.py
-!/select_development_region.py
-!/analyze_pet_supply.py
+# Track source code, service assets/configuration, and all docs by default.
+
+# Local input data, analysis results, API responses, and run artifacts.
+data/
+runs/
+region_monthly.csv
+
+# Test code and test artifacts (keep local, do not publish).
+test/
+tests/
+__tests__/
+test_*.py
+*_test.py
+*_tests.py
+conftest.py
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+/scripts/check_service.py
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local credentials; the example configuration remains shareable.
+.env
+.env.*
+!/.env.example
+.secrets/
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Python environments, caches, logs, and local databases.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.log
+*.db
+*.db-*
+*.sqlite*

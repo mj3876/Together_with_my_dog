@@ -1,0 +1,2 @@
+# Source files and documentation are tracked by default.
+# Data, results, tests, and credentials follow the repository root .gitignore.

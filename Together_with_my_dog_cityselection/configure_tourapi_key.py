@@ -8,7 +8,7 @@ import tempfile
 import warnings
 
 
-TARGET = Path(__file__).resolve().parent / ".secrets" / "tourapi.key"
+TARGET = Path(__file__).resolve().parents[1] / ".secrets" / "tourapi.key"
 PET_TARGET = TARGET.with_name("pet_tourapi.key")
 
 

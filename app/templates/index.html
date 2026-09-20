@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block scripts %}
+<script defer src="{{ url_for('static', path='/js/itinerary.js') }}"></script>
+<script defer src="{{ url_for('static', path='/js/recommendations.js') }}"></script>
+{% endblock %}
+{% block content %}
+<section class="hero page-width">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="live-dot"></span> DAEJEON, TOGETHER</div>
+    <h1>어디든 함께.<br>동선은 <em>가깝게.</em></h1>
+    <p class="hero-description">우리 개와 떠나는 대전 여행.<br>다섯 가지만 알려주면, 식사부터 체험과 숙박까지<br class="desktop-only"> 하나의 편안한 코스로 이어드려요.</p>
+    <div class="feature-chips"><span>반려견 수·체중에 맞게</span><span>이동은 짧게</span><span>코스는 하나로</span></div>
+    <div class="journey-art" aria-hidden="true">
+      <svg viewBox="0 0 440 190" fill="#557348" style="display:block;margin:auto"><path d="M20 125C90 165 88 45 166 72S220 170 282 118S340 34 414 79" fill="none" stroke="#c7d5ba" stroke-width="5" stroke-dasharray="9 10"/>
+        <circle cx="45" cy="129" r="24" fill="#e6ead8"/><circle cx="169" cy="73" r="26" fill="#f7dca8"/><circle cx="286" cy="116" r="27" fill="#dfebd9"/><circle cx="402" cy="76" r="25" fill="#ead9c7"/>
+        <text x="45" y="137" text-anchor="middle" font-size="23">⌂</text><text x="169" y="81" text-anchor="middle" font-size="23">♧</text><text x="286" y="124" text-anchor="middle" font-size="23">🐾</text><text x="402" y="85" text-anchor="middle" font-size="23">⌂</text>
+        <text x="45" y="174" text-anchor="middle" class="art-label">출발</text><text x="169" y="28" text-anchor="middle" class="art-label">맛있는 식사</text><text x="286" y="165" text-anchor="middle" class="art-label">함께하는 체험</text><text x="395" y="30" text-anchor="middle" class="art-label">포근한 쉼</text>
+      </svg>
+      <span class="art-caption" style="display:block;margin-top:12px">머무는 순간까지, 함께할 수 있도록</span>
+    </div>
+  </div>
+  <section class="planner-card" aria-labelledby="form-heading">
+    <div class="card-heading"><div><span class="overline">START YOUR TRIP</span><h2 id="form-heading">어떤 여행을 떠나나요?</h2></div><span class="region-pill">대전</span></div>
+    <form id="trip-form" novalidate>
+      <fieldset id="trip-fields"><legend class="sr-only">여행 조건 다섯 항목</legend>
+        <div class="field location-field" data-location="start">
+          <label for="start-search"><span class="step-number">1</span> 대전에서 출발할 위치</label>
+          <div class="search-row"><input id="start-search" type="search" placeholder="장소 또는 주소 검색" autocomplete="off" maxlength="100" aria-describedby="start-selection"><button type="button" class="icon-button locate" data-target="start" aria-label="현재 위치를 출발지로 선택">◎</button></div>
+          <div id="start-options" class="location-options" aria-label="출발 위치 검색 결과"></div><div id="start-selection" class="selection-hint">검색 결과에서 위치를 선택해 주세요.</div>
+        </div>
+        <div class="two-fields">
+          <div class="field"><label for="trip-days"><span class="step-number">2</span> 여행 전체 일수</label><div class="unit-input"><input id="trip-days" type="number" min="1" step="1" value="2" required><span>일</span></div><small id="nights-label">1박 2일 여행</small></div>
+          <div class="field"><label for="dog-count"><span class="step-number">3</span> 반려견 수</label><div class="unit-input"><input id="dog-count" type="number" min="1" step="1" value="1" required><span>마리</span></div><small>함께 떠나는 반려견 모두</small></div>
+        </div>
+        <div class="field"><label for="weight-0"><span class="step-number">4</span> 반려견 체중</label><div id="dog-weights" class="weight-grid"><div class="weight-item"><label for="weight-0">반려견 1</label><div class="unit-input"><input id="weight-0" class="dog-weight" type="number" min="0.1" step="0.1" placeholder="예: 7.5" required><span>kg</span></div></div></div></div>
+        <div class="field location-field" data-location="end">
+          <div class="label-row"><label for="end-search"><span class="step-number">5</span> 대전 여행 종료 위치</label><button type="button" class="text-button" id="same-location">출발 위치와 같게</button></div>
+          <div class="search-row"><input id="end-search" type="search" placeholder="여행을 마칠 장소 검색" autocomplete="off" maxlength="100" aria-describedby="end-selection"><button type="button" class="icon-button locate" data-target="end" aria-label="현재 위치를 종료지로 선택">◎</button></div>
+          <div id="end-options" class="location-options" aria-label="종료 위치 검색 결과"></div><div id="end-selection" class="selection-hint">마지막 장소부터 여기까지 동선을 계산해요.</div>
+        </div>
+        <p id="form-error" class="form-error" role="alert" hidden></p>
+        <button type="submit" class="primary-button submit-button" id="create-trip">내 여행 코스 만들기 <span aria-hidden="true">→</span></button>
+      </fieldset>
+      <p class="form-footnote">자동차 이동 기준 · 여행 날짜는 입력하지 않아요</p>
+    </form>
+  </section>
+</section>
+<section id="loading" class="page-width loading-card" aria-live="polite" hidden><span class="spinner"></span><div><h2>함께할 장소를 하나의 동선으로 잇고 있어요.</h2><p>반려견 조건과 여행 전체 이동시간을 비교합니다.</p></div></section>
+<section id="empty-result" class="page-width empty-card" aria-live="polite" hidden></section>
+<section id="result" class="page-width" aria-live="polite" hidden></section>
+<section class="how-it-works page-width" aria-label="여행을 만드는 방법"><div><span>01</span><h3>다섯 가지만 알려주세요</h3><p>출발과 도착, 여행 일수,<br>반려견 수와 체중이면 충분해요.</p></div><div><span>02</span><h3>가까운 동선으로 연결해요</h3><p>식당·체험·숙소를 함께 비교해<br>여행 전체의 이동을 줄여요.</p></div><div><span>03</span><h3>완성된 코스 하나를 만나세요</h3><p>일차별 지도와 참고 일정을 보고<br>여행을 저장해 두세요.</p></div></section>
+<dialog id="detail-dialog"><button type="button" class="dialog-close" aria-label="닫기">×</button><div id="detail-content"></div></dialog>
+{% endblock %}

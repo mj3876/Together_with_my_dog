@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}{{ place.name }} · 장소 상세{% endblock %}
+{% block content %}
+<article class="page-width place-article"><a href="/" class="text-button">← 여행 만들기</a><span class="eyebrow">{{ {'lodging':'STAY', 'restaurant':'EAT', 'activity':'EXPERIENCE'}[place.category] }}</span><h1>{{ place.name }}</h1><p>{{ place.address }}</p><p>{{ place.description }}</p>
+  {% if place.product_name %}<h2>{{ place.product_name }}</h2>{% endif %}
+  <div class="detail-grid"><section class="info-panel"><h2>반려견 동반 규정</h2><p>마릿수: {% if place.policy.dogs_unlimited %}제한 없음{% elif place.policy.max_dogs %}최대 {{ place.policy.max_dogs }}마리{% else %}미확인{% endif %}</p><p>각 체중: {% if place.policy.weight_unlimited %}제한 없음{% elif place.policy.max_weight_kg %}{{ place.policy.max_weight_kg }}kg {{ '미만' if place.policy.weight_operator == 'lt' else '이하' }}{% else %}미확인{% endif %}</p><p>확인일: {{ place.policy.checked_at or '미확인' }}</p><p>{{ place.policy.source_quote }}</p>{% if place.policy.source_url and not place.is_demo %}<a href="{{ place.policy.source_url }}" target="_blank" rel="noopener noreferrer">규정 출처 ↗</a>{% endif %}</section>
+  <section class="info-panel"><h2>방문 전 확인사항</h2><p>{{ place.schedule_note }}</p><ul>{% for item in place.policy.requirements %}<li>{{ item }}</li>{% endfor %}</ul><p>인원 정원·영업 날짜·예약 가능 여부는 별도 확인이 필요합니다.</p>{% if place.price_note %}<p>참고 요금: {{ place.price_note }}</p>{% endif %}{% if place.official_url and not place.is_demo %}<a href="{{ place.official_url }}" target="_blank" rel="noopener noreferrer">공식 안내·예약 ↗</a>{% endif %}</section></div>
+</article>
+{% endblock %}

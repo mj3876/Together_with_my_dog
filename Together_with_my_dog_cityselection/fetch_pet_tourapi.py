@@ -16,7 +16,10 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-from fetch_tourapi import ApiError, NoRedirect, load_key, parse_payload
+if __package__:
+    from .fetch_tourapi import ApiError, NoRedirect, load_key, parse_payload
+else:
+    from fetch_tourapi import ApiError, NoRedirect, load_key, parse_payload
 
 
 DEFAULT_BASE_URL = "https://apis.data.go.kr/B551011/KorPetTourService2"

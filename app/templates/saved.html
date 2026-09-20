@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}저장한 여행 · 우리 개와 끝까지 함께{% endblock %}
+{% block scripts %}<script defer src="{{ url_for('static', path='/js/itinerary.js') }}"></script><script defer src="{{ url_for('static', path='/js/saved.js') }}"></script>{% endblock %}
+{% block content %}
+<section class="page-width saved-heading"><span class="eyebrow">YOUR LITTLE GETAWAYS</span><h1>다시 꺼내 보는 여행.</h1><p>직접 저장한 코스는 이 브라우저에만 보관됩니다. 다른 기기와 공유하려면 JSON으로 내보내세요.</p></section>
+<section id="saved-list" class="page-width saved-list"></section>
+<section id="result" class="page-width" hidden></section>
+<dialog id="detail-dialog"><button type="button" class="dialog-close" aria-label="닫기">×</button><div id="detail-content"></div></dialog>
+{% endblock %}

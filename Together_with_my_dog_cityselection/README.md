@@ -1,4 +1,132 @@
-# Together_with_my_dog — 개발 대상 지역 선정 · 데이터랩 기술 구현 가이드
+# 우리 개와 끝까지 함께 — 대전 반려견 여행 서비스
+
+> 지역 선정·분석 코드 6개와 이 문서는 `Together_with_my_dog_cityselection/`에 있습니다. 아래 명령은 모두 상위 저장소 루트 `Together_with_my_dog/`에서 실행합니다. 서비스 소스와 `.secrets/`, `data/`, `runs/`는 저장소 루트 기준입니다.
+
+Python/FastAPI로 구현한 로컬 실행 서비스입니다. **대전 출발 위치, 여행 전체 일수, 반려견 수, 각 반려견 체중, 대전 종료 위치**만 입력하면 전체 이동시간이 짧은 **여행 코스 하나**를 제공합니다. 설계 원본은 [Notion 구현 가이드](https://app.notion.com/p/3e04a247b914812b8349e7052dd002b4)에서 관리합니다.
+
+## 서비스 실행
+
+Python 3.10 이상을 사용합니다. 아래는 PowerShell 기준이며 활성화 없이 가상환경의 Python을 직접 실행합니다.
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m scripts.run_service --demo
+```
+
+브라우저에서 **http://127.0.0.1:8000**을 엽니다. API 문서는 **http://127.0.0.1:8000/docs**입니다. 종료는 실행 터미널에서 `Ctrl+C`입니다. 이미 `.venv`를 준비했다면 마지막 명령만 실행하면 됩니다.
+
+Git Bash에서는 `.venv/Scripts/python.exe -m scripts.run_service --demo`를 사용합니다.
+
+**데모 모드:** API 키 없이 동작합니다. 가상 숙소 2곳·식당 4곳·체험 4개와 가상 이동시간을 사용하며, 화면과 저장 결과에 데모임을 표시합니다. 별도 메모리 DB를 사용하므로 실제 DB에 섞이지 않습니다. 기본 위치 목록에서 출발·종료 지점을 선택하면 최대 4일 여행을 체험할 수 있습니다. 실제 방문용으로 사용할 수 없습니다.
+
+**실제 모드:** 실제 장소·규정 자료와 경로 API 설정이 필요합니다. 데이터가 부족하면 그 이유를 표시하며 가상 장소나 직선거리 환산값으로 결과를 만들지 않습니다. 현재 기존 TourAPI 수집본만으로는 식당·체험을 채울 수 없으므로 아래 데이터 준비가 필요합니다.
+
+```powershell
+# .env가 없을 때 한 번만 복사하고, 편집기에서 실제 키를 입력합니다.
+Copy-Item .env.example .env
+.\.venv\Scripts\python.exe -m scripts.run_service
+```
+
+`.env`에서 `APP_MODE=live`로 설정합니다. PowerShell 환경변수 `APP_MODE`를 별도로 지정했다면 환경변수가 우선합니다.
+
+| 설정 | 용도 |
+|---|---|
+| `KAKAO_REST_API_KEY` | 장소·주소 검색 및 현재 위치의 대전 행정구역 확인 |
+| `KAKAO_MOBILITY_API_KEY` | 자동차 길찾기 `TIME` 기준 예상 주행시간 |
+| `DATABASE_PATH` | 실제 SQLite 파일. 기본 `data/app.db` |
+| `LOCATION_SIGNING_KEY` | 선택 위치·추천 응답의 변조 확인. 비어 있으면 `.secrets/location_signing.key`에 자동 생성 |
+| `MAX_ROUTE_REQUESTS` | 한 추천 요청의 경로 조회 상한. 기본 500 |
+| `MAX_SEARCH_STATES` | 정확 탐색의 상태 확장 상한. 기본 250000 |
+
+키의 실제 서비스 사용 권한·요금·쿼터는 해당 제공사에서 설정합니다. REST 키는 서버에서만 사용합니다. [카카오 장소 검색 문서](https://developers.kakao.com/docs/latest/ko/local/dev-guide) · [카카오모빌리티 길찾기 문서](https://developers.kakaomobility.com/guide/navi-api/directions)
+
+지도는 Leaflet/OpenStreetMap을 사용합니다. 인터넷 연결이 없으면 방문 위치 개요를 표시합니다. 점선은 방문 순서 연결선이고, 실제 경로가 확보된 구간은 도로 경로를 표시합니다. 배포할 때는 [지도 타일 사용 정책](https://operations.osmfoundation.org/policies/tiles/)에 맞는 타일 제공 방식을 선택하세요.
+
+## 구현한 사용자 흐름
+
+- 한 화면의 다섯 항목만 입력합니다. 여러 반려견의 체중은 각각 검사합니다.
+- 1일은 숙박 없는 당일 코스, N일은 한 숙소에서 N−1박 하는 일차별 코스입니다.
+- 하루 식당 1곳·체험 1개를 배치하고, 여행 중 같은 식당·프로그램을 반복하지 않습니다. 모든 끼니와 자유시간을 채우는 상품은 아닙니다.
+- 마릿수·체중을 통과한 장소의 거점·일차별 배치·방문 순서를 함께 탐색합니다. 전체 주행시간 → 가장 긴 구간 → 안정적인 식별 키 순으로 결정합니다. 예산·취향 점수는 없습니다.
+- 날짜를 입력받지 않으므로 운영·예약 확정 일정이 아닌 **날짜 미지정 참고 계획**입니다. 10:00 시작, 식사 60분, 구간당 준비 10분, 하루 8시간 이내를 자동 배치 기준으로 사용합니다. 실제 체험 소요시간이 없는 후보는 운영자가 보완해야 합니다.
+- 최종 코스 하나의 일차별 지도·시간표·선정 이유·방문 전 확인사항을 보여줍니다. 장소 교체도 새 결과 하나만 반환합니다.
+- 저장 버튼은 이 브라우저의 localStorage에만 저장합니다. JSON 내보내기·삭제·문의 문안 복사를 지원합니다. 문의 자동 발송·예약·결제는 없습니다.
+- 날짜·견종·장비·인원 등 추가 조건을 묻지 않습니다. 입력하지 않은 조건의 충족 여부는 추정하지 않고 장소별 확인사항에 표시합니다.
+
+후보가 부족하면 일수를 줄이지 않습니다. 경로를 조회하지 못하면 0분으로 채우지 않습니다. 탐색·호출 한도에 도달하면 일부 후보의 결과를 최적 코스처럼 반환하지 않고 `planning_limit` 또는 `route_unavailable` 상태를 반환합니다.
+
+## 실제 데이터 준비
+
+기존 분석·수집 파일은 `Together_with_my_dog_cityselection/`으로 이동했습니다. 서비스 명령은 프로젝트 루트에서 `python -m scripts.이름` 형식으로 실행합니다. 내려받은 자료·DB·실제 키는 Git에서 제외됩니다.
+
+```powershell
+# 1. 대전 숙박·음식점 목록 수집: 기존 수집기를 재사용합니다.
+.\.venv\Scripts\python.exe -m scripts.collect_places --output data/raw/daejeon_01
+
+# 2. 목록을 비활성 검토용 JSON으로 변환합니다. 기존 파일을 덮어쓰지 않습니다.
+.\.venv\Scripts\python.exe -m scripts.import_manual_places --from-tourapi data/raw/daejeon_01/places.csv --output data/curated/tourapi_review.json
+
+# 3. 필요한 장소의 동반 상세 원문을 수집합니다. contentId는 실제 수집값으로 교체합니다.
+.\.venv\Scripts\python.exe -m scripts.collect_pet_details 3533154 --output data/raw/pet_details_01
+
+# 4. 수동 입력 양식과 전체 데이터 스키마를 만듭니다.
+.\.venv\Scripts\python.exe -m scripts.import_manual_places --template --output data/curated/manual_review.json
+.\.venv\Scripts\python.exe -m scripts.import_manual_places --schema --output data/curated/place_schema.json
+
+# 5. 공식 근거로 검토·보완한 JSON만 적재합니다. 같은 id는 갱신하며 전체 입력 오류 시 적재하지 않습니다.
+.\.venv\Scripts\python.exe -m scripts.build_service_db data/curated/tourapi_review.json data/curated/manual_review.json
+```
+
+`collect_pet_details`의 기본 operation은 `detailPetTour2`이며 승인받은 최신 명세가 다르면 `--operation`으로 지정합니다. 목록·상세 수집에는 기존 `.secrets/pet_tourapi.key`를 사용합니다. API 응답의 자유서술 문장을 임의로 허용 규정으로 자동 변환하지 않습니다.
+
+대전시 음식점 XLSX/CSV는 실제 명부의 헤더에 맞춰 변환합니다. 아래 `업소명`·`소재지`는 예시이므로 첨부 파일에 맞게 지정해야 합니다. 헤더가 첫 행이 아니면 `--header-row`, 다른 시트면 `--sheet`를 사용합니다.
+
+```powershell
+.\.venv\Scripts\python.exe -m scripts.import_restaurant_list data/raw/restaurants.xlsx --name-column 업소명 --address-column 소재지 --source-url "공식_게시물_URL" --output data/curated/restaurants_review.json
+```
+
+검토용 자료의 `latitude`·`longitude`와 업체명·주소를 실제 값으로 채우고, 다음 조건을 확인한 뒤 `active=true`로 변경합니다.
+
+| 데이터 | 활성화에 필요한 내용 |
+|---|---|
+| 공통 | 대전 실제 주소·좌표, 공식 근거에 따른 `policy.pet_allowed`, `policy.verified`, `source_url`, `source_quote`, `checked_at` |
+| 반려견 규정 | `max_dogs`, `max_weight_kg`, 체중 `weight_operator`(`lt`/`lte`). 무제한은 공식 근거가 있을 때만 `dogs_unlimited`/`weight_unlimited=true` |
+| 숙소 | 동반 가능한 객실별 별도 `id`와 `product_name`. 같은 숙소의 객실은 `venue_id` 공유 |
+| 식당 | 실제 식사 메뉴 확인 후 `serves_meals=true`. 동일 업체 지점의 중복 자료는 `venue_id`로 묶기 |
+| 체험 | 실제 프로그램별 `id`·`product_name`, 상시/정기 운영 `recurring=true`, 공식 `duration_minutes` |
+| 추가 규정 | 견종·체고·준비물·참가 자격은 `policy.requirements`에 기록. 운영·휴무·회차는 `schedule_note` |
+
+비활성 후보는 DB에 보관할 수 있지만 추천하지 않습니다. 정식 자료가 없는 마릿수·체중 규정은 통과시키지 않습니다. 좌표 범위 검사만으로 행정구역을 확정하지 않으므로 수동 자료는 공식 주소도 확인해야 합니다. 파일 사이에서 같은 `id`가 반복되면 적재를 거부합니다. 데이터 관리 API를 인터넷에 노출하지 않고 CLI로 자료를 관리합니다.
+
+## 서비스 코드 구성과 API
+
+| 경로 | 역할 |
+|---|---|
+| `app/main.py`, `app/api/` | FastAPI 실행·화면·추천·장소·위치·교체·문의 API |
+| `app/schemas/` | 다섯 입력, 장소별 규정, 일차별 일정과 단일 결과 형식 |
+| `app/models/`, `app/db/`, `app/repositories/` | SQLite/SQLAlchemy 저장·조회. 초기에는 검증된 장소·정책·프로그램 문서를 하나의 테이블에 보관 |
+| `app/services/` | 규정 처리, 정확 조합 탐색, 참고 시간표, 경로 재사용, 최종 선정 |
+| `app/integrations/` | 카카오 위치·경로 API 및 기존 TourAPI 수집기 연결 |
+| `app/templates/`, `app/static/` | 다섯 항목 입력, 단일 코스·지도·저장 화면 |
+| `scripts/` | 실행, 원자료 수집·검토 양식·DB 적재·핵심 동작 점검 |
+
+`POST /api/v1/recommendations`는 `start_point, trip_days, dog_count, dog_weights_kg, end_point`만 받습니다. 위치 객체는 `GET /api/v1/locations?q=검색어`의 결과를 그대로 사용합니다. 이름·주소·좌표와 서버 서명은 위치 선택 과정에서 채워지며 사용자 입력 조건을 늘리지 않습니다. 직접 좌표를 변조한 요청은 거부합니다.
+
+그 밖에 `GET /api/v1/locations/resolve`, `GET /api/v1/places/{id}`, `POST /api/v1/itineraries/replace`, `POST /api/v1/itineraries/inquiry`, `GET /healthz`를 제공합니다. 교체·문의 요청은 서버가 서명한 코스 문맥을 사용합니다. 정확한 형식은 `/docs`에서 확인할 수 있습니다.
+
+성공은 `status=recommended`, `itinerary={...}`입니다. `itinerary.days`는 같은 여행의 일차 목록입니다. 실패 시 `itinerary=null`과 이유를 반환하며, 사용자에게 여섯 번째 조건을 요구하지 않습니다.
+
+```powershell
+# 외부 API 호출 없이 핵심 서비스 동작 점검
+.\.venv\Scripts\python.exe -m scripts.check_service
+```
+
+로컬 개발용 실행 범위입니다. 실행 명령은 127.0.0.1에만 바인딩합니다. 공개 배포·인증·사용자 계정·실시간 재고 연동은 포함하지 않습니다.
+
+---
+
+# 기존 지역 선정 · 데이터랩 분석 도구
 
 한국관광공사 방문자 지표와 반려동물 동반시설 자료를 결합해 개발 후보 지역을 비교하는 Python 프로젝트입니다. 기존 README와 「개발 대상 지역 선정 | 데이터랩 기술 구현 가이드」를 이 문서로 통합했습니다.
 
@@ -31,7 +159,7 @@
 
 ## 2. 환경과 코드 다운로드
 
-Python **3.10 이상**과 표준 라이브러리만 사용합니다. 별도 `pip install`은 필요하지 않습니다. 키 입력 GUI는 `tkinter`가 있는 Python 설치에서 사용할 수 있으며, 없으면 터미널 입력을 사용합니다.
+아래의 기존 분석 스크립트는 Python **3.10 이상**과 표준 라이브러리만 사용합니다. FastAPI 서비스는 문서 상단의 `requirements.txt` 설치가 필요합니다. 키 입력 GUI는 `tkinter`가 있는 Python 설치에서 사용할 수 있으며, 없으면 터미널 입력을 사용합니다.
 
 | 파일 | 역할 |
 |---|---|
@@ -58,7 +186,7 @@ Git이 없으면 GitHub의 **Code → Download ZIP**으로 받아 압축을 풀�
 
 ```powershell
 $pythonExe = 'C:\실제설치경로\python.exe'
-& $pythonExe -X utf8 .\fetch_pet_tourapi.py --help
+& $pythonExe -X utf8 .\Together_with_my_dog_cityselection\fetch_pet_tourapi.py --help
 ```
 
 ## 3. 실행자가 직접 준비할 것
@@ -77,8 +205,8 @@ $pythonExe = 'C:\실제설치경로\python.exe'
 프로젝트 루트에서 차례로 실행하고, 각 창에 해당 키를 붙여넣어 저장한 뒤 창을 닫습니다.
 
 ```powershell
-python -X utf8 .\configure_tourapi_key.py --gui --service visitors
-python -X utf8 .\configure_tourapi_key.py --gui --service pet
+python -X utf8 .\Together_with_my_dog_cityselection\configure_tourapi_key.py --gui --service visitors
+python -X utf8 .\Together_with_my_dog_cityselection\configure_tourapi_key.py --gui --service pet
 ```
 
 GUI 없이 실제 대화형 터미널에서 입력하려면 `--gui`를 생략합니다. 입력은 화면에 표시되지 않습니다. 터미널 방식은 기존 키 덮어쓰기를 거부하므로 교체할 때는 GUI를 사용합니다.
@@ -133,7 +261,7 @@ data/raw/*숙박방문자 비율 추이(외지인).csv
 ### 4-1. 방문자 API 연결 확인
 
 ```powershell
-python -X utf8 .\fetch_tourapi.py check --level sido --date 2025-09-01 --key-file .\.secrets\tourapi.key --output .\runs\visitor_check_01
+python -X utf8 .\Together_with_my_dog_cityselection\fetch_tourapi.py check --level sido --date 2025-09-01 --key-file .\.secrets\tourapi.key --output .\runs\visitor_check_01
 ```
 
 `공식 API 정상 응답 확인`은 접근 확인 결과입니다. 전체 분석기간의 완전성은 다음 수집에서 검증합니다.
@@ -141,9 +269,9 @@ python -X utf8 .\fetch_tourapi.py check --level sido --date 2025-09-01 --key-fil
 ### 4-2. 시도·시군구 방문자 수집
 
 ```powershell
-python -X utf8 .\fetch_tourapi.py fetch --level sido --start 2025-09 --end 2026-07 --regions 30 28 26 --key-file .\.secrets\tourapi.key --output .\runs\api_candidates_sido_202509_202607
+python -X utf8 .\Together_with_my_dog_cityselection\fetch_tourapi.py fetch --level sido --start 2025-09 --end 2026-07 --regions 30 28 26 --key-file .\.secrets\tourapi.key --output .\runs\api_candidates_sido_202509_202607
 
-python -X utf8 .\fetch_tourapi.py fetch --level sigungu --start 2025-09 --end 2026-07 --regions 51150 52110 --key-file .\.secrets\tourapi.key --output .\runs\api_candidates_sigungu_202509_202607
+python -X utf8 .\Together_with_my_dog_cityselection\fetch_tourapi.py fetch --level sigungu --start 2025-09 --end 2026-07 --regions 51150 52110 --key-file .\.secrets\tourapi.key --output .\runs\api_candidates_sigungu_202509_202607
 ```
 
 기본 방문자 유형은 `외지인(b)`입니다. `--regions`는 반환 자료에서 집계할 지역을 고르는 옵션입니다. API 전국 응답을 페이지별로 받으므로 조회량 자체가 다섯 지역으로 줄어들지는 않습니다. 월별 모든 일자와 지역·유형 일관성을 검증하며 호출한도 또는 불완전한 자료로 중단될 수 있습니다.
@@ -155,7 +283,7 @@ python -X utf8 .\fetch_tourapi.py fetch --level sigungu --start 2025-09 --end 20
 API 수집 두 건과 숙박비율 CSV 5개가 준비된 뒤 실행합니다.
 
 ```powershell
-python -X utf8 .\prepare_city_comparison.py
+python -X utf8 .\Together_with_my_dog_cityselection\prepare_city_comparison.py
 ```
 
 옵션 없이 정해진 경로를 읽습니다. 방문자 폴더는 `api_candidates_*_202509_202607`을 먼저 찾고, 없으면 과거 실행용 `api_candidates_*_202509_202608`을 찾습니다. 새 사용자는 위 수집 명령의 `_202509_202607` 경로를 사용합니다.
@@ -171,7 +299,7 @@ python -X utf8 .\prepare_city_comparison.py
 ### 4-4. 관광수요 순위
 
 ```powershell
-python -X utf8 .\select_development_region.py --input .\region_monthly.csv --start 2025-09 --end 2026-07 --level city --output .\runs\city_selection_01
+python -X utf8 .\Together_with_my_dog_cityselection\select_development_region.py --input .\region_monthly.csv --start 2025-09 --end 2026-07 --level city --output .\runs\city_selection_01
 ```
 
 `region_ranking.csv`와 `selection_review.json`이 생성됩니다. `rank_base`, `rank_balanced`, `rank_visitors_only`를 비교합니다.
@@ -179,9 +307,9 @@ python -X utf8 .\select_development_region.py --input .\region_monthly.csv --sta
 ### 4-5. 반려동물 동반시설 확인·수집
 
 ```powershell
-python -X utf8 .\fetch_pet_tourapi.py check --key-file .\.secrets\pet_tourapi.key --area-code 3 --content-type-id 32
+python -X utf8 .\Together_with_my_dog_cityselection\fetch_pet_tourapi.py check --key-file .\.secrets\pet_tourapi.key --area-code 3 --content-type-id 32
 
-python -X utf8 .\fetch_pet_tourapi.py fetch --key-file .\.secrets\pet_tourapi.key --output .\runs\pet_api_01
+python -X utf8 .\Together_with_my_dog_cityselection\fetch_pet_tourapi.py fetch --key-file .\.secrets\pet_tourapi.key --output .\runs\pet_api_01
 ```
 
 기본 조회는 인천·대전·부산·강원·전북 × 숙박·음식점입니다. 전체 페이지를 수집해 `raw/`, `places.csv`, `manifest.json`을 저장합니다. 성공 상태는 `complete`입니다. 정상 0건 응답도 처리합니다.
@@ -189,7 +317,7 @@ python -X utf8 .\fetch_pet_tourapi.py fetch --key-file .\.secrets\pet_tourapi.ke
 ### 4-6. 수요 대비 시설 공급 부족순위
 
 ```powershell
-python -X utf8 .\analyze_pet_supply.py --input .\runs\pet_api_01 --demand .\region_monthly.csv --start 2025-09 --end 2026-07 --output .\runs\pet_supply_01
+python -X utf8 .\Together_with_my_dog_cityselection\analyze_pet_supply.py --input .\runs\pet_api_01 --demand .\region_monthly.csv --start 2025-09 --end 2026-07 --output .\runs\pet_supply_01
 ```
 
 | 생성 파일 | 확인할 내용 |
@@ -266,6 +394,6 @@ region_code,region_name,region_level,month,visitors,overnight_pct,visitor_source
 
 ## 7. GitHub 공개 범위
 
-관리할 파일은 **6개 Python 스크립트, 이 README, `.gitignore`**입니다. `.gitignore`는 이 8개 파일만 포함하도록 설정했습니다. 새 코드를 공유하려면 제외 규칙도 명시적으로 갱신합니다.
+관리할 파일은 **`Together_with_my_dog_cityselection/` 안의 Python 스크립트 6개, README, `.gitignore`**, 저장소 루트의 **`.gitignore`, `app/`, `scripts/`, `requirements.txt`, `.env.example`**입니다. 루트 `.gitignore`는 공개할 폴더와 서비스 소스만 허용하고, 지역 선정 폴더의 `.gitignore`는 해당 폴더 안의 파일 8개만 허용합니다. 인증키·실제 `.env`·가상환경·데이터·DB·실행 결과는 계속 제외합니다.
 
 로컬 `.secrets/`, `data/`, `runs/`, `region_monthly.csv`, 캐시·가상환경은 업로드하지 않습니다. 이미 추적 중인 파일은 `.gitignore`만으로 제외되지 않으므로 `git ls-files`와 `git diff --cached --name-only`에서 업로드 목록을 확인합니다. 다른 사용자는 위 3~4절에 따라 자신의 키와 자료를 준비합니다.

@@ -17,8 +17,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 from statistics import mean
 
-from fetch_tourapi import ApiError, parse_payload
-from select_development_region import months_between
+if __package__:
+    from .fetch_tourapi import ApiError, parse_payload
+    from .select_development_region import months_between
+else:
+    from fetch_tourapi import ApiError, parse_payload
+    from select_development_region import months_between
 
 
 SERVICE_NAME = "한국관광공사_반려동물_동반여행_서비스"

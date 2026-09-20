@@ -7,8 +7,12 @@ from collections import defaultdict
 from decimal import Decimal
 from pathlib import Path
 
-from fetch_tourapi import ApiError, parse_payload, summarize_month
-from select_development_region import FIELDS, months_between
+if __package__:
+    from .fetch_tourapi import ApiError, parse_payload, summarize_month
+    from .select_development_region import FIELDS, months_between
+else:
+    from fetch_tourapi import ApiError, parse_payload, summarize_month
+    from select_development_region import FIELDS, months_between
 
 
 CANDIDATES = {
