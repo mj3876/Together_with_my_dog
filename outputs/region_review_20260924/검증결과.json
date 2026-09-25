@@ -1,0 +1,49 @@
+{
+  "raw_pages_hash_verified": 318,
+  "pet_raw_to_places_exact": true,
+  "city_55_rows_exact": true,
+  "city_coverage_exact": true,
+  "supply_three_csv_exact": true,
+  "code_ast_unchanged": true,
+  "original_files_unchanged": true,
+  "overnight_source_hashes_match": true,
+  "demand_hash_matches_original_audits": true,
+  "annotated_csv_values_preserved": [
+    {
+      "file": "01_places_주석.csv",
+      "source": "runs/pet_api_20260919_183904/places.csv",
+      "rows": 63,
+      "original_columns_unchanged": true
+    },
+    {
+      "file": "02_pet_facilities_deduplicated_주석.csv",
+      "source": "runs/pet_supply_20260919_184024/pet_facilities_deduplicated.csv",
+      "rows": 39,
+      "original_columns_unchanged": true
+    },
+    {
+      "file": "03_unmatched_places_주석.csv",
+      "source": "runs/pet_supply_20260919_184024/unmatched_places.csv",
+      "rows": 24,
+      "original_columns_unchanged": true
+    },
+    {
+      "file": "04_pet_supply_ranking_주석.csv",
+      "source": "runs/pet_supply_20260919_184024/pet_supply_ranking.csv",
+      "rows": 5,
+      "original_columns_unchanged": true
+    },
+    {
+      "file": "05_region_monthly_주석.csv",
+      "source": "data/processed/city_202509_202607/region_monthly.csv",
+      "rows": 55,
+      "original_columns_unchanged": true
+    },
+    {
+      "file": "06_visitor_coverage_주석.csv",
+      "source": "data/processed/city_202509_202607/visitor_coverage.csv",
+      "rows": 55,
+      "original_columns_unchanged": true
+    }
+  ]
+}
