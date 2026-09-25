@@ -1,0 +1,84 @@
+{
+  "status": "developer_review_required",
+  "service": "한국관광공사_반려동물_동반여행_서비스",
+  "analysis_period": [
+    "2025-09",
+    "2026-07"
+  ],
+  "analysis_month_count": 11,
+  "demand_file": "C:\\Users\\ms840\\mjuser\\Together_with_my_dog ​\\region_monthly.csv",
+  "demand_sha256": "3086d139f08577a6a17d83dd644daf0deccb4adc991e8f267644c8b84c92386f",
+  "facility_input": "C:\\Users\\ms840\\mjuser\\Together_with_my_dog ​\\runs\\pet_api_20260919_183904",
+  "source_files": [
+    "C:\\Users\\ms840\\mjuser\\Together_with_my_dog ​\\runs\\pet_api_20260919_183904\\places.csv"
+  ],
+  "source_file_count": 1,
+  "raw_record_count": 63,
+  "selected_category_record_count": 63,
+  "unique_content_id_count": 63,
+  "duplicate_content_id_rows_removed": 0,
+  "category_conflict_content_ids": [],
+  "records_without_content_id": 0,
+  "classified_record_count": 39,
+  "unmatched_record_count": 24,
+  "unmatched_reasons": {
+    "unmatched_address": 24
+  },
+  "excluded_content_type_counts": {},
+  "content_type_ids": {
+    "lodging": [
+      "32"
+    ],
+    "restaurant": [
+      "39"
+    ]
+  },
+  "lodging_weight": 0.5,
+  "ranking_definition": "higher shortage_index means more visitor demand per registered pet facility",
+  "region_counts": {
+    "26": {
+      "lodging": 5,
+      "restaurant": 1
+    },
+    "28": {
+      "lodging": 1,
+      "restaurant": 1
+    },
+    "30": {
+      "lodging": 1,
+      "restaurant": 0
+    },
+    "51150": {
+      "lodging": 7,
+      "restaurant": 20
+    },
+    "52110": {
+      "lodging": 3,
+      "restaurant": 0
+    }
+  },
+  "warnings": [
+    "시설 수는 API 등록 콘텐츠의 조회 시점 스냅샷이며 실제 업소 전수조사가 아닙니다.",
+    "일반 방문자 지표를 반려견 동반 관광수요의 대리변수로 사용했습니다.",
+    "시설 수가 0인 지역의 방문자/시설 비율은 n.a.로 표시하고 부족지수 계산에서는 가장 높은 부담으로 처리했습니다.",
+    "콘텐츠 유형 코드는 TourAPI 서비스 명세와 대조한 뒤 확정해야 합니다.",
+    "주소가 없거나 대상 지역으로 분류되지 않은 시설은 순위에서 제외하고 unmatched_places.csv에 기록했습니다."
+  ],
+  "created_utc": "2026-09-19T09:40:25.024292+00:00",
+  "_review_comments": {
+    "source_file": "runs/pet_supply_20260919_184024/pet_supply_audit.json",
+    "notes": {
+      "raw_record_count": "input_files가 places.csv 하나를 선택하고 load_places가 읽은 63행.",
+      "selected_category_record_count": "content_id가 있고 유형 32/39인 63행.",
+      "unique_content_id_count": "content_id를 키로 quality 점수가 더 높은 행을 보존. 실제 중복 제거 0건, 63개 ID.",
+      "classified_record_count": "classify_place가 후보 5곳으로 분류한 39행. 전부 address 방식.",
+      "unmatched_record_count": "24행. 실제 주소는 모두 강릉/전주 이외 강원/전북 지역.",
+      "region_counts": "후보 행의 region_code와 category별 콘텐츠 수.",
+      "lodging_weight": "0.5. 음식점 가중치는 1-0.5.",
+      "demand_sha256": "현재 root region_monthly.csv와 processed 결과의 해시가 일치하는지 재검증함.",
+      "demand_file/facility_input/source_files": "과거 실행 폴더명이 남은 절대경로. 현재 프로젝트의 동일 상대경로로 찾고 해시/재현 결과를 확인함.",
+      "status": "developer_review_required는 결과가 생성되어도 한계와 기준에 대한 검토가 필요하다는 기존 상태.",
+      "warnings": "기존 문구의 n.a.는 개념 설명. 실제 CSV 저장 값은 빈칸. 주소 없음만 제외한다는 문구는 실제 코드보다 좁음."
+    }
+  }
+}

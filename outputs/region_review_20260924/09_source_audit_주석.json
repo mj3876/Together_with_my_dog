@@ -1,0 +1,86 @@
+{
+  "period": [
+    "2025-09",
+    "2026-07"
+  ],
+  "analysis_month_count": 11,
+  "excluded_months": [
+    "2026-08"
+  ],
+  "comparison_scope": "whole_city",
+  "candidate_count": 5,
+  "overnight_months": 55,
+  "complete_visitor_months": 55,
+  "can_run_selection": true,
+  "missing_visitor_months": [],
+  "overnight_sources": [
+    {
+      "file": "data/raw/20260914201051_숙박방문자 비율 추이(외지인).csv",
+      "region_name": "대전광역시",
+      "region_code": "30",
+      "region_level": "sido",
+      "sha256": "f96a79c7a4d10a8d844973acd84e2f2404abc86bbc519885383a9a9dcf03c6f8",
+      "rows_used": 11,
+      "excluded_period_rows": 1,
+      "national_average_rows_excluded": 12
+    },
+    {
+      "file": "data/raw/20260914201503_숙박방문자 비율 추이(외지인).csv",
+      "region_name": "인천광역시",
+      "region_code": "28",
+      "region_level": "sido",
+      "sha256": "dd89179a9d76498b3a0ef6fb9d38fd42ad01353919940a8c7c81db0fd053564f",
+      "rows_used": 11,
+      "excluded_period_rows": 1,
+      "national_average_rows_excluded": 12
+    },
+    {
+      "file": "data/raw/20260914201533_숙박방문자 비율 추이(외지인).csv",
+      "region_name": "부산광역시",
+      "region_code": "26",
+      "region_level": "sido",
+      "sha256": "e7ad39769d64b451251dce3cc1b15b507fc04637be3090c3609059f0fb5e4316",
+      "rows_used": 11,
+      "excluded_period_rows": 1,
+      "national_average_rows_excluded": 12
+    },
+    {
+      "file": "data/raw/20260914201612_숙박방문자 비율 추이(외지인).csv",
+      "region_name": "강릉시",
+      "region_code": "51150",
+      "region_level": "sigungu",
+      "sha256": "ce243faa001eeeec1b07e68de7d0cd971ec9c9a6ba413a4c6d5d96b473dc8c3b",
+      "rows_used": 11,
+      "excluded_period_rows": 1,
+      "national_average_rows_excluded": 12
+    },
+    {
+      "file": "data/raw/20260914201747_숙박방문자 비율 추이(외지인).csv",
+      "region_name": "전주시",
+      "region_code": "52110",
+      "region_level": "sigungu",
+      "sha256": "df24226d6be154e4515935bd1ce33189b243407b675bd8ab2ed0d587600c4b63",
+      "rows_used": 11,
+      "excluded_period_rows": 1,
+      "national_average_rows_excluded": 12
+    }
+  ],
+  "visitor_api_sources": {
+    "sido": "runs/api_candidates_sido_202509_202608",
+    "sigungu": "runs/api_candidates_sigungu_202509_202608"
+  },
+  "input_sha256": "3086d139f08577a6a17d83dd644daf0deccb4adc991e8f267644c8b84c92386f",
+  "_review_comments": {
+    "source_file": "data/processed/city_202509_202607/source_audit.json",
+    "notes": {
+      "period/analysis_month_count": "2025-09~2026-07 공통 11개월.",
+      "candidate_count/comparison_scope": "대전·인천·부산 sido, 강릉·전주 sigungu의 시 전체 5곳.",
+      "excluded_months": "2026-08은 방문자 원문 1~15일뿐. 모든 5개 후보에서 직접 확인.",
+      "overnight_sources": "5개 CSV에서 각각 11행 사용, 기간 밖 후보 1행 제외, 전국평균 12행 제외. 합계 55행 사용/5행 기간 제외/60행 전국평균 제외.",
+      "complete_visitor_months": "summarize_month의 월 전체 날짜 검증을 통과한 55개 지역·월.",
+      "can_run_selection": "coverage에 incomplete가 없다는 뜻. 대전 선정 자체를 확정하는 값이 아님.",
+      "visitor_api_sources": "두 manifest의 전체 status는 failed이지만 8월 불완전 때문. 이전 11개월 원문은 각 월 검증 후 사용.",
+      "input_sha256": "이 스크립트가 작성한 region_monthly.csv의 SHA-256. 원자료 318개 페이지 해시도 별도 확인."
+    }
+  }
+}

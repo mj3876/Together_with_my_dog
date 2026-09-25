@@ -1,0 +1,67 @@
+﻿결과파일,열명,설명
+runs/pet_api_20260919_183904/places.csv,content_id,API 콘텐츠 ID. 중복 제거 키. 업소명 기준 중복 제거가 아님.
+runs/pet_api_20260919_183904/places.csv,content_type_id,목록 유형. 현재 숙박 32/음식점 39 사용.
+runs/pet_api_20260919_183904/places.csv,title,시설 콘텐츠 이름.
+runs/pet_api_20260919_183904/places.csv,addr1,기본 주소.
+runs/pet_api_20260919_183904/places.csv,addr2,상세 주소.
+runs/pet_api_20260919_183904/places.csv,area_code,반려동물 TourAPI 관광지역 코드. 방문자 행정코드와 다름.
+runs/pet_api_20260919_183904/places.csv,sigungu_code,반려동물 API 지역 내 시군구 코드. 방문자 signguCode와 직접 조인하지 않음.
+runs/pet_api_20260919_183904/places.csv,mapx,경도 문자열. 수집 단계에서 숫자 변환/좌표 검증을 하지 않음.
+runs/pet_api_20260919_183904/places.csv,mapy,위도 문자열. 부족순위 계산에는 사용하지 않음.
+runs/pet_api_20260919_183904/places.csv,query_area_code,수집 요청 areaCode. 수집기에서 추가.
+runs/pet_api_20260919_183904/places.csv,query_content_type_id,수집 요청 contentTypeId. 원문 유형이 없을 때 대체값.
+runs/pet_api_20260919_183904/places.csv,source_file,시설 조회에 속한 원문 페이지 상대경로. 다중 페이지라면 세미콜론 연결.
+runs/pet_supply_20260919_184024/pet_facilities_deduplicated.csv,content_id,API 콘텐츠 ID. 중복 제거 키. 업소명 기준 중복 제거가 아님.
+runs/pet_supply_20260919_184024/pet_facilities_deduplicated.csv,content_type_id,목록 유형. 현재 숙박 32/음식점 39 사용.
+runs/pet_supply_20260919_184024/pet_facilities_deduplicated.csv,category,content_type_id로 정한 lodging 또는 restaurant.
+runs/pet_supply_20260919_184024/pet_facilities_deduplicated.csv,region_code,방문자 API 기준 행정지역 코드. 시설은 주소 분류 후 해당 후보 코드를 부여.
+runs/pet_supply_20260919_184024/pet_facilities_deduplicated.csv,region_name,후보 도시 이름.
+runs/pet_supply_20260919_184024/pet_facilities_deduplicated.csv,classification_method,address 또는 area_code. 현재 분류된 39행은 모두 address.
+runs/pet_supply_20260919_184024/pet_facilities_deduplicated.csv,title,시설 콘텐츠 이름.
+runs/pet_supply_20260919_184024/pet_facilities_deduplicated.csv,addr1,기본 주소.
+runs/pet_supply_20260919_184024/pet_facilities_deduplicated.csv,addr2,상세 주소.
+runs/pet_supply_20260919_184024/pet_facilities_deduplicated.csv,area_code,반려동물 TourAPI 관광지역 코드. 방문자 행정코드와 다름.
+runs/pet_supply_20260919_184024/pet_facilities_deduplicated.csv,sigungu_code,반려동물 API 지역 내 시군구 코드. 방문자 signguCode와 직접 조인하지 않음.
+runs/pet_supply_20260919_184024/pet_facilities_deduplicated.csv,source_file,시설 조회에 속한 원문 페이지 상대경로. 다중 페이지라면 세미콜론 연결.
+runs/pet_supply_20260919_184024/unmatched_places.csv,reason,missing_content_id 또는 unmatched_address. 현재 24행은 모두 후보 지역 밖.
+runs/pet_supply_20260919_184024/unmatched_places.csv,content_id,API 콘텐츠 ID. 중복 제거 키. 업소명 기준 중복 제거가 아님.
+runs/pet_supply_20260919_184024/unmatched_places.csv,content_type_id,목록 유형. 현재 숙박 32/음식점 39 사용.
+runs/pet_supply_20260919_184024/unmatched_places.csv,title,시설 콘텐츠 이름.
+runs/pet_supply_20260919_184024/unmatched_places.csv,addr1,기본 주소.
+runs/pet_supply_20260919_184024/unmatched_places.csv,addr2,상세 주소.
+runs/pet_supply_20260919_184024/unmatched_places.csv,area_code,반려동물 TourAPI 관광지역 코드. 방문자 행정코드와 다름.
+runs/pet_supply_20260919_184024/unmatched_places.csv,sigungu_code,반려동물 API 지역 내 시군구 코드. 방문자 signguCode와 직접 조인하지 않음.
+runs/pet_supply_20260919_184024/unmatched_places.csv,source_file,시설 조회에 속한 원문 페이지 상대경로. 다중 페이지라면 세미콜론 연결.
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,shortage_rank,1+자신보다 큰 부족지수의 수. 동점 공동순위.
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,region_code,방문자 API 기준 행정지역 코드. 시설은 주소 분류 후 해당 후보 코드를 부여.
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,region_name,후보 도시 이름.
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,region_level,sido(대전·인천·부산) 또는 sigungu(강릉·전주).
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,analysis_start,분석 시작월 2025-09.
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,analysis_end,분석 종료월 2026-07.
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,analysis_month_count,공통 분석 월수 11.
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,mean_monthly_visitors,지역별 11개월 visitors 산술평균. 출력 소수 6자리 반올림.
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,pet_lodging_count,후보 지역으로 분류된 고유 content_id 중 lodging 건수.
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,pet_restaurant_count,후보 지역으로 분류된 고유 content_id 중 restaurant 건수.
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,visitors_per_pet_lodging,"월평균 방문자/등록 숙박 수. 0개면 CSV 빈칸, 내부 부담도 inf."
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,visitors_per_pet_restaurant,"월평균 방문자/등록 음식점 수. 0개면 CSV 빈칸, 내부 부담도 inf."
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,lodging_shortage_percentile,숙박 부담도의 후보 5곳 내 중간순위 백분위(0~1).
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,restaurant_shortage_percentile,음식점 부담도의 후보 5곳 내 중간순위 백분위(0~1). 0건인 2곳은 0.875.
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,shortage_index,100*(0.5*숙박 백분위+0.5*음식점 백분위). 상대지수이며 부족률이 아님.
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,lodging_status,"숙박 0개 no_registered_facility, 그 외 registered_records."
+runs/pet_supply_20260919_184024/pet_supply_ranking.csv,restaurant_status,"음식점 0개 no_registered_facility, 그 외 registered_records."
+data/processed/city_202509_202607/region_monthly.csv,region_code,방문자 API 기준 행정지역 코드. 시설은 주소 분류 후 해당 후보 코드를 부여.
+data/processed/city_202509_202607/region_monthly.csv,region_name,후보 도시 이름.
+data/processed/city_202509_202607/region_monthly.csv,region_level,sido(대전·인천·부산) 또는 sigungu(강릉·전주).
+data/processed/city_202509_202607/region_monthly.csv,month,YYYY-MM 기준월.
+data/processed/city_202509_202607/region_monthly.csv,visitors,해당 월 모든 날의 외지인(b) touNum 합계. 월 순방문자라고 단정할 수 없음.
+data/processed/city_202509_202607/region_monthly.csv,overnight_pct,외지인 숙박방문자 비율 CSV의 백분율 수치. 14.9는 14.9%.
+data/processed/city_202509_202607/region_monthly.csv,visitor_source,해당 월의 API 원문 페이지 목록. 목록 내 후보 지역·유형·일자로 추가 필터링.
+data/processed/city_202509_202607/region_monthly.csv,overnight_source,해당 지역 숙박방문자 비율 다운로드 CSV.
+data/processed/city_202509_202607/visitor_coverage.csv,region_name,후보 도시 이름.
+data/processed/city_202509_202607/visitor_coverage.csv,region_code,방문자 API 기준 행정지역 코드. 시설은 주소 분류 후 해당 후보 코드를 부여.
+data/processed/city_202509_202607/visitor_coverage.csv,month,YYYY-MM 기준월.
+data/processed/city_202509_202607/visitor_coverage.csv,observed_days,선택 지역·월·외지인 유형의 서로 다른 기준일 수.
+data/processed/city_202509_202607/visitor_coverage.csv,first_day,실제로 관측된 최초 기준일 YYYYMMDD.
+data/processed/city_202509_202607/visitor_coverage.csv,last_day,실제로 관측된 최종 기준일 YYYYMMDD.
+data/processed/city_202509_202607/visitor_coverage.csv,status,"월 집계 성공 complete, 실패 incomplete."
+data/processed/city_202509_202607/visitor_coverage.csv,detail,월별 집계 오류 설명. complete면 CSV 빈칸.
