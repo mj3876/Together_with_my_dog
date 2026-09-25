@@ -33,6 +33,17 @@ SOURCE_URL = "https://www.data.go.kr/data/15101972/openapi.do"
 AUTH_CODES = {"20", "30", "31", "SERVICE_KEY_IS_NULL", "SERVICE_KEY_IS_NOT_REGISTERED_ERROR"}
 RETRY_CODES = {"01", "04", "05", "23"}
 
+# [지역 선정 기준 점검 2026-09-24: 실제 응답과 집계 열의 관계]
+# 원문 위치: runs/api_candidates_{sido|sigungu}_202509_202608/raw/*.xml.
+# baseYmd=기준일 YYYYMMDD, areaCode/areaNm=시도 코드/이름,
+# signguCode/signguNm=시군구 코드/이름(시군구 응답),
+# daywkDivCd/daywkDivNm=요일 코드/이름(현재 집계에서는 사용하지 않음),
+# touDivCd/touDivNm=방문자 구분 코드/이름, touNum=해당 일자·지역·구분의 방문자 지표.
+# 실제 구분값은 원문에서 확인한다. 지역 선정에는 touDivNm='외지인(b)'만 사용한다.
+# header.resultCode/resultMsg=응답 상태, body.totalCount/pageNo/numOfRows=페이지 메타데이터.
+# visitors는 일별 touNum의 월 합계다. 월간 순방문자나 반려견 동반 방문자 수로 해석하지 않는다.
+# 숙박방문자 비율은 별도 다운로드 CSV에서 가져오며 이 API로 산출하지 않는다.
+
 
 class ApiError(ValueError):
     def __init__(self, message, code="", retryable=False):
@@ -88,6 +99,9 @@ def api_status(code):
 
 
 def parse_payload(payload):
+    # JSON의 response.body.items.item 또는 XML의 body/items/item을 공통 dict 목록으로 변환.
+    # 단일 JSON 객체도 리스트로 통일하고 정상 응답 코드·페이지 정보를 검사한다.
+    # 항목의 지표를 합산하거나 결측을 채우는 함수가 아니다. 실제 합산은 summarize_month().
     try:
         text = payload.decode("utf-8-sig")
         if text.lstrip().startswith("{"):
@@ -198,6 +212,8 @@ def write_csv(path, rows, fields):
 
 def download_window(client, start, end, output, manifest, page_size=1000):
     """동일 기간의 모든 페이지를 수집하고 건수·중복·기간을 검증한다."""
+    # --regions 필터는 이 다운로드에 적용되지 않는다. API 반환 지역 전체를 원문에 보존하고
+    # summarize_month에서 선택 지역을 거른다. 따라서 원문 행 수와 분석용 행 수는 다르다.
     all_rows, known_keys, page_no, total_count = [], set(), 1, None
     files = []
     while True:
@@ -240,6 +256,12 @@ def download_window(client, start, end, output, manifest, page_size=1000):
 
 
 def summarize_month(rows, month, level, selected_codes, visitor_type, source_files):
+    # 1) 방문자 유형과 지역코드를 필터링한다. sido는 areaCode, sigungu는 signguCode 사용.
+    # 2) touNum을 Decimal로 읽고 음수/비유한수/같은 지역·일자의 중복을 거부한다.
+    # 3) 달력의 모든 날짜가 정확히 있어야 월 합계를 만든다. 누락일을 0으로 대체하지 않는다.
+    # 4) visitors=sum(일별 touNum), observed_days=해당 월 날짜 수, visitor_source=입력 페이지 목록.
+    # 기존 2026-08 원문은 1~15일뿐이어서 fetch 전체 실행은 실패했고 월별 CSV도 쓰이지 않았다.
+    # prepare_city_comparison은 보존된 원문에서 완전한 2025-09~2026-07만 다시 집계한다.
     code_field, name_field = (("areaCode", "areaNm") if level == "sido"
                               else ("signguCode", "signguNm"))
     daily = defaultdict(dict)

@@ -1,0 +1,2795 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="대전광역시, 대전시청, 대전광역시청">
+
+<title>대전광역시 반려동물 동반 출입 음식점 등록 현황(2026. 9. 7.) | 대전광역시청</title>
+			<link rel="shortcut icon" type="image/x-icon" href="/images/drh/layout/common/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/css/drh/layout/reset.css" />
+<link rel="stylesheet" type="text/css" href="/css/drh/layout/common.css" />
+<link rel="stylesheet" type="text/css" href="/css/drh/layout/layout_2018.css" />
+<link rel="stylesheet" type="text/css" href="/css/drh/layout/layout_dep.css" />
+<link rel="stylesheet" type="text/css" href="/css/drh/layout/contents.css" />
+<link rel="stylesheet" type="text/css" href="/css/drh/layout_2023/common.css?1790331480813" />
+<link rel="stylesheet" type="text/css" href="/css/drh/layout_2023/layout.css?1790331480813" />
+<link rel="stylesheet" type="text/css" href="/css/drh/layout_2023/main.css?1790331480813" />
+
+<script type="text/javascript" src="/js/drh/layout/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src='/js/cmm/commonUtil.js'></script>
+<script type="text/javascript" src='/js/cmm/stringUtil.js'></script>
+<script type="text/javascript" src="/js/cmm/system_util.js" ></script>
+<script type="text/javascript" src="/js/cmm/system_board.js"></script>
+<!--<script type="text/javascript" src="/js/drh/layout/jquery.easing.1.3.min.js"></script>-->
+<script type="text/javascript" src="/js/drh/layout/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="/js/cmm/jquery.form.min.js"></script>
+<script type="text/javascript" src="/js/cmm/html5shiv.js" ></script>
+<script type="text/javascript" src="/js/drh/twitter/twitter.js"></script>
+<script type="text/javascript" src="/js/drh/twitter/twitterCity.js"></script>
+<script type="text/javascript" src="/js/drh/layout/common.js"></script>
+<script type="text/javascript" src="/js/drh/layout/common_dep.js"></script>
+<script type="text/javascript" src="/js/drh/layout_2023/common.js?1790331480813"></script>
+<link rel="stylesheet" type="text/css" href="/css/drh/content.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/drh/layout/board/new_board.css" media="all" />
+<script type="text/javaScript">
+	</script>
+	
+<script type="text/javascript" src="/cmm/validator.do"></script>
+</head>
+<body>
+	<!-- skipNavi -->
+	<!-- skip -->
+    <div class="skiptoContent">
+        <a href="#wrap-content">본문 바로가기</a>
+    </div>
+    <!-- //skip --><!-- //skipNavi -->
+	<div id="wrap" class="wrap-sub">
+		<!-- header -->
+		<script type="text/javascript" src="/js/netfunnel/netfunnel.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/js/netfunnel/skin_djdefault.js" charset="UTF-8"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	
+});
+
+$(document).keydown(function(e){
+	
+	var key = (e) ? e.keyCode : event.keyCode;
+	if(key == 116 || (event.ctrlKey == true && key == 82)){
+		event.keyCode = 0;
+		event.cancelBubble = true;
+		event.returnValue = false;
+		return false;
+	}
+	 
+});
+
+function getItMobileSearch(e){
+	
+	if(e.id == "searchEngine3"){
+		var searchWord = $("#qt3").val();
+		var category = $("#menu option:selected").val();
+		
+		if(searchWord == ""){
+			alert("검색어를 입력하십시오.");
+			$("#qt3").focus();
+			return false;
+		}
+		$.ajax({
+			url:'/drh/totalSearch.do',
+			type: "post",
+			data: {"totalSearch_keyword" : searchWord,
+				"totalSearch_category" : category},
+			dataType: 'json',
+			async:false,
+			success:function(data, status){
+				$("#searchEngine3").attr("action", "https://search.daejeon.go.kr/RSA/front/Search.jsp");
+				$("#searchEngine3").attr("target", "_blank");
+				$("#searchEngine3").submit();
+				//return true;
+			},
+			error: function(request, status, opt){
+				alert("서버와의 연결에 실패했습니다. Error Code ["+status+"]");
+				return false;
+			}
+		});
+	}
+	else if(e.id == "searchEngine2"){
+		var searchWord = $("#qt2").val();
+		var category = $("#searchMenuPc").val();
+		if(searchWord == ""){
+			alert("검색어를 입력하십시오.");
+			$("#qt2").focus();
+			return false;
+		}
+		$.ajax({
+			url:'/drh/totalSearch.do',
+			type: "post",
+			data: {"totalSearch_keyword" : searchWord,
+				"totalSearch_category" : category},
+			dataType: 'json',
+			async:false,
+			success:function(data, status){
+				$("#searchEngine2").attr("action", "https://search.daejeon.go.kr/RSA/front/Search.jsp");
+				$("#searchEngine2").attr("target", "_blank");
+				$("#searchEngine2").submit();
+				//return true;
+			},
+			error: function(request, status, opt){
+				alert("서버와의 연결에 실패했습니다. Error Code ["+status+"]");
+				return false;
+			}
+		});
+	}
+	else if(e[0].id == "searchEngine"){
+		var searchWord = $("#qt").val();
+		var category = "통합검색";
+		if(searchWord == ""){
+			alert("검색어를 입력하십시오.");
+			$("#qt").focus();
+			return false;
+		}
+		$.ajax({
+			url:'/drh/totalSearch.do',
+			type: "post",
+			data: {"totalSearch_keyword" : searchWord,
+				"totalSearch_category" : category},
+			dataType: 'json',
+			async:false,
+			success:function(data, status){
+				$("#searchEngine").attr("action", "https://search.daejeon.go.kr/RSA/front/Search.jsp");
+				$("#searchEngine").attr("target", "_blank");
+				$("#searchEngine").submit();
+				//return true;
+			},
+			error: function(request, status, opt){
+				alert("서버와의 연결에 실패했습니다. Error Code ["+status+"]");
+				return false;
+			}
+		});
+	}
+}
+</script>
+
+<!-- <div id="intro"></div> intro 출력 div -->
+
+<!-- 상단고정배너 --> 
+<!-- 공식배너 -->
+<div class="header-nuri">
+	<div class="inner">
+		<p>이 누리집은 대한민국 공식 전자정부 누리집입니다.</p>
+	</div>
+</div>
+<!-- //공식배너 -->
+
+
+<!-- header : s -->
+<header class="wrap-header">
+  	<div class="header-top">
+		<div class="today-info">
+  <a href="https://www.weather.go.kr/weather/main.jsp" target="_blank" title="새창" class="info-weather">
+      <strong>09.25(금)</strong>
+      <div class="weather">
+          <img src="/images/drh/layout/ico/icon_Rain.png" alt="비"/>
+      </div>
+      <i>비</i>
+  </a>
+  <ul class="info-list">
+      <li>
+      	<a href="https://www.airkorea.or.kr" target="_blank" title="새창">미세먼지</a>
+나쁨      </li>
+      <li>
+      	<a href="https://www.airkorea.or.kr" target="_blank" title="새창">초미세먼지</a>
+나쁨      </li>
+      <li>
+      	<a href="https://www.airkorea.or.kr" target="_blank" title="새창">오존</a>
+보통      </li>
+  </ul>
+</div><!-- //오늘 날씨 -->
+        <ul class="user-menu">
+            <li><a href="https://www.daejeon.go.kr/integ/integMemberLogin.do?siteCd=DRH"><i>로그인</i></a></li>
+                 			<li><a href="/integ/registerMember/integMemberJoinClause.do"><i>회원가입</i></a></li>
+				 <li>
+                <div class="wrap-select select-lang">
+                    <a href="javascript:;"><i>Language</i></a>
+                    <ul class="select-list">
+                        <li><a href="https://www.daejeon.go.kr/english/index.do" target="_blank" title="새창"><i>EN</i></a></li>
+                        <li><a href="https://www.daejeon.go.kr/japanese/index.do" target="_blank" title="새창"><i>JP</i></a></li>
+                        <li><a href="https://www.daejeon.go.kr/chinese/index.do" target="_blank" title="새창"><i>CH</i></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="wrap-select select-sns">
+                    <a href="javascript:;"><i>SNS</i></a>
+                    <ul class="select-list">
+                        <li><a href="https://www.youtube.com/channel/UCzIgmDjE0lFDu2IhEF_ewOA" target="_blank" title="새창" class="icon-youtube"><i>유튜브</i></a></li>
+                        <li><a href="https://blog.naver.com/storydaejeon" target="_blank" title="새창" class="icon-blog"><i>네이버 블로그</i></a></li>
+                        <li><a href="https://www.facebook.com/daejeonstory" target="_blank" title="새창" class="icon-facebook"><i>페이스북</i></a></li>
+                        <li><a href="https://www.instagram.com/daejeon_official/" target="_blank" title="새창" class="icon-instagram"><i>인스타그램</i></a></li>
+                        <li><a href="https://pf.kakao.com/_NkUIK" target="_blank" title="새창" class="icon-kakao"><i>카카오 채널</i></a></li>
+                        <li><a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fdreamdaejeon" target="_blank" title="새창" class="icon-twitter"><i>엑스</i></a></li>
+                        <li><a href="https://band.us/band/63004733" target="_blank" title="새창" class="icon-band"><i>네이버 밴드</i></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="sitemap"><a href="https://www.daejeon.go.kr/drh/info/sitemap.do?menuSeq=1506"><i>사이트맵</i></a></li>
+        </ul>
+	</div>
+	<div id="header" class="gnb-current">
+		<h1 id="logo"><a href="/"><i>대전광역시</i></a></h1>
+		<!-- gnb -->
+		<div class="layer-gnb">
+			<div class="wrap-cnt">
+	            <div class="mo-top hidePc">
+	                <ul class="mo-user-menu">
+	                	<li><a href="https://www.daejeon.go.kr/integ/integMemberLogin.do?siteCd=DRH"><i>로그인</i></a></li>
+	                   			<li><a href="/integ/registerMember/integMemberJoinClause.do"><i>회원가입</i></a></li>
+							 </ul>
+	                <div class="top-menu">
+	                    <a href="https://www.daejeon.go.kr/drh/info/sitemap.do?menuSeq=1506" class="sitemap-link"><i>사이트맵</i></a>
+	                    <div class="wrap-select select-lang">
+	                        <a href="javascript:;"><i>Language</i></a>
+	                        <ul class="select-list">
+	                            <li><a href="https://www.daejeon.go.kr/english/index.do" target="_blank" title="새창"><i>EN</i></a></li>
+	                            <li><a href="https://www.daejeon.go.kr/japanese/index.do" target="_blank" title="새창"><i>JP</i></a></li>
+	                            <li><a href="https://www.daejeon.go.kr/chinese/index.do" target="_blank" title="새창"><i>CH</i></a></li>
+	                        </ul>
+	                    </div>
+	                </div>
+	            </div>
+	            
+	            <ul class="list-sns">
+                    <li><a href="https://www.youtube.com/channel/UCzIgmDjE0lFDu2IhEF_ewOA" target="_blank" class="sns-youtube" title="새창"><i>유튜브</i></a></li>
+                    <li><a href="https://blog.naver.com/storydaejeon" target="_blank" class="sns-blog" title="새창"><i>네이버 블로그</i></a></li>
+                    <li><a href="https://www.facebook.com/daejeonstory" target="_blank" class="sns-facebook" title="새창"><i>페이스북</i></a></li>
+                    <li><a href="https://www.instagram.com/daejeon_official/" target="_blank" class="sns-instagram" title="새창"><i>인스타그램</i></a></li>
+                    <li><a href="https://pf.kakao.com/_NkUIK" target="_blank" class="sns-kakao" title="새창"><i>카카오 채널</i></a></li>
+                    <li><a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fdreamdaejeon" target="_blank" class="sns-twitter" title="새창"><i>엑스</i></a></li>
+                    <li><a href="https://band.us/band/63004733" target="_blank" class="sns-band" title="새창"><i>네이버 밴드</i></a></li>
+                </ul>
+	            <nav id="gnb">
+					<ul class="depth1">
+						<li class="ver-01"><a href="/drh/open/index.do?menuSeq=1438" ><i>정보공개</i></a>
+											<div class="depth-cont" id="snb01">
+												<div class="depth-tit">
+													<strong>
+			                                        	<span>우리 모두의 대전<br />온통 행복한 시민</span>정보공개</strong>
+												</div>
+													<ul class="depth2">
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1519" ><i>정보공개제도안내</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1519"  ><i>정보공개 및 처리제도</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1448"  ><i>정보공개청구</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6615"  ><i>비공개 대상정보 세부기준</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1522"  ><i>수수료</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1523"  ><i>불복절차</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1524"  ><i>관련법령 및 서식</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1520"  ><i>정보공개편람</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/open/drhDataOpen/drhDataOpenBoardList.do?menuSeq=3134" ><i>사전정보공표</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/open/drhDataOpen/drhDataOpenBoardList.do?menuSeq=3134"  ><i>사전정보공표</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/open/drhDataOpen/drhDataOpenBoardList.do?menuSeq=4804&searchCondition2=C08&searchCondition3=D0806"  ><i>업무추진비</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/open/drhDataOpen/drhDataOpenBoardView.do?boardSeq=640&amp;menuSeq=5788"  ><i>주간행사계획</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=2656"  ><i>사전정보공표(2014년 1월 이전자료)</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/information/openDocInfoList.do?menuSeq=6876" ><i>원문정보・정보목록공개</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/information/openDocInfoList.do?menuSeq=6876"  ><i>원문정보공개</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/information/informationList.do?menuSeq=1540"  ><i>정보목록검색</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/acm/drhAcmBoardList.do?menuSeq=6412" ><i>위원회 운영정보</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/acm/drhAcmBoardList.do?menuSeq=6412"  ><i>위원회 현황</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/acm/drhAcmResultBoardList.do?menuSeq=6423"  ><i>회의결과</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=7190" ><i>공공데이터개방</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7190"  ><i>이용안내</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/bud/financeinfo/main.do?menuSeq=5163" target="_blank" title="새창으로 이동"><i>재정정보공개</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="https://www.daejeon.go.kr/bud/financeinfo/main.do?menuSeq=5163" target="_blank" title="새창으로 이동" ><i>총괄현황</i></a>
+																	</li>
+																	<li >
+																		<a href="https://www.daejeon.go.kr/bud/financeinfo/budgetOperationStatus.do?menuSeq=5164" target="_blank" title="새창으로 이동" ><i>자금운용현황</i></a>
+																	</li>
+																	<li >
+																		<a href="https://www.daejeon.go.kr/bud/financeinfo/annualRevenuesStatus.do?menuSeq=5165" target="_blank" title="새창으로 이동" ><i>세입현황</i></a>
+																	</li>
+																	<li >
+																		<a href="https://www.daejeon.go.kr/bud/financeinfo/budgetExecutionStatus.do?menuSeq=5166" target="_blank" title="새창으로 이동" ><i>세출현황</i></a>
+																	</li>
+																	<li >
+																		<a href="https://www.daejeon.go.kr/bud/financeinfo/budgetRealmStatus.do?menuSeq=5167" target="_blank" title="새창으로 이동" ><i>예산분야현황</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/gyeyak/index.do" target="_blank" title="새창으로 이동"><i>계약정보공개</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/gyeyak/order/orderList.do?menuFg=A1&cntrtFlag=&upmuGubun=3&menuSeq=5885" target="_blank" title="새창으로 이동" ><i>발주계획</i></a>
+																	</li>
+																	<li >
+																		<a href="/gyeyak/bid/bidInList.do?menuFg=B1&cntrtFlag=&upmuGubun=3&menuSeq=5890" target="_blank" title="새창으로 이동" ><i>입찰정보</i></a>
+																	</li>
+																	<li >
+																		<a href="/gyeyak/cntrt/cstnCntrtList.do?menuFg=C1&cntrtFlag=1&menuSeq=5899" target="_blank" title="새창으로 이동" ><i>계약정보</i></a>
+																	</li>
+																	<li >
+																		<a href="/gyeyak/openMain.do?menuFg=K1&cntrtFlag=1&upmuGubun=&amp;menuSeq=5203" target="_blank" title="새창으로 이동" ><i>신기술특허OPEN창구</i></a>
+																	</li>
+																	<li >
+																		<a href="/gyeyak/order/orderList.do?menuFg=A1&cntrtFlag=&upmuGubun=3&menuSeq=5916" target="_blank" title="새창으로 이동" ><i>대금지급</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=4620" ><i>조직정보공개</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=4620"  ><i>대전시 공무원 정원</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6146"  ><i>대전시 공무원 현원</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/board/boardNormalList.do?boardId=normal_0201&amp;menuSeq=1482" ><i>정책실명제</i></a>
+															<ul class="depth3 noData">
+																</ul>
+																</li>
+														<li >
+															<a href="/drh/depart/board/boardNormalList.do?boardId=ins_0002&menuSeq=1042" target="_blank" title="새창으로 이동"><i>감사결과공개</i></a>
+															<ul class="depth3 noData">
+																</ul>
+																</li>
+														</ul>
+											</div>
+										</li>
+										<li class="ver-02"><a href="/drh/citizen/index.do?menuSeq=1439" ><i>참여마당</i></a>
+											<div class="depth-cont" id="snb02">
+												<div class="depth-tit">
+													<strong>
+			                                        	<span>우리 모두의 대전<br />온통 행복한 시민</span>참여마당</strong>
+												</div>
+													<ul class="depth2">
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=7417" ><i>시정참여</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6373"  ><i>시장에게 바란다</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6374"  ><i>대전시소(정책제안 플랫폼)</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6375"  ><i>대전주민참여예산</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6860"  ><i>숙의제도</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7417"  ><i>고향사랑기부제</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=6854" ><i>일반참여</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6854"  ><i>공모·설문</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/part/board/boardNormalList.do?boardId=normal_0168&amp;menuSeq=1548"  ><i>칭찬합시다</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/part/board/boardNormalList.do?boardId=normal_0167&amp;menuSeq=1547"  ><i>자유게시판</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/board/boardNormalList.do?boardId=normal_0169&menuSeq=1549" ><i>시민단체</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_0169&amp;menuSeq=1549"  ><i>알려드립니다</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1768"  ><i>단체등록안내</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1552" ><i>기부문화</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1552"  ><i>기부금대상민간단체 안내</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5048"  ><i>기부금품모집안내</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_0173&amp;menuSeq=1553"  ><i>기부금품모집자료실</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_0174&amp;menuSeq=1554"  ><i>기부금품모집등록현황</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=4184"  ><i>기부참여안내</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=4858" ><i>문자 안내</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=4858"  ><i>대기오염경보 문자 안내</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														</ul>
+											</div>
+										</li>
+										<li class="ver-03"><a href="/drh/civil_apeal/index.do?menuSeq=1440" ><i>전자민원</i></a>
+											<div class="depth-cont" id="snb03">
+												<div class="depth-tit">
+													<strong>
+			                                        	<span>우리 모두의 대전<br />온통 행복한 시민</span>전자민원</strong>
+												</div>
+													<ul class="depth2">
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=4769" ><i>대전시에 바란다</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=4769"  ><i>대전시에 바란다(국민신문고)</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=4784"  ><i>나의민원</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1563" ><i>민원안내</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1565"  ><i>무인민원발급기</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1566"  ><i>분야별민원안내</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1567"  ><i>시청 민원실 안내도</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1563"  ><i>민원소개·법령</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1771"  ><i>민원편의시책</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=3453"  ><i>자격증 재발급</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1464"  ><i>민원신청/조회</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1571" ><i>여권안내</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1571"  ><i>여권개요</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1575"  ><i>여권교부/보관및반납</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=6655" ><i>원스톱(통합) 민원안내</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6655"  ><i>원스톱민원안내</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=4026"  ><i>2021년3월31일이전내용보기</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=5079" ><i>민원신고센터</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5079"  ><i>교통민원</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5067"  ><i>화물운송불법/불공정</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=8055"  ><i>바가지요금 신고</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=4775"  ><i>환경신문고</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=4778"  ><i>부동산실거래가위반</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=4783"  ><i>중개업소위법부당행위</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1799"  ><i>예산낭비신고센터</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5756"  ><i>공무원 비리익명제보</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6638"  ><i>공직자 비리신고</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5461"  ><i>민원부조리 신고</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=4628"  ><i>자동차관리법 위반행위 신고</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=4741"  ><i>안전신문고</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5252"  ><i>인권침해 구제신청</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6578"  ><i>불법하도급신고</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=7129" ><i>부패공익신고</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7129"  ><i>부패·공익신고</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=3323"  ><i>복지·보조금 부정신고</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1891" ><i>규제개혁</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1891"  ><i>규제개혁이란?</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5089"  ><i>국무조정실 규제신문고</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5180"  ><i>규제정보포털</i></a>
+																	</li>
+																	<li >
+																		<a href="/minwon/rgltRptList.do?menuSeq=7987"  ><i>지방규제신고센터</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6571"  ><i>규제입증요청</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1897"  ><i>등록규제 현황</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_0097&amp;menuSeq=6927"  ><i>규제혁신 알림/소식</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/administration/board/boardGalleryList.do?boardId=gallery_0020&amp;menuSeq=6928"  ><i>규제혁신 카드뉴스</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=7235" ><i>적극행정</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7235"  ><i>제도소개</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6444"  ><i>적극행정 국민추천</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7237"  ><i>소극행정 신고센터</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/minwonFormList.do?boardId=normal_0200&amp;menuSeq=1466" ><i>민원사무편람/서식</i></a>
+															<ul class="depth3 noData">
+																</ul>
+																</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=7195" ><i>버스전용차로 민원</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7195"  ><i>버스전용차로 위반 안내</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7197"  ><i>과태료 납부 안내</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7198"  ><i>의견진술 및 이의신청 안내</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7199"  ><i>버스전용차로 CCTV현황</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7200"  ><i>임차인 변경 안내</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														</ul>
+											</div>
+										</li>
+										<li class="ver-04"><a href="/drh/board/boardNormalList.do?boardId=normal_0096&menuSeq=1631" ><i>행정정보</i></a>
+											<div class="depth-cont" id="snb04">
+												<div class="depth-tit">
+													<strong>
+			                                        	<span>우리 모두의 대전<br />온통 행복한 시민</span>행정정보</strong>
+												</div>
+													<ul class="depth2">
+														<li class="on">
+															<a href="/drh/board/boardNormalList.do?boardId=normal_0096&menuSeq=1631" ><i>시정뉴스</i></a>
+															<ul class="depth3">
+																	<li class="on active">
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_0096&amp;menuSeq=1631"  ><i>시정소식</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_0124&amp;menuSeq=1639"  ><i>보도해명자료</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_1029&amp;menuSeq=5056"  ><i>달라지는 대전생활</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_0189&menuSeq=1632"  ><i>보도자료</i></a>
+																	</li>
+																	<li >
+																		<a href="/fvu/index.do" target="_blank" title="새창으로 이동" ><i>행사안내</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7176"  ><i>입찰정보</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_0123&amp;menuSeq=1638"  ><i>타기관소식</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_1028&amp;menuSeq=6622"  ><i>주요업무계획</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/drhRegulationsList.do?menuSeq=1660" ><i>시정자료실</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/drhRegulationsList.do?menuSeq=1660"  ><i>공보(고시공고)</i></a>
+																	</li>
+																	<li >
+																		<a href="/ada/index.do" target="_blank" title="새창으로 이동" ><i>행정자료실</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=pla_0005&amp;menuSeq=6869"  ><i>학술용역 활용상황</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_1024&amp;menuSeq=6360"  ><i>시민의식조사</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/administration/board/boardGalleryList.do?boardId=gallery_0031&menuSeq=7631" ><i>인구정책</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/administration/board/boardGalleryList.do?boardId=gallery_0031&amp;menuSeq=7631"  ><i>인구정책 카드뉴스</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_1054&amp;menuSeq=7630"  ><i>만남결혼육아주거 브리핑자료 모음</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7634"  ><i>인구정책 분야별 관련부서</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=6666" ><i>청년정책</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6666"  ><i>대전청년내일재단</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7633"  ><i>만남</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1876" ><i>법무행정정보</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1876"  ><i>행정심판</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1880"  ><i>소청심사</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1883"  ><i>소송</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1654"  ><i>대법원판례</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1886"  ><i>행정절차제도</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1648"  ><i>자치법규</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1655"  ><i>법령해석사례</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6576"  ><i>법령</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6452"  ><i>지방세 납세자보호관</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/bud/index.do" target="_blank" title="새창으로 이동"><i>예산/재정</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/bud/BudFinanceboardList.do?boardId=budboard005&menuSeq=349" target="_blank" title="새창으로 이동" ><i>세입세출예산서</i></a>
+																	</li>
+																	<li >
+																		<a href="/bud/BudFinanceboardList.do?boardId=budboard006&menuSeq=350" target="_blank" title="새창으로 이동" ><i>결산</i></a>
+																	</li>
+																	<li >
+																		<a href="/bud/BudContentsHtmlView.do?menuSeq=7338" target="_blank" title="새창으로 이동" ><i>공유재산</i></a>
+																	</li>
+																	<li >
+																		<a href="/bud/BudFinanceboardList.do?boardId=budboard011&menuSeq=353" target="_blank" title="새창으로 이동" ><i>재정공시</i></a>
+																	</li>
+																	<li >
+																		<a href="/bud/BudContentsHtmlView.do?menuSeq=354" target="_blank" title="새창으로 이동" ><i>주민참여예산제</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/urb/index.do" target="_blank" title="새창으로 이동"><i>도시주택정보</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/urb/UrbCityPlanDisplayList.do?menuSeq=1102" target="_blank" title="새창으로 이동" ><i>도시계획</i></a>
+																	</li>
+																	<li >
+																		<a href="/urb/ContentsHtmlView.do?menuSeq=1170" target="_blank" title="새창으로 이동" ><i>도시정비</i></a>
+																	</li>
+																	<li >
+																		<a href="/urb/ContentsHtmlView.do?tapMenuSeq=1180&menuSeq=1179" target="_blank" title="새창으로 이동" ><i>택지·도시개발</i></a>
+																	</li>
+																	<li >
+																		<a href="/urb/ContentsHtmlView.do?menuSeq=1306" target="_blank" title="새창으로 이동" ><i>도시경관</i></a>
+																	</li>
+																	<li >
+																		<a href="/urb/ContentsHtmlView.do?menuSeq=1350" target="_blank" title="새창으로 이동" ><i>토지정책</i></a>
+																	</li>
+																	<li >
+																		<a href="/urb/ContentsHtmlView.do?menuSeq=7836"  ><i>전세피해</i></a>
+																	</li>
+																	<li >
+																		<a href="/urb/ContentsHtmlView.do?menuSeq=6475" target="_blank" title="새창으로 이동" ><i>도시재생</i></a>
+																	</li>
+																	<li >
+																		<a href="/urb/ContentsHtmlView.do?menuSeq=1249" target="_blank" title="새창으로 이동" ><i>건축·주택</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/MediaList.do?menuSeq=2558" ><i>대전소식모아보기</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/MediaList.do?notiType=NOTI_01&amp;menuSeq=2559"  ><i>공지사항</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/MediaList.do?notiType=NOTI_02&amp;menuSeq=2560"  ><i>보도자료</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/MediaList.do?notiType=NOTI_03&amp;menuSeq=2561"  ><i>문화행사</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/MediaList.do?notiType=NOTI_04&amp;menuSeq=2562"  ><i>입법예고</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/MediaList.do?notiType=NOTI_05&amp;menuSeq=2563"  ><i>타기관 채용정보</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/MediaList.do?notiType=NOTI_06&amp;menuSeq=2564"  ><i>고시공고</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/MediaList.do?notiType=NOTI_07&amp;menuSeq=2565"  ><i>입찰정보</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/ins/index.do?menuSeq=1034" target="_blank" title="새창으로 이동"><i>감사행정</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/depart/board/boardNormalList.do?boardId=ins_0002&menuSeq=1042" target="_blank" title="새창으로 이동" ><i>감사결과</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/depart/board/boardNormalList.do?boardId=ins_0004&menuSeq=1058" target="_blank" title="새창으로 이동" ><i>감사(청렴)자료실</i></a>
+																	</li>
+																	<li >
+																		<a href="/ins/InsContentsHtmlView.do?menuSeq=4597" target="_blank" title="새창으로 이동" ><i>사전 컨설팅감사</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/depart/board/boardNormalList.do?boardId=ins_0003&menuSeq=1057" target="_blank" title="새창으로 이동" ><i>감사정보</i></a>
+																	</li>
+																	<li >
+																		<a href="/ins/InsContentsHtmlView.do?menuSeq=6389" target="_blank" title="새창으로 이동" ><i>적극행정 면책제도</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="https://www.daejeon.go.kr/djpol/index.do" target="_blank" title="새창으로 이동"><i>자치경찰위원회</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="https://www.daejeon.go.kr/djpol/contentView.do?menuSeq=6890" target="_blank" title="새창으로 이동" ><i>위원회소개</i></a>
+																	</li>
+																	<li >
+																		<a href="https://www.daejeon.go.kr/djpol/contentView.do?menuSeq=6895" target="_blank" title="새창으로 이동" ><i>정책마당</i></a>
+																	</li>
+																	<li >
+																		<a href="https://www.daejeon.go.kr/djpol/depart/normalBoardList.do?boardId=pol_0003&menuSeq=6901" target="_blank" title="새창으로 이동" ><i>회의마당</i></a>
+																	</li>
+																	<li >
+																		<a href="https://www.daejeon.go.kr/djpol/contentView.do?menuSeq=6903" target="_blank" title="새창으로 이동" ><i>참여마당</i></a>
+																	</li>
+																	<li >
+																		<a href="https://www.daejeon.go.kr/djpol/depart/normalBoardList.do?boardId=djPol_0009&menuSeq=6907" target="_blank" title="새창으로 이동" ><i>알림마당</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														</ul>
+											</div>
+										</li>
+										<li class="ver-05"><a href="/drh/economy/index.do?menuSeq=1441" ><i>열린경제</i></a>
+											<div class="depth-cont" id="snb05">
+												<div class="depth-tit">
+													<strong>
+			                                        	<span>우리 모두의 대전<br />온통 행복한 시민</span>열린경제</strong>
+												</div>
+													<ul class="depth2">
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1815" ><i>과학산업</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1815"  ><i>대덕연구개발특구</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7178"  ><i>대덕특구 재창조</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=7889" ><i>기업지원</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7889"  ><i>기업지원 주요 시책</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7919"  ><i>산업단지 지원</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7896"  ><i>자금지원</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7899"  ><i>실증지원</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7904"  ><i>기업 경쟁력강화 지원</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7910"  ><i>창업지원</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7921"  ><i>기업 투자유치 지원</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7926"  ><i>국내판로 및 공공구매지원</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7937"  ><i>해외판로 지원</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7940"  ><i>기업 예우 지원</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7944"  ><i>소상공인 지원</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7948"  ><i>기업애로 및 규제신고</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7950"  ><i>주요 Q&A</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1602" ><i>일자리지원</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1602"  ><i>대전일자리지원센터</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7644"  ><i>일자리종합상담</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7648"  ><i>채용정보</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7652"  ><i>일자리사업</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7807"  ><i>청년일자리지원정책가이드</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7955"  ><i>대전광역시명장</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1831" ><i>부동산정보</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1831"  ><i>부동산개발업등록</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1610"  ><i>부동산중개업정보</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1611"  ><i>공시지가조회</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1612"  ><i>토지이용계획</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1615" ><i>소비자정보</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/cons/index.do" target="_blank" title="새창으로 이동" ><i>소비생활센터</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1615"  ><i>생활지리정보</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1837"  ><i>농수산물정보</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/price/index.do?menuSeq=3302" ><i>물가정보</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=3303"  ><i>소비자물가지수</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_1007&amp;menuSeq=3304"  ><i>소비자물가동향</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_1008&amp;menuSeq=3305"  ><i>개인서비스 가격동향</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_1009&amp;menuSeq=3306"  ><i>주요생필품 물가동향</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=3308"  ><i>주요공공요금</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=3318"  ><i>착한가격업소</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/board/boardNormalList.do?boardId=normal_0187&menuSeq=1618" ><i>경제지표</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_0187&amp;menuSeq=1618"  ><i>경제지표</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_0188&amp;menuSeq=1619"  ><i>월간경제</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1620" ><i>협동조합</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1620"  ><i>협동조합이란?</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1621"  ><i>협동조합 설립신고 절차</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_0152&amp;menuSeq=1622"  ><i>자료실</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=6526" ><i>지역인재 의무채용</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6526"  ><i>제도 안내</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6531"  ><i>공공기관 목록 및 채용정보</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6532"  ><i>지역인재 채용현황</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6536"  ><i>자주하는 질문</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=7967" ><i>전기자동차 충전시설 신고 및 책임보험 가입</i></a>
+															<ul class="depth3 noData">
+																</ul>
+																</li>
+														</ul>
+											</div>
+										</li>
+										<li class="ver-06"><a href="/drh/life/index.do?menuSeq=1443" ><i>생활정보</i></a>
+											<div class="depth-cont" id="snb06">
+												<div class="depth-tit">
+													<strong>
+			                                        	<span>우리 모두의 대전<br />온통 행복한 시민</span>생활정보</strong>
+												</div>
+													<ul class="depth2">
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1662" ><i>교육·상담</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1662"  ><i>AI디지털배움터</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1663"  ><i>대전의 대학교</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1912"  ><i>인터넷·스마트폰 과의존 예방</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5278"  ><i>인권침해 상담</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1914" ><i>복지</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1914"  ><i>국민기초생활보장</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1917"  ><i>의료급여제도</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=3256"  ><i>긴급복지지원</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=2116"  ><i>장애인복지</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1925"  ><i>어르신</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=3142"  ><i>다자녀</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=3150"  ><i>보육</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=2269"  ><i>가정복지ㆍ다문화</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=4743"  ><i>청소년ㆍ아동</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1671"  ><i>노숙인복지</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1940"  ><i>사회복지관</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1947"  ><i>장묘관리</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7444"  ><i>보훈수당지원</i></a>
+																	</li>
+																	<li >
+																		<a href="/wel/WelContentsHtmlView.do?menuSeq=2718" target="_blank" title="새창으로 이동" ><i>보훈공원</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1951"  ><i>지역자율형사회서비스</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=4608"  ><i>의사상자 지원제도</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7242"  ><i>대전 교통복지카드</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7975"  ><i>의료·요양 통합돌봄</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=5853" ><i>성인지정책</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5853"  ><i>성인지감수성충전소</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=2149"  ><i>양성평등정책</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5855"  ><i>여성</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/life/NightfloatOntheDayList.do?menuSeq=1678" ><i>건강과의료</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/life/NightfloatOntheDayList.do?menuSeq=1678"  ><i>당직의료기관</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1955"  ><i>보건소</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1680"  ><i>예방접종</i></a>
+																	</li>
+																	<li >
+																		<a href="/djbaby/index.do" target="_blank" title="새창으로 이동" ><i>산모지원</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=2176"  ><i>생활건강</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1684"  ><i>관련사이트</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1686"  ><i>당번약국</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1968" ><i>환경정보</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1968"  ><i>환경정책</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5782"  ><i>물순환회복</i></a>
+																	</li>
+																	<li >
+																		<a href="/hea/index.do" target="_blank" title="새창으로 이동" ><i>대기정보</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6590"  ><i>미세먼지정보</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=3275"  ><i>자연환경조사</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=2194"  ><i>재활용정보</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1984"  ><i>음식물쓰레기자원화</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1990"  ><i>기후변화대응</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1693"  ><i>관련사이트</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=2230" ><i>3대하천정보</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=2230"  ><i>대전의 3대하천</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=2236"  ><i>3대하천 사업현황</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=2225"  ><i>3대하천 편의시설 및 이용신청</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=4550"  ><i>하천용어</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/saf/index.do" target="_blank" title="새창으로 이동"><i>재난·안전</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/saf/SafContentsHtmlView.do?menuSeq=1278" target="_blank" title="새창으로 이동" ><i>자연재난 길잡이</i></a>
+																	</li>
+																	<li >
+																		<a href="/saf/SafContentsHtmlView.do?menuSeq=1279" target="_blank" title="새창으로 이동" ><i>사회재난 길잡이</i></a>
+																	</li>
+																	<li >
+																		<a href="https://www.daejeon.go.kr/saf/SafContentsHtmlView.do?menuSeq=6610" target="_blank" title="새창으로 이동" ><i>시민안전보험</i></a>
+																	</li>
+																	<li >
+																		<a href="https://www.daejeon.go.kr/saf/SafContentsHtmlView.do?menuSeq=6851" target="_blank" title="새창으로 이동" ><i>어린이안전관리 제도</i></a>
+																	</li>
+																	<li >
+																		<a href="/saf/SafContentsHtmlView.do?menuSeq=7689"  ><i>중대재해처벌법</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=7206" ><i>시설이용</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7206"  ><i>대전 반려동물 관련 시설</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7201"  ><i>공공체육시설</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_1046&amp;menuSeq=1703"  ><i>동네체육시설</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1704"  ><i>하천체육시설</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1706"  ><i>시설이용신청</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=2525"  ><i>청소년수련시설</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1497" ><i>바로가기</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5066"  ><i>분실물 찾기</i></a>
+																	</li>
+																	<li >
+																		<a href="/urb/index.do" target="_blank" title="새창으로 이동" ><i>도시주택정보</i></a>
+																	</li>
+																	<li >
+																		<a href="/djTram/index.do" target="_blank" title="새창으로 이동" ><i>대전트램</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1497"  ><i>교통정보</i></a>
+																	</li>
+																	<li >
+																		<a href="/hea/index.do" target="_blank" title="새창으로 이동" ><i>보건환경연구원</i></a>
+																	</li>
+																	<li >
+																		<a href="/far/index.do" target="_blank" title="새창으로 이동" ><i>농업기술센터</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5857"  ><i>수돗물 수질정보</i></a>
+																	</li>
+																	<li >
+																		<a href="https://daejeon.go.kr/djeco/index.do" target="_blank" title="새창으로 이동" ><i>친환경학교급식</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														</ul>
+											</div>
+										</li>
+										<li class="ver-07"><a href="/drh/daejeon/index.do?menuSeq=1444" ><i>대전소개</i></a>
+											<div class="depth-cont" id="snb07">
+												<div class="depth-tit">
+													<strong>
+			                                        	<span>우리 모두의 대전<br />온통 행복한 시민</span>대전소개</strong>
+												</div>
+													<ul class="depth2">
+														<li >
+															<a href="/drh/drhOrganization.do?menuSeq=6376" ><i>시청안내</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/drhOrganization.do?menuSeq=6376"  ><i>조직도 및 업무안내</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1848"  ><i>청사안내</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1851"  ><i>시민이용시설</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1846"  ><i>청사둘러보기</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1643"  ><i>오시는 길</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1759"  ><i>대전120콜센터</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=6708" ><i>대전의상징</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6708"  ><i>시정구호</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=3294"  ><i>대전의 깃대종</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5758"  ><i>대전색</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=2059"  ><i>대전사랑운동</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5085"  ><i>대전의노래</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1748"  ><i>시민헌장</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=2024" ><i>대전도시브랜드</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=2024"  ><i>브랜드 슬로건</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1711"  ><i>시기·심벌마크·로고</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6709"  ><i>엠블럼</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=7637"  ><i>캐릭터</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1708"  ><i>대전의 꽃·나무·새</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6861"  ><i>대전 홍보영상</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=2033" ><i>대전의현황</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=2033"  ><i>자연환경</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1716"  ><i>행정구역</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1717"  ><i>대전의지명</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=2038" ><i>사이버역사관</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=2038"  ><i>대전의역사</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1719"  ><i>대전의연혁</i></a>
+																	</li>
+																	<li >
+																		<a href="https://www.daejeon.go.kr/his/board/musBoardDataList.do?bbsCode=hispeople&menuSeq=670" target="_blank" title="새창으로 이동" ><i>대전의인물</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1722"  ><i>시정ㆍ경제ㆍ환경백서</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5824"  ><i>대전찰칵</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1725"  ><i>기록관</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="https://www.daejeon.go.kr/sta/index.do" target="_blank" title="새창으로 이동"><i>대전의통계</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="https://www.daejeon.go.kr/sta/StaDaejeonTodayList.do?menuSeq=20" target="_blank" title="새창으로 이동" ><i>한눈에보는 대전</i></a>
+																	</li>
+																	<li >
+																		<a href="https://www.daejeon.go.kr/sta/StaStatisticsFldList.do?menuSeq=180" target="_blank" title="새창으로 이동" ><i>통계자료</i></a>
+																	</li>
+																	<li >
+																		<a href="https://www.daejeon.go.kr/sta/StaSocialindicatorList.do?categorySeq=591&menuSeq=6857" target="_blank" title="새창으로 이동" ><i>e-대전통계</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1728" ><i>국제협력</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1728"  ><i>자매우호도시</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1741"  ><i>자매우호도시 홍보관</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5276"  ><i>국제기구</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5277"  ><i>외국인주민 통합지원센터</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/board/boardNormalList.do?boardId=normal_0164&menuSeq=1749" ><i>원도심이야기</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/board/boardNormalList.do?boardId=normal_0164&amp;menuSeq=1749"  ><i>원도심 소식</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1750"  ><i>원도심 자랑</i></a>
+																	</li>
+																	<li >
+																		<a href="/fod/index.do" target="_blank" title="새창으로 이동" ><i>대전의 맛</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=1752"  ><i>원도심으로 오세요</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=5825"  ><i>대전스카이로드 운영</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														<li >
+															<a href="/drh/drhStoryDaejeonList.do?boardId=blog_0001&amp;menuSeq=7214" ><i>온라인 홍보관</i></a>
+															<ul class="depth3">
+																	<li >
+																		<a href="/drh/drhStoryDaejeonList.do?boardId=blog_0001&amp;menuSeq=1479"  ><i>Story대전</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/blogBoardView.do?boardId=fact_check&amp;menuSeq=5651"  ><i>핫뉴스</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/administration/board/boardGalleryList.do?boardId=gallery_0030&amp;menuSeq=7372"  ><i>과학 뉴스레터</i></a>
+																	</li>
+																	<li >
+																		<a href="/its/index.do" target="_blank" title="새창으로 이동" ><i>월간 대전이즈유</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/administration/board/boardGalleryList.do?boardId=gallery_0019&amp;menuSeq=4637"  ><i>시정카드뉴스</i></a>
+																	</li>
+																	<li >
+																		<a href="https://tv.daejeon.go.kr/" target="_blank" title="새창으로 이동" ><i>대전인터넷방송</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/administration/board/boardGalleryList.do?boardId=gallery_0029&amp;menuSeq=7215"  ><i>대전TV</i></a>
+																	</li>
+																	<li >
+																		<a href="/drh/DrhContentsHtmlView.do?menuSeq=6867"  ><i>홍보대사</i></a>
+																	</li>
+																	</ul>
+															 	</li>
+														</ul>
+											</div>
+										</li>
+										<li class="ver-09">
+							<a href="javascript:;"><i>분야별정보</i></a>						
+							<div class="depth-cont">
+								<div class="depth-tit">
+                                       <strong>
+                                           <span>우리 모두의 대전<br />온통 행복한 시민</span>분야별정보
+                                       </strong>
+                                </div>
+								<ul class="depth2-type02">
+	<li class="is-active">
+        <a href="javascript:void(0);"><i>만남 · 결혼 · 육아(돌봄) · 주거</i></a>
+        <ul class="depth3-type02">
+            <li>
+                <a href="javascript:void(0);"><i>만남 · 결혼</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=7633"><i>만남-연(連) In 대전</i></a>
+                    </li>
+                    <li>
+                        <a href="https://daejeon.familynet.or.kr/center/lay1/program/S295T322C449/receipt/view.do?seq=180364" class="outlink_nav" target="_blank" title="새창열림"><i>만남-빛이나는 HOLO</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.daejeonyouthportal.kr/content/CT_000000000497/cntPage.do?commonMenuNo=304_305_323_327&dpmSectionFst=1&dpmSectionScd=7" class="outlink_nav" target="_blank" title="새창열림"><i>결혼장려금</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.daejeon.go.kr/djbaby/contentsHtmlView.do?menuSeq=7376" target="_blank" title="새창열림"><i>임신지원</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.daejeon.go.kr/djbaby/contentsHtmlView.do?menuSeq=7391" target="_blank" title="새창열림"><i>출산지원</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+	            <a href="javascript:void(0);"><i>육아(돌봄)</i></a>
+	            <ul class="depth4-type02">
+	                <li>
+	                    <a href="https://www.daejeon.go.kr/djbaby/contentsHtmlView.do?menuSeq=7398" target="_blank" title="새창열림"><i>대전형 양육기본수당</i></a>
+	                </li>
+	                <li>
+	                    <a href="https://www.daejeon.go.kr/djbaby/contentsHtmlView.do?menuSeq=7401" target="_blank" title="새창열림"><i>아이건강</i></a>
+	                </li>
+	                <li>
+	                    <a href="https://www.daejeon.go.kr/djbaby/contentsHtmlView.do?menuSeq=7429" target="_blank" title="새창열림"><i>우리대전 북스타트</i></a>
+	                </li>
+	                <li>
+	                    <a href="https://www.daejeoni.or.kr/dolbom/main.do;jsessionid=42697F7D43A0371D651E041A57EFFC51" class="outlink_nav" target="_blank" title="새창열림"><i>다함께돌봄 원스톱통합지원센터</i></a>
+	                </li>
+	                <li>
+	                    <a href="https://www.daejeoni.or.kr/dolbom/instt/list.do#1" class="outlink_nav" target="_blank" title="새창열림"><i>돌봄기관 (검색부터 예약까지)</i></a>
+	                </li>
+	                <li>
+	                    <a href="https://www.daejeoni.or.kr/dolbom/map/index.do" class="outlink_nav" target="_blank" title="새창열림"><i>체험기관 (문화/놀이/역사)</i></a>
+	                </li>
+	                <li>
+	                    <a href="https://www.daejeoni.or.kr/dolbom/sos/index.do" class="outlink_nav" target="_blank" title="새창열림"><i>의료기관 (아이 위급상황 안내)</i></a>
+	                </li>
+	            </ul>
+	        </li>      
+	        <li>
+	            <a href="javascript:void(0);"><i>주거</i></a>
+	            <ul class="depth4-type02">
+	                <li>
+	                    <a href="https://www.daejeonyouthportal.kr/content/CT_000000000061/cntPage.do?commonMenuNo=79_80&dpmSectionFst=2&dpmSectionScd=9" class="outlink_nav" target="_blank" title="새창열림"><i>대전청년 월세지원</i></a>
+	                </li>
+	                <li>
+	                    <a href="https://www.daejeonyouthportal.kr/content/CT_000000000059/cntPage.do?commonMenuNo=304_305_323_329&dpmSectionFst=2&dpmSectionScd=9" class="outlink_nav" target="_blank" title="새창열림"><i>청년 주택임차보증금 이자지원</i></a>
+	                </li>
+	                <li>
+	                    <a href="https://www.daejeonyouthportal.kr/content/CT_000000000063/cntPage.do?commonMenuNo=304_305_323_329&dpmSectionFst=2&dpmSectionScd=9 www.다가온.kr" class="outlink_nav" target="_blank" title="새창열림"><i>대전형 임대주택 공급사업</i></a>
+	                </li>
+	                <li>
+	                    <a href="https://www.daejeonyouthportal.kr/content/CT_000000000060/cntPage.do?commonMenuNo=304_305_323_329&dpmSectionFst=2&dpmSectionScd=9 www.daejeonyouthhouse.co.kr" class="outlink_nav" target="_blank" title="새창열림"><i>대전 청년하우스 입주</i></a>
+	                </li>
+	                <li>
+	                    <a href="https://www.daejeonyouthportal.kr/content/CT_000000000062/cntPage.do?commonMenuNo=304_305_323_329&dpmSectionFst=2&dpmSectionScd=9" class="outlink_nav" target="_blank" title="새창열림"><i>청년 월세 한시 특별지원</i></a>
+	                </li>
+	                <li>
+	                    <a href="https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcView.do" class="outlink_nav" target="_blank" title="새창열림"><i>공공임대 주택 공급 등</i></a>
+	                </li>
+	            </ul>
+	        </li>
+	        <li>
+	            <a href="javascript:void(0);"><i>대전 인구정책 뉴스</i></a>
+	            <ul class="depth4-type02">
+	                <li>
+	                    <a href="/drh/board/boardNormalList.do?boardId=normal_1054&menuSeq=7630" target="_blank" title="새창열림"><i>만남결혼육아주거 브리핑자료</i></a>
+	                </li>
+	                <li>
+	                    <a href="/drh/administration/board/boardGalleryList.do?boardId=gallery_0031&menuSeq=7631" target="_blank" title="새창열림"><i>인구정책 카드뉴스</i></a>
+	                </li>
+	                <li>
+	                    <a href="/drh/DrhContentsHtmlView.do?menuSeq=7634" target="_blank" title="새창열림"><i>인구정책 분야별 관련부서</i></a>
+	                </li>
+	            </ul>
+	        </li>
+	        <li>
+                <ul class="link-list">
+                    <li><a href="https://kosis.kr/index/index.do" target="_blank" title="새창열림"><i>국가통계포털</i></a></li>
+                    <li><a href="https://jumin.mois.go.kr/" target="_blank" title="새창열림"><i>주민등록인구통계</i></a></li>
+                    <li><a href="https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_1054&menuSeq=7630&pageIndex=1&ntatcSeq=1514851404" target="_blank" title="새창열림"><i>생애주기별 인구정책</i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:void(0);"><i>교육 · 청년 · 일자리</i></a>
+        <ul class="depth3-type02">
+            <li>
+                <a href="javascript:void(0);"><i>교육</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=1662"><i>디지털배움터</i></a>
+                    </li>
+                    <li>
+                        <a href="/lif/index.do" target="_blank" title="새창열림"><i>여성가족원</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.dile.or.kr" target="_blank" title="새창열림"><i>대전평생교육진흥원</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.daejeon.go.kr/okr2019/index.do" class="outlink_nav" target="_blank" title="새창열림"><i>OK예약서비스</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0);"><i>청년 · 일자리</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="https://www.daejeonyouthportal.kr/index.do" target="_blank" title="새창열림"><i>미래두배 청년통장</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.daejeonyouthportal.kr/content/CT_000000000104/cntPage.do?commonMenuNo=145_146_147" target="_blank" title="새창열림"><i>대전청년네트워크</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.jobdaejeon.or.kr/djyouthgrowth" target="_blank" title="새창열림"><i>대전청년성장프로젝트</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.daejeon.go.kr/drh/jobBlogList.do?boardId=jobblog01&menuSeq=7650" target="_blank" title="새창열림"><i>채용행사</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="link-list">
+                    <li><a href="https://www.daejeonyouthportal.kr" target="_blank" title="새창열림"><i>대전청년포털</i></a></li>
+                    <li><a href="https://daejeon.work.go.kr/main.do/main.do" target="_blank" title="새창열림"><i>대전일자리지원센터</i></a></li>
+                    <li><a href="https://www.djbea.or.kr/" target="_blank" title="새창열림"><i>대전일자리경제진흥원</i></a></li>
+                    <li><a href="https://www.work.go.kr/" target="_blank" title="새창열림"><i>워크넷</i></a></li>
+                    <li><a href="https://www.d-startup.kr/" target="_blank" title="새창열림"><i>대전창업온라인</i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+	<li>
+        <a href="javascript:void(0);"><i>복지 · 보건</i></a>
+        <ul class="depth3-type02">
+            <li>
+                <a href="javascript:void(0);"><i>복지</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=1914"><i>국민기초생활</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=2123&menuSeq=1922"><i>장애인 복지(일자리)</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/board/boardNormalList.do?boardId=normal_0153&menuSeq=1921"><i>점자시정소식</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=1925"><i>어르신복지</i></a>
+                    </li>
+                    <li>
+                        <a href="http://daejeon.childcare.go.kr" target="_blank" title="새창열림"><i>대전육아종합지원센터</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=3143"><i>다자녀가정우대</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=2269"><i>다문화가족지원</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=1940"><i>사회복지관</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0);"><i>보건</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="/drh/life/NightfloatOntheDayList.do?menuSeq=1678"><i>당직의료기관</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=1686"><i>당번약국</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=1955"><i>보건소</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="link-list">
+                	<li><a href="https://www.daejeon.go.kr/djbaby/index.do" target="_blank" title="새창열림"><i>임신·출산 행복꾸러미</i></a></li>
+                    <li><a href="https://www.safe182.go.kr/index.do" target="_blank" title="새창열림"><i>실종아동/어르신찾기</i></a></li>
+                    <li><a href="/drh/DrhContentsHtmlView.do?menuSeq=5853" target="_blank" title="새창열림"><i>성인지감수성충전소</i></a></li>
+                    <li><a href="https://www.daejeon.go.kr/womendb/" target="_blank" title="새창열림"><i>대전여성인재DB</i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;"><i>예산 · 재정 · 세정</i></a>
+        <ul class="depth3-type02">
+            <li>
+                <a href="javascript:void(0);"><i>예산 · 재정</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="/bud/BudFinanceboardList.do?boardId=budboard005&menuSeq=349"><i>세입세출예산서</i></a>
+                    </li>
+                    <li>
+                        <a href="/bud/BudFinanceboardList.do?boardId=budboard011&menuSeq=353"><i>재정공시</i></a>
+                    </li>
+                    <li>
+                        <a href="/bud/BudFinanceboardList.do?boardId=budboard006&menuSeq=350"><i>결산</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0);" target="_blank" title="새창열림"><i>세정</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="/tax/TaxContentsHtmlView.do?menuSeq=4710"><i>지방세납부안내</i></a>
+                    </li>
+                    <li>
+                        <a href="/tax/TaxContentsHtmlView.do?menuSeq=4704"><i>마을세무사</i></a>
+                    </li>
+                    <li>
+                        <a href="/tax/TaxContentsHtmlView.do?menuSeq=4714"><i>구제제도</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="link-list">
+                    <li><a href="/bud/index.do" target="_blank" title="새창열림"><i>예산/재정</i></a></li>
+                    <li><a href="/tax/index.do" target="_blank" title="새창열림"><i>세정도우미</i></a></li>
+                    <li><a href="/jumin/index.do" target="_blank" title="새창열림"><i>주민참여예산</i></a></li>
+                    <li><a href="/gyeyak/index.do" target="_blank" title="새창열림"><i>계약정보</i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:void(0);"><i>도시 · 건설</i></a>
+        <ul class="depth3-type02">
+            <li>
+                <a href="javascript:;"><i>건축 · 주택</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="/urb/ContentsHtmlView.do?menuSeq=1306"><i>도시경관</i></a>
+                    </li>
+                    <li>
+                        <a href="/urb/ContentsHtmlView.do?menuSeq=1249"><i>건축 · 주택</i></a>
+                    </li>
+                    <li>
+                        <a href="/gun/index.do" target="_blank" title="새창열림" class="outlink_nav"><i>건설관리본부</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;"><i>도시</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="/urb/UrbCityPlanDisplayList.do?menuSeq=1102"><i>도시계획</i></a>
+                    </li>
+                    <li>
+                        <a href="/urb/ContentsHtmlView.do?menuSeq=6475"><i>도시재생</i></a>
+                    </li>
+                    <li>
+                        <a href="/urb/ContentsHtmlView.do?menuSeq=1170"><i>도시정비</i></a>
+                    </li>
+                    <li>
+                        <a href="/urb/ContentsHtmlView.do?tapMenuSeq=1180&menuSeq=1179"><i>택지 · 도시개발</i></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:void(0);"><i>재난 · 안전</i></a>
+        <ul class="depth3-type02">
+            <li>
+                <a href="javascript:void(0);"><i>재난 · 안전</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="/saf/SafContentsHtmlView.do?menuSeq=1278"><i>자연재난행동요령</i></a>
+                    </li>
+                    <li>
+                        <a href="/saf/SafContentsHtmlView.do?menuSeq=1279"><i>사회재난행동요령</i></a>
+                    </li>
+                    <li>
+                        <a href="/saf/SafContentsHtmlView.do?menuSeq=6851"><i>어린이안전관리제도</i></a>
+                    </li>
+                    <li>
+                        <a href="/saf/SafContentsHtmlView.do?menuSeq=6610"><i>시민안전보험</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="link-list">
+                    <li><a href="/saf/index.do" target="_blank" title="새창열림"><i>Safe대전</i></a></li>
+                    <li><a href="/dj119/index.do" target="_blank" title="새창열림"><i>소방본부</i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:void(0);"><i>교통</i></a>
+        <ul class="depth3-type02">
+            <li>
+                <a href="javascript:void(0);"><i>교통</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="http://traffic.daejeon.go.kr/map/busInfo/searchRoute.do" class="outlink_nav" target="_blank" title="새창열림"><i>버스노선</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.tashu.or.kr" target="_blank" class="outlink_nav" title="새창열림"><i>타슈 자전거</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.daejeon.go.kr/djTram/index.do" target="_blank" class="outlink_nav" title="새창열림"><i>대전트램</i></a>
+                    </li>
+                    <li>
+                        <a href="https://bus-parking.daejeon.go.kr/" target="_blank" class="outlink_nav" title="새창열림"><i>교통위반 과태료조회</i></a>
+                    </li>
+                    <li>
+                        <a href="https://carfree.daejeon.go.kr/main/index.do" target="_blank" class="outlink_nav" title="새창열림"><i>승용차요일제</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="link-list">
+                    <li><a href="http://traffic.daejeon.go.kr/" target="_blank" title="새창열림"><i>교통정보센터</i></a></li>
+                    <li><a href="https://www.djtc.kr/" target="_blank" title="새창열림"><i>대전교통공사</i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:void(0);"><i>환경</i></a>
+        <ul class="depth3-type02">
+            <li>
+                <a href="javascript:void(0);"><i>환경</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=1968"><i>환경정보</i></a>
+                    </li>
+                    <li>
+                        <a href="/hea/contentsHtmlView.do?menuSeq=4639"><i>대기정보</i></a>
+                    </li>
+                    <li>
+                        <a href="http://www.waterworks.daejeon.kr" class="outlink_nav" target="_blank" title="새창열림"><i>상수도</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=2230"><i>3대하천정보</i></a>
+                    </li>
+                    <li>
+                        <a href="/ist/index.do" target="_blank" title="새창열림"><i>곤충생태관</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="link-list">
+                    <li><a href="/hea/index.do" target="_blank" title="새창열림"><i>보건환경연구원</i></a></li>
+                    <li><a href="/drh/DrhContentsHtmlView.do?menuSeq=4858" target="_blank" title="새창열림"><i>대기오염경보 문자안내</i></a></li>
+                    <li><a href="https://www.airkorea.or.kr/" target="_blank" title="새창열림"><i>에어코리아</i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:void(0);"><i>기업 · 경제</i></a>
+        <ul class="depth3-type02">
+            <li>
+                <a href="javascript:void(0);"><i>기업</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=7896"><i>중소기업지원</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=5640"><i>지역 기술개발제품</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=7244"><i>기업애로 온라인 접수창구</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=6864"><i>중소기업제품 공공구매제도</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0);"><i>경제</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="/drh/board/boardNormalList.do?boardId=normal_1007&menuSeq=3304"><i>물가정보</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/board/boardNormalList.do?boardId=normal_0187&menuSeq=1618"><i>경제지표</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=1609"><i>대전부동산정보조회</i></a>
+                    </li>
+                    <li>
+                        <a href="/cons/index.do" target="_blank" title="새창열림"><i>소비생활센터</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=1837"><i>농수산물정보</i></a>
+                    </li>
+                    <li>
+                        <a href="http://www.daejeon.go.kr/ohj/index.do" class="outlink_nav" target="_blank" title="새창열림"><i>오정농수산물도매시장</i></a>
+                    </li>
+                    <li>
+                        <a href="http://www.daejeon.go.kr/noe/index.do" class="outlink_nav" target="_blank" title="새창열림"><i>노은농수산물도매시장</i></a>
+                    </li>
+					<li>
+                        <a href="/sta/index.do" target="_blank" title="새창열림"><i>대전통계</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="link-list">
+                    <li><a href="https://www.djbea.or.kr" target="_blank" title="새창열림"><i>대전일자리경제진흥원</i></a></li>
+                    <li><a href="https://www.semas.or.kr/" target="_blank" title="새창열림"><i>소상공인시장진흥공단</i></a></li>
+                    <li><a href="https://www.dips.or.kr/" target="_blank" title="새창열림"><i>대전기업정보포털</i></a></li>
+                    <li><a href="https://djtb.kr/sstCtyDaejeon.do" target="_blank" title="새창열림"><i>대전실증플랫폼</i></a></li>
+                    <li><a href="https://www.investkorea.org/dj-kr/index.do" target="_blank" title="새창열림"><i>외국인 투자유치</i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:void(0);"><i>문화 · 체육</i></a>
+        <ul class="depth3-type02">
+            <li>
+                <a href="javascript:void(0);"><i>문화</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="https://daejeon.go.kr/djac/index.do" class="outlink_nav" target="_blank" title="새창열림"><i>대전예술의전당</i></a>
+                    </li>
+                    <li>
+                        <a href="https://daejeon.go.kr/kmusic/index.do" class="outlink_nav" target="_blank" title="새창열림"><i>대전시립연정국악원</i></a>
+                    </li>
+                    <li>
+                        <a href="https://daejeon.go.kr/dma/index.do" class="outlink_nav" target="_blank" title="새창열림"><i>대전시립미술관</i></a>
+                    </li>
+                    <li>
+                        <a href="https://daejeon.go.kr/his/index.do" class="outlink_nav" target="_blank" title="새창열림"><i>대전시립박물관</i></a>
+                    </li>
+                    <li>
+                        <a href="https://daejeon.go.kr/pre/index.do" class="outlink_nav" target="_blank" title="새창열림"><i>대전선사박물관</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.daejeon.go.kr/hanbatlibrary/index.do" class="outlink_nav" target="_blank" title="새창열림"><i>한밭도서관</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0);"><i>체육</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=2493"><i>공공체육시설</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/board/boardNormalList.do?boardId=normal_1046&menuSeq=1703"><i>동네체육시설</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="link-list">
+                    <li><a href="https://www.daejeon.go.kr/fvu/index.do" class="outlink_nav" target="_blank" title="새창열림"><i>문화행사</i></a></li>
+                    <li><a href="/drh/DrhContentsHtmlView.do?menuSeq=7206" class="outlink_nav" target="_blank" title="새창열림"><i>반려동물 관련 시설</i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:void(0);"><i>관광</i></a>
+        <ul class="depth3-type02">
+            <li>
+                <a href="javascript:void(0);"><i>관광</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="https://daejeontour.co.kr/guide_book_djt" class="outlink_nav" target="_blank" title="새창열림"><i>관광명소지도</i></a>
+                    </li>
+                    <li>
+                        <a href="https://daejeontour.co.kr/festival_djt" class="outlink_nav" target="_blank" title="새창열림"><i>대표축제</i></a>
+                    </li>
+                    <li>
+                        <a href="https://daejeontour.co.kr/recommend_djt" class="outlink_nav" target="_blank" title="새창열림"><i>추천관광코스</i></a>
+                    </li>
+                    <li>
+                        <a href="https://daejeontour.co.kr/tourism_djt" class="outlink_nav" target="_blank" title="새창열림"><i>관광자료신청</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.oworld.kr/" class="outlink_nav" target="_blank" title="새창열림"><i>오월드(대전동물원)</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.daejeon.go.kr/gar/index.do" class="outlink_nav" target="_blank" title="새창열림"><i>한밭수목원</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="link-list">
+                    <li><a href="https://daejeontour.co.kr" target="_blank" title="새창열림"><i>대전관광</i></a></li>
+					<li><a href="/fod/index.do" target="_blank" title="새창열림"><i>대전의맛</i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:void(0);"><i>행정</i></a>
+        <ul class="depth3-type02">
+            <li>
+                <a href="javascript:void(0);"><i>행정</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=1648"><i>자치법규</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/DrhContentsHtmlView.do?menuSeq=1891"><i>규제개혁</i></a>
+                    </li>
+                    <li>
+                        <a href="/drh/board/boardNormalList.do?boardId=normal_0214&menuSeq=2660"><i>행정정보목록</i></a>
+                    </li>
+                    <li>
+                        <a href="/ada/index.do" class="outlink_nav" target="_blank" title="새창열림"><i>행정자료실</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="link-list">
+                    <li><a href="https://daejeon.go.kr/mayor/index.do" target="_blank" title="새창열림"><i>열린시장실</i></a></li>
+                    <li><a href="/drh/DrhContentsHtmlView.do?menuSeq=1848" target="_blank" title="새창열림"><i>시청안내</i></a></li>
+                    <li><a href="/drh/drhOrganization.do?menuSeq=6376" target="_blank" title="새창열림"><i>조직 · 업무안내</i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:void(0);"><i>과학</i></a>
+        <ul class="depth3-type02">
+            <li>
+                <a href="javascript:void(0);"><i>과학</i></a>
+                <ul class="depth4-type02">
+                    <li>
+                        <a href="https://www.innopolis.or.kr/inno" class="outlink_nav" target="_blank" title="새창열림"><i>대덕연구개발특구</i></a>
+                    </li>
+                    <li>
+                        <a href="https://dst.daejeon.go.kr/kr/" class="outlink_nav" target="_blank" title="새창열림"><i>대전사이언스투어</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.djtp.or.kr/" class="outlink_nav" target="_blank" title="새창열림"><i>대덕테크노파크</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.museum.go.kr/site/main/home" class="outlink_nav" target="_blank" title="새창열림"><i>국립중앙과학관</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="link-list">
+                    <li><a href="https://www.innopolis.or.kr/innoSchedule?menuId=MENU01058&viewType=1" target="_blank" title="새창열림"><i>연구개발특구 행사정보</i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul></div>
+						</li>
+					</ul>
+				</nav>
+				<a href="javascript:;" class="menu-close hidePc"><i>닫기</i></a>
+             </div>
+		</div>
+		 <!-- //gnb -->
+         <!-- 모바일 검색 -->
+         <a href="javascript:;" class="sub-srh-btn"><i>통합검색</i></a>
+         <!-- //모바일 검색 -->
+         <a href="#menu" class="menu-btn"><i>메뉴</i></a>
+	</div>
+</header><!-- //hader -->
+		<section class="wrap-container">
+					
+			<!-- leftmenu -->
+			<script>
+$(window).ready(function(){
+	switch('1442') {
+		case '1438':
+			$(".wrap-container").addClass('ver-01');
+			break;
+		case '1439':
+			$(".wrap-container").addClass('ver-02');
+			break; 
+		case '1440':
+			$(".wrap-container").addClass('ver-03');
+			break;
+		case '1442':
+			$(".wrap-container").addClass('ver-04');
+			break;	
+		case '1441':
+			$(".wrap-container").addClass('ver-05');
+			break;
+		case '1443':
+			$(".wrap-container").addClass('ver-06');
+			break;
+		case '1444':
+			$(".wrap-container").addClass('ver-07');
+			break;
+		default:
+			$(".wrap-container").addClass('ver-08');
+			break;
+	}
+});
+
+//검색
+function indexSearch(){
+	var searchWord = $("#mainSearch").val();
+	var category = "통합검색";
+	if(searchWord == ""){
+		alert("검색어를 입력하십시오.");
+		$("#mainSearch").focus();
+		return;
+	}
+	//document.getElementById("mainSearchEngine").action = "http://search.daejeon.go.kr/RSA/front/Search.jsp" ;
+	$("#mainSearchEngine").submit();
+}
+
+// 검색어 저장
+function searchHis(){
+	var searchWord = $("#mainSearch").val();
+	var category = "통합검색";
+	//document.getElementById("mainSearchEngine").action = "http://search.daejeon.go.kr/RSA/front/Search.jsp" ;
+
+	$.ajax({
+		url:'/drh/totalSearch.do',
+		type: "post",
+		data: {"totalSearch_keyword" : searchWord,
+			"totalSearch_category" : category},
+		dataType: 'json',
+		async:false,
+		success:function(data, status){
+			return false;
+		},
+		error: function(request, status, opt){
+			alert("서버와의 연결에 실패했습니다. Error Code ["+status+"]");
+			return false;
+		}
+	});
+}
+</script>
+
+<!-- 검색영역 -->
+<div class="wrap-srh">
+	<!-- 전체 검색 -->
+	<div id="srh-total" class="srh-total-sub">
+		<form id="mainSearchEngine" target="_blank" action="https://search.daejeon.go.kr/RSA/front/Search.jsp" onsubmit="searchHis()">
+        	<input type="hidden" id="mainSearchMenuPc" name="menu" value="통합검색"/>
+        	<input type="hidden" id="" name="" value=""/>
+            <input type="text" id="mainSearch" name="qt" placeholder="검색어를 입력하세요" title="검색어입력">
+            <button type="button" onclick="indexSearch()" title="새창으로 이동" class="srh-button"><i>검색</i></button>
+        </form>
+	</div>
+	 <!-- //전체 검색 -->
+</div>
+<!-- //검색영역 -->
+
+<div class="wrap-remote">
+	<h2 class="remote-tit"><i>
+	<!-- 메뉴가 새창이면 새로운 메뉴 Level 구조로 변경 1442 -->
+			행정정보<!-- </h1> -->
+	</i></h2>
+	<nav class="wrap-lnb">
+		<ul class="lnb">
+			<li class="is-current is-on"><a
+						href="/drh/board/boardNormalList.do?boardId=normal_0096&menuSeq=1631"
+						>시정뉴스</a>
+
+						<ul class="depth2 dep2">
+												
+												<li class="is-current is-on" >
+															<a href="/drh/board/boardNormalList.do?boardId=normal_0096&amp;menuSeq=1631" class="is-current is-on" >시정소식</a>
+														</li>
+													<li  >
+															<a href="/drh/board/boardNormalList.do?boardId=normal_0124&amp;menuSeq=1639"  >보도해명자료</a>
+														</li>
+													<li  >
+															<a href="/drh/board/boardNormalList.do?boardId=normal_1029&amp;menuSeq=5056"  >달라지는 대전생활</a>
+														</li>
+													<li  >
+															<a href="/drh/board/boardNormalList.do?boardId=normal_0189&menuSeq=1632"  >보도자료</a>
+														</li>
+													<li  >
+															<a href="/fvu/index.do" target="_blank" title="새창으로 이동" >행사안내</a>
+														</li>
+													<li  >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=7176"  >입찰정보</a>
+														</li>
+													<li  >
+															<a href="/drh/board/boardNormalList.do?boardId=normal_0123&amp;menuSeq=1638"  >타기관소식</a>
+														</li>
+													<li  >
+															<a href="/drh/board/boardNormalList.do?boardId=normal_1028&amp;menuSeq=6622"  >주요업무계획</a>
+														</li>
+													</ul>
+										</li>
+				<li ><a
+						href="/drh/drhRegulationsList.do?menuSeq=1660"
+						>시정자료실</a>
+
+						<ul class="depth2 dep2">
+												
+												<li  >
+															<a href="/drh/drhRegulationsList.do?menuSeq=1660"  >공보(고시공고)</a>
+														</li>
+													<li  >
+															<a href="/ada/index.do" target="_blank" title="새창으로 이동" >행정자료실</a>
+														</li>
+													<li  >
+															<a href="/drh/board/boardNormalList.do?boardId=pla_0005&amp;menuSeq=6869"  >학술용역 활용상황</a>
+														</li>
+													<li  >
+															<a href="/drh/board/boardNormalList.do?boardId=normal_1024&amp;menuSeq=6360"  >시민의식조사</a>
+														</li>
+													</ul>
+										</li>
+				<li ><a
+						href="/drh/administration/board/boardGalleryList.do?boardId=gallery_0031&menuSeq=7631"
+						>인구정책</a>
+
+						<ul class="depth2 dep2">
+												
+												<li  >
+															<a href="/drh/administration/board/boardGalleryList.do?boardId=gallery_0031&amp;menuSeq=7631"  >인구정책 카드뉴스</a>
+														</li>
+													<li  >
+															<a href="/drh/board/boardNormalList.do?boardId=normal_1054&amp;menuSeq=7630"  >만남결혼육아주거 브리핑자료 모음</a>
+														</li>
+													<li  >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=7634"  >인구정책 분야별 관련부서</a>
+														</li>
+													</ul>
+										</li>
+				<li ><a
+						href="/drh/DrhContentsHtmlView.do?menuSeq=6666"
+						>청년정책</a>
+
+						<ul class="depth2 dep2">
+												
+												<li  >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=6666"  >대전청년내일재단</a>
+														</li>
+													<li  >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=7633"  >만남</a>
+														</li>
+													</ul>
+										</li>
+				<li ><a
+						href="/drh/DrhContentsHtmlView.do?menuSeq=1876"
+						>법무행정정보</a>
+
+						<ul class="depth2 dep2">
+												
+												<li  >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1876"  >행정심판</a>
+														</li>
+													<li  >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1880"  >소청심사</a>
+														</li>
+													<li  >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1883"  >소송</a>
+														</li>
+													<li  >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1654"  >대법원판례</a>
+														</li>
+													<li  >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1886"  >행정절차제도</a>
+														</li>
+													<li  >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1648"  >자치법규</a>
+														</li>
+													<li  >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=1655"  >법령해석사례</a>
+														</li>
+													<li  >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=6576"  >법령</a>
+														</li>
+													<li  >
+															<a href="/drh/DrhContentsHtmlView.do?menuSeq=6452"  >지방세 납세자보호관</a>
+														</li>
+													</ul>
+										</li>
+				<li ><a
+						href="/bud/index.do"
+						target="_blank" title="새창으로 이동">예산/재정</a>
+
+						<ul class="depth2 dep2">
+												
+												<li  >
+															<a href="/bud/BudFinanceboardList.do?boardId=budboard005&menuSeq=349" target="_blank" title="새창으로 이동" >세입세출예산서</a>
+														</li>
+													<li  >
+															<a href="/bud/BudFinanceboardList.do?boardId=budboard006&menuSeq=350" target="_blank" title="새창으로 이동" >결산</a>
+														</li>
+													<li  >
+															<a href="/bud/BudContentsHtmlView.do?menuSeq=7338" target="_blank" title="새창으로 이동" >공유재산</a>
+														</li>
+													<li  >
+															<a href="/bud/BudFinanceboardList.do?boardId=budboard011&menuSeq=353" target="_blank" title="새창으로 이동" >재정공시</a>
+														</li>
+													<li  >
+															<a href="/bud/BudContentsHtmlView.do?menuSeq=354" target="_blank" title="새창으로 이동" >주민참여예산제</a>
+														</li>
+													</ul>
+										</li>
+				<li ><a
+						href="/urb/index.do"
+						target="_blank" title="새창으로 이동">도시주택정보</a>
+
+						<ul class="depth2 dep2">
+												
+												<li  >
+															<a href="/urb/UrbCityPlanDisplayList.do?menuSeq=1102" target="_blank" title="새창으로 이동" >도시계획</a>
+														</li>
+													<li  >
+															<a href="/urb/ContentsHtmlView.do?menuSeq=1170" target="_blank" title="새창으로 이동" >도시정비</a>
+														</li>
+													<li  >
+															<a href="/urb/ContentsHtmlView.do?tapMenuSeq=1180&menuSeq=1179" target="_blank" title="새창으로 이동" >택지·도시개발</a>
+														</li>
+													<li  >
+															<a href="/urb/ContentsHtmlView.do?menuSeq=1306" target="_blank" title="새창으로 이동" >도시경관</a>
+														</li>
+													<li  >
+															<a href="/urb/ContentsHtmlView.do?menuSeq=1350" target="_blank" title="새창으로 이동" >토지정책</a>
+														</li>
+													<li  >
+															<a href="/urb/ContentsHtmlView.do?menuSeq=7836"  >전세피해</a>
+														</li>
+													<li  >
+															<a href="/urb/ContentsHtmlView.do?menuSeq=6475" target="_blank" title="새창으로 이동" >도시재생</a>
+														</li>
+													<li  >
+															<a href="/urb/ContentsHtmlView.do?menuSeq=1249" target="_blank" title="새창으로 이동" >건축·주택</a>
+														</li>
+													</ul>
+										</li>
+				<li ><a
+						href="/drh/MediaList.do?menuSeq=2558"
+						>대전소식모아보기</a>
+
+						<ul class="depth2 dep2">
+												
+												<li  >
+															<a href="/drh/MediaList.do?notiType=NOTI_01&amp;menuSeq=2559"  >공지사항</a>
+														</li>
+													<li  >
+															<a href="/drh/MediaList.do?notiType=NOTI_02&amp;menuSeq=2560"  >보도자료</a>
+														</li>
+													<li  >
+															<a href="/drh/MediaList.do?notiType=NOTI_03&amp;menuSeq=2561"  >문화행사</a>
+														</li>
+													<li  >
+															<a href="/drh/MediaList.do?notiType=NOTI_04&amp;menuSeq=2562"  >입법예고</a>
+														</li>
+													<li  >
+															<a href="/drh/MediaList.do?notiType=NOTI_05&amp;menuSeq=2563"  >타기관 채용정보</a>
+														</li>
+													<li  >
+															<a href="/drh/MediaList.do?notiType=NOTI_06&amp;menuSeq=2564"  >고시공고</a>
+														</li>
+													<li  >
+															<a href="/drh/MediaList.do?notiType=NOTI_07&amp;menuSeq=2565"  >입찰정보</a>
+														</li>
+													</ul>
+										</li>
+				<li ><a
+						href="/ins/index.do?menuSeq=1034"
+						target="_blank" title="새창으로 이동">감사행정</a>
+
+						<ul class="depth2 dep2">
+												
+												<li  >
+															<a href="/drh/depart/board/boardNormalList.do?boardId=ins_0002&menuSeq=1042" target="_blank" title="새창으로 이동" >감사결과</a>
+														</li>
+													<li  >
+															<a href="/drh/depart/board/boardNormalList.do?boardId=ins_0004&menuSeq=1058" target="_blank" title="새창으로 이동" >감사(청렴)자료실</a>
+														</li>
+													<li  >
+															<a href="/ins/InsContentsHtmlView.do?menuSeq=4597" target="_blank" title="새창으로 이동" >사전 컨설팅감사</a>
+														</li>
+													<li  >
+															<a href="/drh/depart/board/boardNormalList.do?boardId=ins_0003&menuSeq=1057" target="_blank" title="새창으로 이동" >감사정보</a>
+														</li>
+													<li  >
+															<a href="/ins/InsContentsHtmlView.do?menuSeq=6389" target="_blank" title="새창으로 이동" >적극행정 면책제도</a>
+														</li>
+													</ul>
+										</li>
+				<li ><a
+						href="https://www.daejeon.go.kr/djpol/index.do"
+						target="_blank" title="새창으로 이동">자치경찰위원회</a>
+
+						<ul class="depth2 dep2">
+												
+												<li  >
+															<a href="https://www.daejeon.go.kr/djpol/contentView.do?menuSeq=6890" target="_blank" title="새창으로 이동" >위원회소개</a>
+														</li>
+													<li  >
+															<a href="https://www.daejeon.go.kr/djpol/contentView.do?menuSeq=6895" target="_blank" title="새창으로 이동" >정책마당</a>
+														</li>
+													<li  >
+															<a href="https://www.daejeon.go.kr/djpol/depart/normalBoardList.do?boardId=pol_0003&menuSeq=6901" target="_blank" title="새창으로 이동" >회의마당</a>
+														</li>
+													<li  >
+															<a href="https://www.daejeon.go.kr/djpol/contentView.do?menuSeq=6903" target="_blank" title="새창으로 이동" >참여마당</a>
+														</li>
+													<li  >
+															<a href="https://www.daejeon.go.kr/djpol/depart/normalBoardList.do?boardId=djPol_0009&menuSeq=6907" target="_blank" title="새창으로 이동" >알림마당</a>
+														</li>
+													</ul>
+										</li>
+				</ul>
+	</nav>		
+</div><!-- //leftmenu --> 
+			
+			<section id="wrap-content" class="wrap-content">
+				<!-- 컨텐츠 Header -->
+				<div class="cont-head">
+					<!-- 현재페이지 경로정보 -->
+					<!-- page share -->
+<div class="page-share">
+	<a href="javascript:void(0)" onclick="javascript:facebook();return false;" title="대전광역시 페이스북 새 창으로 이동" class="share-ico-01"><i>페이스북</i></a>
+	<a href="javascript:void(0)" onclick="javascript:twitter('[대전광역시] 시정소식')" title="대전광역시 엑스 새 창으로 이동" class="share-ico-02"><i>엑스</i></a>
+	<a href="javascript:void(0)" onclick="window.open('/common/print.do', 'print', 'width=1034, height=500, scrollbars=1');return false;" target="_blank" title="새창으로 이동" class="share-ico-03"><i>인쇄</i></a>
+	<a href="javascript:void(0)" title="새창으로 이동" target="_blank" onclick="bookmarks('/drh/board/boardNormalView.do?boardId=normal_0096&amp;amp;menuSeq=1631&amp;amp;ntatcSeq=1521961064','');return false;" class="share-ico-04"><i>페이지 저장</i></a>
+</div>
+<!-- //page share -->
+
+<h3 class="cont-tit"><i id="ckSubNm"></i></h3>
+<!-- 현재페이지 경로정보 -->
+<div class="breadcrumb">
+	<a href="javascript:void(0)" class="home"><i>메인</i></a>
+	<a href="/drh/board/boardNormalList.do?boardId=normal_0096&menuSeq=1631" ><i>행정정보</i></a>
+				<a href="/drh/board/boardNormalList.do?boardId=normal_0096&menuSeq=1631" ><i>시정뉴스</i></a>
+				<a href="/drh/board/boardNormalList.do?boardId=normal_0096&amp;menuSeq=1631" class="is-current"><i>시정소식</i></a>
+						</div>
+<!-- //현재페이지 경로정보 -->
+<script type="text/javascript"> 
+		$(document).ready(function() {
+			if("시정소식"==''){
+			$("#ckSubNm").text("시정소식");
+			}else{
+			$("#ckSubNm").text("시정소식");
+			}
+		});
+</script><!-- //현재페이지 경로정보 -->
+				</div>
+				<!-- //컨텐츠 Header -->
+				<article id="cont-body">
+					<!-- content_body -->
+					<script>
+var delta = 300;
+var timerResize = null;
+$(document).ready(function(e) {
+	mobToggle ();
+});
+	
+var cacheWidth = $(window).width();
+$(window).resize(function(){
+	var newWidth = $(window).width();
+	if(newWidth !== cacheWidth){
+	//do
+		clearTimeout(timerResize);
+		timerResize = setTimeout(resizeDone, delta);
+		function resizeDone(){
+			mobToggle ();
+			clearTimeout(timerResize);
+	// 		location.reload();
+		}
+	}
+});
+
+$(window).ready(function(){
+	$(".toggle_m").click(function(){
+		$(this).toggleClass("ov");
+		$(".teb2").slideToggle(400);	
+		return false;	
+	});
+});
+
+function mobToggle (){
+	if($(window).width()<768){
+		if($(".toggle_m").is(":hidden")){
+//				$(".teb2").show();	
+			$(".teb2").hide();
+		} else {
+			$(".toggle_m").removeClass("ov");
+			$(".teb2").hide();
+		}
+		/* 
+		$(".toggle_m").click(function(){
+			alert("?");
+			$(this).toggleClass("ov");
+			$(".teb2").slideToggle(400);	
+			return false;	
+		});
+		 */
+		var tebChkYn = $("ul.teb2 li:gt(0) a.on").text();
+// 			alert(tebChkYn);
+		if(tebChkYn==''){
+			$(".toggle_m").text($("ul.teb2 li:eq(0)").text());
+		}else{
+			$(".depth2_tab a:eq(0)").text(tebChkYn);
+		}
+	}else{
+		$(".teb2").show();
+	}
+}
+
+</script>
+<script type="text/javascript" src="/js/drh/layout/jquery.easing.1.3.min.js"></script>
+<!-- <script type="text/javascript" src="https://v2.ttalk.co.kr/js/jquery.ttalk.min.js"></script> -->
+<!-- <script type="text/javascript" src="https://v2.ttalk.co.kr/js/init.ttalk.min.js"></script> -->
+<link rel="stylesheet" type="text/css" href="/css/drh/layout/charge.css?1790331480813" media="all" />
+
+<!-- table_set -->
+<script type="text/javascript">
+$(document).ready(function(e) {
+        
+  if('' == 'Y' && 'normal_0096' == 'normal_0167'){
+		$("body").html("");
+		window.location.replace("https://www.daejeon.go.kr/");
+		//location.href="/";
+		//return false;
+    }
+}); 	
+</script>
+
+
+<!-- 공지형 게시판 view -->
+<div id="new_bbs">
+			<div class="board_view">
+				<ul>
+					<li class="title">
+						<span class="subject">제목</span><span class="txt">대전광역시 반려동물 동반 출입 음식점 등록 현황(2026. 9. 7.)</span>
+					</li>
+		      		<li class="person"> 
+						<span class="subject">담당부서</span><span class="txt">식의약안전과</span>
+		      		</li>
+					<li class="date">
+						<span class="subject">문의처</span><span class="txt">&nbsp;0422704881</span>
+					</li>
+	      			<li class="person3">
+	      				<span class="subject">작성자</span><span class="txt">식의약안전과</span>
+	      			</li>
+					<li class="data3">
+						<span class="subject">작성일</span><span class="txt">2026-09-07</span>
+					</li>
+					<li class="view3">
+						<span class="subject">조회수</span><span class="txt">169</span>
+					</li>
+					<li class="txt none">
+							<span class="subject">첨부파일</span><span class="txt">
+		        
+								<a href="javascript:fileDownLoad('FileUpload/CommonBoard/normal_0096/20260907042604162.xlsx', '반려동물 동반출입 등록 현황20260907.xlsx');" title="대전광역시 반려동물 동반 출입 음식점 등록 현황(2026. 9. 7.) 첨부파일 다운로드" style="width:auto;">
+										반려동물 동반출입 등록 현황20260907.xlsx(15.1KB)
+									</a>&nbsp;
+									<a href="javascript:fileDownLoad('FileUpload/CommonBoard/normal_0096/20260907042604162.xlsx', '반려동물 동반출입 등록 현황20260907.xlsx');" title="대전광역시 반려동물 동반 출입 음식점 등록 현황(2026. 9. 7.) 첨부파일 다운로드" >
+										<img src="/images/common/btn_down.png" alt="다운받기" title="새창으로 열림" />
+									</a>
+									<a href="javascript:filePreView('482025', 'FileUpload/CommonBoard/normal_0096/20260907042604162.xlsx', '반려동물 동반출입 등록 현황20260907.xlsx');" class="bg_no" style="width:20%;">
+											<img src="/images/common/btn_preview_view.gif" alt="미리보기" title="새창으로 열림" />
+										</a>
+									<br/>
+									</span> 
+						</li>
+					</ul>
+		    
+				<div class="board_txt">
+					<p class="0" style="margin: 0px; border: 0px; padding: 0px; font-size: 13px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(102, 102, 102); line-height: 20px; font-family: 나눔고딕, Nanumgothic, 돋움, Dotum, Verdana, Arial, AppleGothic, sans-serif;"><span style="margin: 0px; border: 0px; padding: 0px; font-size: 14pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt; font-weight: bold;">□</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 14pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; font-weight: bold;">반려동물 동반 음식점 업체정보</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 14pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt; font-weight: bold;">(</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 14pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; font-weight: bold;">전국</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 14pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt; font-weight: bold;">)</span></p>
+<p class="0" style="margin: 0px; border: 0px; padding: 0px; font-size: 13px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(102, 102, 102); line-height: 20px; font-family: 나눔고딕, Nanumgothic, 돋움, Dotum, Verdana, Arial, AppleGothic, sans-serif;"><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 나눔고딕; letter-spacing: 0pt; font-weight: bold;">☞</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 나눔고딕; letter-spacing: 0pt; font-weight: bold;">click(</span><a href="https://www.foodsafetykorea.go.kr/portal/petKorea.do" style="margin: 0px; border: 0px; padding: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; text-decoration: none; color: rgb(90, 90, 90); cursor: pointer;"><u style="margin: 0px; border: 0px; padding: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">반려동물 동반 가능 업소 현황</span></u></a><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 나눔고딕; letter-spacing: 0pt; font-weight: bold;">)</span></p>
+<p class="0" style="margin: 0px; border: 0px; padding: 0px; font-size: 13px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(102, 102, 102); line-height: 20px; font-family: 나눔고딕, Nanumgothic, 돋움, Dotum, Verdana, Arial, AppleGothic, sans-serif;">&nbsp;&nbsp;</p>
+<p class="0" style="margin: 0px; border: 0px; padding: 0px; font-size: 13px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(102, 102, 102); line-height: 20px; font-family: 나눔고딕, Nanumgothic, 돋움, Dotum, Verdana, Arial, AppleGothic, sans-serif;"><span style="margin: 0px; border: 0px; padding: 0px; font-size: 14pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt;">□</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 14pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은;"><span style="margin: 0px; border: 0px; padding: 0px; font-size: 14pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-weight: bold;">관련 제도 질의응답</span></span></p>
+<p class="0" style="margin: 0px; border: 0px; padding: 0px; font-size: 13px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(102, 102, 102); line-height: 20px; font-family: 나눔고딕, Nanumgothic, 돋움, Dotum, Verdana, Arial, AppleGothic, sans-serif;"><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 나눔고딕; letter-spacing: 0pt; font-weight: bold;">☞</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 나눔고딕; letter-spacing: 0pt; font-weight: bold;">click(</span><a href="https://foodsafetykorea.go.kr/portal/board/board.do?menu_grp=MENU_NEW04&amp;menu_no=5826" style="margin: 0px; border: 0px; padding: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; text-decoration: none; color: rgb(90, 90, 90); cursor: pointer;"><u style="margin: 0px; border: 0px; padding: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 나눔고딕;">식품안전나라</span></u></a><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 나눔고딕; letter-spacing: 0pt; font-weight: bold;">)</span></p>
+<p class="0" style="margin: 0px; border: 0px; padding: 0px; font-size: 13px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(102, 102, 102); line-height: 20px; font-family: 나눔고딕, Nanumgothic, 돋움, Dotum, Verdana, Arial, AppleGothic, sans-serif;">&nbsp;</p>
+<p class="0" style="margin: 0px; border: 0px; padding: 0px; font-size: 13px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(102, 102, 102); line-height: 20px; font-family: 나눔고딕, Nanumgothic, 돋움, Dotum, Verdana, Arial, AppleGothic, sans-serif;"><span style="margin: 0px; border: 0px; padding: 0px; font-size: 14pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt; font-weight: bold;">□</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 14pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; font-weight: bold;">반려동물 동반 출입 음식점 운영 및 등록 문의</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 14pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt; font-weight: bold;">(</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 14pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; font-weight: bold;">관할 구청 위생과</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 14pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt; font-weight: bold;">)</span></p>
+<p class="0" style="margin: 0px; border: 0px; padding: 0px; font-size: 13px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(102, 102, 102); line-height: 20px; font-family: 나눔고딕, Nanumgothic, 돋움, Dotum, Verdana, Arial, AppleGothic, sans-serif;"><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt;">-</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은;">동&nbsp; 구</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt;">: 251-4663</span></p>
+<p class="0" style="margin: 0px; border: 0px; padding: 0px; font-size: 13px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(102, 102, 102); line-height: 20px; font-family: 나눔고딕, Nanumgothic, 돋움, Dotum, Verdana, Arial, AppleGothic, sans-serif;"><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt;">-</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은;">중&nbsp; 구</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt;">: 606-7334</span></p>
+<p class="0" style="margin: 0px; border: 0px; padding: 0px; font-size: 13px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(102, 102, 102); line-height: 20px; font-family: 나눔고딕, Nanumgothic, 돋움, Dotum, Verdana, Arial, AppleGothic, sans-serif;"><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt;">-</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은;">서&nbsp; 구</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt;">: 288-3333</span></p>
+<p class="0" style="margin: 0px; border: 0px; padding: 0px; font-size: 13px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(102, 102, 102); line-height: 20px; font-family: 나눔고딕, Nanumgothic, 돋움, Dotum, Verdana, Arial, AppleGothic, sans-serif;"><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt;">-</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은;">유성구</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt;">: 611-2418</span></p>
+<p style="margin: 0px; border: 0px; padding: 0px; font-size: 13px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(102, 102, 102); line-height: 20px; font-family: 나눔고딕, Nanumgothic, 돋움, Dotum, Verdana, Arial, AppleGothic, sans-serif;"><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt;">-</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은;">대덕구</span><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt;">: 608-6892</span></p>
+<p style="margin: 0px; border: 0px; padding: 0px; font-size: 13px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(102, 102, 102); line-height: 20px; font-family: 나눔고딕, Nanumgothic, 돋움, Dotum, Verdana, Arial, AppleGothic, sans-serif;"><span style="margin: 0px; border: 0px; padding: 0px; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 맑은; letter-spacing: 0pt;"><br></span></p>
+<p style="margin: 0px; border: 0px; padding: 0px; font-size: 13px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(102, 102, 102); line-height: 20px; font-family: 나눔고딕, Nanumgothic, 돋움, Dotum, Verdana, Arial, AppleGothic, sans-serif;"><img src="https://www.daejeon.go.kr/plugins/crosseditor4/binary/images/000456/20260518164450733_170NK622.jpg" alt="(식품의약품안전처, 국민 안심이 기준입니다) 반려동물 동반 출입 음식점 반려인도 준비사항이 있어요! (WELCOME 반려동물 출입가능업소) &#9312;예방접종은 기본 반려동물 동반출입 음식점 출입 시 예방접종 증명서 또는 사진 등 증빙자료를 보여주세요! &#9313;'반려동물 동반출입 음식점' 안내문 확인 '반려동물 동반출입 음식점' 안내문을 확인 후 이용하세요! &#9314;반려동물 동반출입 음식점에 있는 동안 반려동물은 이동하면 안돼요! 반려동물 간 또는 사람 간 안전을 위해 음식점 안에서 케이지 또는 목줄 고정장치 등을 이용해 반려동물 등의 이동을 금지해야 해요! [소비자용]" style="margin: 0px; border: 0px solid rgb(0, 0, 0); padding: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; vertical-align: baseline; height: 1000px;"></p><br/>	
+				</div>
+			</div>
+			
+			<!-- 이전글, 다음글 -->
+			<ul class="prev_next_link">
+				<li class="prev"> 
+					<span class="subject">이전글</span>
+					<span class="link">
+						<a href="/drh/board/boardNormalView.do?boardId=normal_0096&amp;menuSeq=1631&amp;pageIndex=1&amp;ntatcSeq=1521905220">[접수마감]'대전 헤리티지 오픈하우스' 행사 안내 및 신청자 모집</a>		
+							</span> 
+				</li>
+				<li class="next"> 
+					<span class="subject">다음글</span> 
+					<span class="link">
+						<a href="/drh/board/boardNormalView.do?boardId=normal_0096&amp;menuSeq=1631&amp;pageIndex=1&amp;ntatcSeq=1521973742">2026 대전·세종 관광기업 팝업스토어 '대세로 와YOU' 행사 개최</a>		
+							</span>
+				</li>
+			</ul>
+			<!-- //이전글, 다음글 --> 
+		  
+			
+			<div class="board_btn"> 
+				<a href="/drh/board/boardNormalList.do?boardId=normal_0096&amp;menuSeq=1631&amp;pageIndex=&amp;categorySeq="  class="btn_type2">
+					목록
+				</a>
+			</div>
+			
+		</div>
+	<!-- //new_bbs 공지형 게시판 view -->
+
+<script type="text/javascript">
+$(function(){
+	//li 체크해서 class 임의 변경 함수
+	$(".board_view > ul > li").size();
+	
+});
+</script>
+</article>
+			</section>
+			<!-- //content -->
+			</div>
+		</section>
+	</div>
+	<!-- footer -->
+	<script type="text/javascript" src="/js/drh/layout/jquery.easing.1.3.min.js"></script>
+<!-- footer -->
+<footer class="wrap-footer">
+    <div class="footer-head">
+        <ul class="footer-nav">
+            <li><a href="https://www.daejeon.go.kr/drh/info/sitemap.do?menuSeq=1506" target="_blank" title="새창"><i>이용안내</i></a></li>
+            <li><a href="https://www.daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=2062" target="_blank" title="새창" class="privacy"><i>개인정보처리방침</i></a></li>
+            <li><a href="https://www.daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=1757" target="_blank" title="새창"><i>고정형&middot;이동형 영상정보처리기기 운영·관리 방침</i></a></li>
+            <!--<li><a href="https://www.daejeon.go.kr/drh/board/boardNormalList.do?boardId=homepage_0001&menuSeq=1507" target="_blank" title="새창"><i>누리집 개선의견</i></a></li>-->
+            <li><a href="https://www.daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=1643" target="_blank" title="새창"><i>찾아오시는 길</i></a></li>
+        </ul>
+        <div class="footer-link">
+			<a href="https://council.daejeon.go.kr/" target="_blank" title="새창" class="link-org left-first"><i>대전광역시 의회</i></a>
+            <div class="footer-org">
+                <ul class="org-site">
+                    <li>
+                        <span class="site-txt">실국누리집</span>
+                        <a href="#site" class="site-btn-more" title="클릭시 실국누리집 링크 열기"><span>실국누리집</span></a>
+                        <div class="link-box">
+                            <ul>
+								<li><a href="/off/index.do?menuSeq=1067" target="_blank" title="새창">대변인실</a></li>
+								<li><a href="/seo/Staff.do?menuSeq=6448" target="_blank" title="새창">대외협력본부</a></li>
+                                <li><a href="/pla/index.do?menuSeq=1017" target="_blank" title="새창">기획조정실</a></li>
+								<li><a href="/aii/index.do" target="_blank" title="새창">AI혁신관</a></li>
+                                <li><a href="/csf/index.do?menuSeq=3500" target="_blank" title="새창">시민안전실</a></li>
+								<li><a href="/sci/index.do?menuSeq=5678" target="_blank" title="새창">미래전략실</a></li>
+								<li><a href="/eco/index.do?menuSeq=2687" target="_blank" title="새창">민생경제국</a></li>
+								<li><a href="/cis/index.do" target="_blank" title="새창">시민사회국</a></li>
+                                <li><a href="/sel/index.do?menuSeq=990" target="_blank" title="새창">행정자치국</a></li>
+                                <li><a href="/cul/index.do?menuSeq=44" target="_blank" title="새창">문화체육관광국</a></li>
+                                <li><a href="/wel/index.do?menuSeq=177" target="_blank" title="새창">복지국</a></li>
+								<li><a href="/citz/index.do" target="_blank" title="새창">의료건강국</a></li>                                
+                                <li><a href="/env/index.do?menuSeq=2673" target="_blank" title="새창">기후환경녹지국</a></li>
+                                <li><a href="/tra/index.do?menuSeq=2699" target="_blank" title="새창">교통국</a></li>
+                                <li><a href="/tram/Staff.do?menuSeq=6001" target="_blank" title="새창">건설주택국</a></li>
+								<li><a href="/cit/index.do?menuSeq=972" target="_blank" title="새창">도시국</a></li>
+								<li><a href="/ctr/index.do" target="_blank" title="새창">도시철도건설국</a></li>
+                                <li><a href="/ins/index.do?menuSeq=1034" target="_blank" title="새창">감사위원회</a></li>
+                                <li><a href="/dj119/index.do" target="_blank" title="새창">소방본부</a></li>								
+                                <li><a href="/djpol/index.do" target="_blank" title="새창">자치경찰위원회</a></li>
+								<li><a href="/gun/index.do" target="_blank" title="새창">건설관리본부</a></li>
+                            </ul>
+                            <a href="#close">목록닫기</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="https://www.daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=1754" class="link-org"><i>대전시 관련 사이트</i></a>
+            <a href="https://www.daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=1755" class="link-org"><i>유관기관 사이트</i></a>
+        </div>
+    </div>
+    <div class="footer-body">
+        <div class="footer-info">
+			<i>대전광역시</i>
+            <p class="add">(35242) 대전광역시 서구 둔산로 100 (둔산동)</p>
+            <div class="info-list">
+                <p class="tel">콜센터 <a href="tel:042-120">042-120</a> (365일)</p>
+                <ul>
+                    <li>평일 08:00~21:00</li>
+                    <li>토·공휴일 09:00~18:00</li>
+                </ul>
+            </div>
+            <p class="copyright">(c) DAEJEON METROPOLITAN CITY. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="footer-mark">
+            <a href="https://www.kogl.or.kr/index.do" target="_blank" title="새창"><img src="/images/drh/layout/common/n_mark_01.png" alt="OPEN 공공누리"></a>
+            <a href="https://www.daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=3342"><img src="/images/drh/layout/common/n_mark_02.png" alt="과학기술정보통신부 WA(WEB접근성) 품질인증 마크, 웹와치(WebWatch) 2026.9.13 ~ 2027.9.12" title="WA 품질인증 마크, 웹와치(WebWatch) 2026.9.13 ~ 2027.9.12"></a>
+            <a href="https://www.mois.go.kr/frt/sub/popup/p_taegugki_banner/screen.do" target="_blank" title="새창"><img src="/images/drh/layout/common/n_mark_03.png" alt="국가상징 나라사랑 태극기"></a>
+        </div>
+    </div>
+</footer>
+<!-- //footer -->
+
+<!-- //layer popup -->	
+<script type="text/javascript" >
+// select layer
+$('.siteLink .depart .selected a').click(function(){
+	$(this).parent().toggleClass('on').next('.list').slideToggle('fast');
+	return false;
+});
+$('.siteLink .depart .list').click(function(){
+	$(this).hide();
+});
+
+
+//cookie(name=value) 형태
+function getCookieFull( name )
+{
+	var nameOfCookie = name + '=';
+	var x = 0;
+	while( x <= document.cookie.length ) {
+		var y = (x + nameOfCookie.length);
+		if( document.cookie.substring( x, y ) == nameOfCookie ) {		
+	        if( ( endOfCookie=document.cookie.indexOf( ';', y ) ) == -1 )
+	            endOfCookie = document.cookie.length;  
+            return unescape( document.cookie.substring( y, endOfCookie ) );  
+        }  
+        x = document.cookie.indexOf( ' ', x ) + 1;  
+        if ( x == 0 )  
+            break;  
+	}
+	return '';  
+}
+
+function closeWinLayer(name) {
+	if( document.getElementById('day_checkbox').checked ) {
+		setCookie(name,"doneLayer",parseInt(''));
+	}
+	document.getElementById('open_popup_wrap').style.display = "none";
+	$('div.layerSnb').css('top','80px');
+}
+
+	var cookiedata = document.cookie;
+	</script><!-- //footer --> 
+	</body>
+</html>

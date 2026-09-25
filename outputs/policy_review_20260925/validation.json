@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-09-25",
+  "restaurant_registrations": 69,
+  "restaurant_venues": 68,
+  "inactive_places_validated_and_test_imported": 9,
+  "active_places": 0,
+  "ddl_tables_created": 22,
+  "constraint_rejections_passed": [
+    "foreign_key_orphan",
+    "second_current_policy",
+    "unlimited_and_numeric_dog_limit",
+    "limited_without_numeric_weight",
+    "complete_month_missing_days",
+    "out_of_range_overnight_pct",
+    "reversed_schedule_interval",
+    "null_primary_key"
+  ],
+  "source_hashes_verified": true,
+  "existing_app_db_unchanged": true,
+  "original_app_db_sha256": "25cf646a0f05b9f7727967848c9d3fad797fb67e079bc565678dd8cb9f170a04",
+  "schema_sql_sha256": "5b9a91207e2311f9b12a6b875c83bdf58957e3433c226c60c11d3e998496ac1b",
+  "places_import_sha256": "952ad65a752efc5c9e17e6eb69708b80f4cbfcdd84c6edd6a3e4172dd100de65",
+  "limitations": [
+    "정규화 스키마의 전체 데이터 ETL 및 앱 어댑터 미구현",
+    "실제 업체 전화 확인·운영 승인 미실시",
+    "원본 WBS 상태 미변경"
+  ]
+}

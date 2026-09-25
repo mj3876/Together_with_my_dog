@@ -1,0 +1,27 @@
+{
+  "registrations": 69,
+  "unique_restaurant_name_address_pairs": 68,
+  "business_type_counts": {
+    "일반음식점": 50,
+    "휴게음식점": 17,
+    "제과점영업": 2
+  },
+  "district_registration_counts": {
+    "동구": 17,
+    "중구": 2,
+    "서구": 34,
+    "유성구": 14,
+    "대덕구": 2
+  },
+  "merged_source_rows": [
+    67,
+    68
+  ],
+  "missing_authority_rows": [
+    42,
+    48
+  ],
+  "reviewed_offerings": 9,
+  "inactive_import_records": 9,
+  "active_import_records": 0
+}

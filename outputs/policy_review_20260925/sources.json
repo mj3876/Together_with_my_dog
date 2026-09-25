@@ -1,0 +1,121 @@
+[
+  {
+    "url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "final_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "checked_at": "2026-09-25T10:18:09.041040+00:00",
+    "content_type": "text/html; charset=UTF-8",
+    "sha256": "b98b08808b53c8e0df1b454669ee784639474e0b3efd0cc0b9f65a8656de7877",
+    "file": "evidence/restaurant_latest.html"
+  },
+  {
+    "url": "https://www.daejeon.go.kr/FileUpload/CommonBoard/normal_0096/20260907042604162.xlsx",
+    "final_url": "https://www.daejeon.go.kr/FileUpload/CommonBoard/normal_0096/20260907042604162.xlsx",
+    "checked_at": "2026-09-25T10:18:36.472122+00:00",
+    "content_type": "application/vnd.ms-excel;charset=UTF-8",
+    "sha256": "dcdf82ec435d454de096904fb494fab0f06beb047190a1c1a92c2c7eaf111f97",
+    "file": "evidence/restaurant_xlsx.xlsx"
+  },
+  {
+    "url": "https://daejeon.go.kr/ani/AniContentsHtmlView.do?menuSeq=7367",
+    "final_url": "https://daejeon.go.kr/ani/AniContentsHtmlView.do?menuSeq=7367",
+    "checked_at": "2026-09-25T10:17:17.490626+00:00",
+    "content_type": "text/html; charset=UTF-8",
+    "sha256": "b6a9e1c4c0eb7f757878d0bbfd2a02faa002bed47073a2b18dcd9c3bf4d1bf6c",
+    "file": "evidence/park_policy.html"
+  },
+  {
+    "url": "https://www.daejeon.go.kr/ani/AniContentsHtmlView.do?menuSeq=7368",
+    "final_url": "https://www.daejeon.go.kr/ani/AniContentsHtmlView.do?menuSeq=7368",
+    "checked_at": "2026-09-25T10:18:52.862840+00:00",
+    "content_type": "text/html; charset=UTF-8",
+    "sha256": "48248b9b119ac61e87819269d162715bf4a59643ed80b0e49473ad5c8967474f",
+    "file": "evidence/park_facilities.html"
+  },
+  {
+    "url": "https://www.daejeon.go.kr/ani/AniContentsHtmlView.do?menuSeq=7369",
+    "final_url": "https://www.daejeon.go.kr/ani/AniContentsHtmlView.do?menuSeq=7369",
+    "checked_at": "2026-09-25T10:18:00.290287+00:00",
+    "content_type": "text/html; charset=UTF-8",
+    "sha256": "51e69b8bd472cdd6fd8c53cf2f9831f1b52c0c7d90837c25d67ac756c6fdfe45",
+    "file": "evidence/education.html"
+  },
+  {
+    "url": "https://www.daejeon.go.kr/ani/AniNoticeView.do?ntatcSeq=1522349952&menuSeq=3107",
+    "final_url": "https://www.daejeon.go.kr/ani/AniNoticeView.do?ntatcSeq=1522349952&menuSeq=3107",
+    "checked_at": "2026-09-25T10:19:49.037616+00:00",
+    "content_type": "text/html; charset=UTF-8",
+    "sha256": "f9f0e08b0915a684d97297c631664c27d646b23b574ea1734aafb6844e22d9de",
+    "file": "evidence/chuseok.html"
+  },
+  {
+    "url": "https://www.daejeon.go.kr/plugins/crosseditor4/binary/images/000477/20260911144149259_206WWTHZ.jpg",
+    "final_url": "https://www.daejeon.go.kr/plugins/crosseditor4/binary/images/000477/20260911144149259_206WWTHZ.jpg",
+    "checked_at": "2026-09-25T11:36:08.791267+00:00",
+    "content_type": "image/jpeg",
+    "sha256": "239cc51120c96f3be7129f716bb4323d9ce3f10691464e69cd2e3f332ea6e34f",
+    "file": "evidence/chuseok_notice.jpg"
+  },
+  {
+    "url": "https://www.daejeon.go.kr/ani/AniNoticeView.do?ntatcSeq=1518200451&menuSeq=3107",
+    "final_url": "https://www.daejeon.go.kr/ani/AniNoticeView.do?ntatcSeq=1518200451&menuSeq=3107",
+    "checked_at": "2026-09-25T10:19:51.195415+00:00",
+    "content_type": "text/html; charset=UTF-8",
+    "sha256": "04c81efaac66dfd4237f5cd1e85b1d83b9bb547a62ad2b5653c1ed64498ac4bd",
+    "file": "evidence/agility_closure.html"
+  },
+  {
+    "file": "evidence/2930677.json",
+    "sha256": "9991580b3934b1150c8c3d76e2857991e76b8cedf36ca4efb82c889dbdf28943",
+    "checked_at": "2026-09-25",
+    "source": "한국관광공사 KorPetTourService2",
+    "request": "contentId=2930677",
+    "operation": "detailPetTour2"
+  },
+  {
+    "file": "evidence/2930677_detailCommon2.json",
+    "sha256": "0ebdf07ac201efebf3c1b7bc28682683fb8698a334f93db0ff15accfa46deb84",
+    "checked_at": "2026-09-25",
+    "source": "한국관광공사 KorPetTourService2",
+    "request": "contentId=2930677",
+    "operation": "detailCommon2"
+  },
+  {
+    "file": "evidence/2930677_detailIntro2.json",
+    "sha256": "46ec6558a4e1a4fdfea68ca4802cd16ab19da8ce22971c32473cce3878dd5149",
+    "checked_at": "2026-09-25",
+    "source": "한국관광공사 KorPetTourService2",
+    "request": "contentId=2930677",
+    "operation": "detailIntro2"
+  },
+  {
+    "file": "evidence/3533154.json",
+    "sha256": "3ccca051b98a5cf6f82700e3c994ee99feb96d0d7fbae676231bc704cfc49aaa",
+    "checked_at": "2026-09-25",
+    "source": "한국관광공사 KorPetTourService2",
+    "request": "contentId=3533154",
+    "operation": "detailPetTour2"
+  },
+  {
+    "file": "evidence/3533154_detailCommon2.json",
+    "sha256": "5e7d682aba9c4bb9f29eca38f18de5637e71373b3f3a232aaf4ce57693db2b89",
+    "checked_at": "2026-09-25",
+    "source": "한국관광공사 KorPetTourService2",
+    "request": "contentId=3533154",
+    "operation": "detailCommon2"
+  },
+  {
+    "file": "evidence/3533154_detailIntro2.json",
+    "sha256": "766b449ec4399079017656616ca8d8bc1e384f2b455426527a6a99f85c173772",
+    "checked_at": "2026-09-25",
+    "source": "한국관광공사 KorPetTourService2",
+    "request": "contentId=3533154",
+    "operation": "detailIntro2"
+  },
+  {
+    "url": "https://www.airbnb.co.kr/rooms/1256582248927052245",
+    "checked_at": "2026-09-25",
+    "access": "web tool readable host listing; no local HTML archive",
+    "excerpt": "반려동물 동반 허용",
+    "summary": "호스트 빨간대문의 독채 상품. 반려견 용품과 체크인 15시·체크아웃 11시 안내. 체중·마릿수 숫자는 확인되지 않음."
+  }
+]

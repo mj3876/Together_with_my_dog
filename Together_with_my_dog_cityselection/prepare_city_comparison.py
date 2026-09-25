@@ -16,6 +16,8 @@ else:
 
 
 CANDIDATES = {
+    # 광역시 3곳은 sido 전체, 강릉·전주는 sigungu 전체. 모두 시 전체이나 행정 규모는 다르다.
+    # 여기의 행정코드는 반려동물 API areaCode와 다른 체계다(예: 대전 30 대 3).
     "대전광역시": ("30", "sido"),
     "인천광역시": ("28", "sido"),
     "부산광역시": ("26", "sido"),
@@ -23,12 +25,14 @@ CANDIDATES = {
     "전주시": ("52110", "sigungu"),
 }
 START, END = "2025-09", "2026-07"
+# 2026-08 방문자 원문은 1~15일만 존재하여 제외. 완전한 공통 11개월×5곳=55행만 분석한다.
 MONTHS = months_between(START, END, expected_count=11)
 OUTPUT = Path("data/processed/city_202509_202607")
 API_SOURCE_PERIODS = ("202509_202607", "202509_202608")
 
 
 def find_api_folder(level):
+    # 11개월 이름 폴더가 있으면 우선 선택, 없으면 12개월 수집 폴더의 보존된 원문을 사용한다.
     for period in API_SOURCE_PERIODS:
         folder = Path(f"runs/api_candidates_{level}_{period}")
         if folder.exists():
@@ -47,6 +51,9 @@ def write_csv(path, rows, fields):
 
 
 def main():
+    # 숙박 CSV: 기준연월→month(YYYY-MM), 지역명→CANDIDATES 코드/등급,
+    # '숙박방문자 비율'→overnight_pct(0~100 백분율 수치, 14.9는 14.9%).
+    # 후보 자체 행만 선택하고 전국평균 및 2026-08 행은 제외한다. 비율을 재계산하지 않는다.
     overnight, sources = {}, []
     for path in sorted(Path("data/raw").glob("*숙박방문자 비율 추이(외지인).csv")):
         raw = path.read_bytes()
@@ -89,6 +96,8 @@ def main():
         raise ValueError("다섯 시의 숙박자료 55개를 확보해야 합니다.")
 
     visits, coverage = {}, []
+    # 방문자 원문: manifest 페이지의 SHA-256을 확인한 후 parse_payload로 공통 행을 읽는다.
+    # 수집 전체가 failed여도 running만 거부한다. 각 후보·월의 날짜 완전성은 summarize_month가 재검사한다.
     for level, folder in API_FOLDERS.items():
         manifest = json.loads((folder / "manifest.json").read_text(encoding="utf-8"))
         if manifest["status"] == "running":
@@ -126,6 +135,11 @@ def main():
                 coverage.append(check)
 
     combined = []
+    # 조인 키=(행정 region_code, month). 월별 visitors(외지인 일별 지표 합계)와
+    # overnight_pct(직접 다운로드한 월별 비율)를 나란히 저장한다. 둘을 곱하지 않는다.
+    # region_monthly.csv는 결합표이며 순위표가 아니다. 수요 순위는 select_development_region에서 계산한다.
+    # visitors가 불완전하면 빈칸, visitor_coverage에 incomplete, source_audit.can_run_selection=False.
+    # visitor_source는 월 전체 페이지 목록이다. 행별 근거는 코드/유형/일자로 추가 필터링해야 한다.
     for name, (code, level) in CANDIDATES.items():
         for month in sorted(MONTHS):
             overnight_value, overnight_file = overnight[code, month]
