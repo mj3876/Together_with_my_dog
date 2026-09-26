@@ -1,0 +1,186 @@
+[
+  {
+    "id": "tour_3533154",
+    "venue_id": "tour_3533154",
+    "name": "빨간대문",
+    "offering_name": "빨간대문 독채",
+    "scope_type": "room",
+    "category": "lodging",
+    "source_url": "https://www.airbnb.co.kr/rooms/1256582248927052245",
+    "checked_at": "2026-09-25",
+    "confirmed_summary": "호스트 예약 페이지와 TourAPI에서 반려견 동반 확인. 독채 상품, 15시 입실·11시 퇴실.",
+    "review_status": "partial",
+    "pet_allowed": true,
+    "pending": [
+      "반려견 마릿수 상한",
+      "체중 상한 및 경계값",
+      "추가요금·견종 제한",
+      "방문일 예약 가능 여부"
+    ],
+    "active": false
+  },
+  {
+    "id": "park_small_outdoor",
+    "venue_id": "tour_2930677",
+    "name": "대전반려동물공원",
+    "offering_name": "중·소형견 야외놀이터",
+    "scope_type": "space",
+    "category": "activity",
+    "source_url": "https://www.daejeon.go.kr/ani/AniContentsHtmlView.do?menuSeq=7368",
+    "checked_at": "2026-09-25",
+    "confirmed_summary": "체고 40cm 미만인 반려견의 공간 이용을 공식 시설 안내에서 확인.",
+    "review_status": "partial",
+    "pet_allowed": true,
+    "pending": [
+      "보호자/일행당 허용 마릿수",
+      "체중 제한 유무",
+      "체고·견종·등록/접종을 현재 5개 입력으로 판별 불가",
+      "방문일 운영 여부"
+    ],
+    "active": false
+  },
+  {
+    "id": "park_large_outdoor",
+    "venue_id": "tour_2930677",
+    "name": "대전반려동물공원",
+    "offering_name": "대형견 야외놀이터",
+    "scope_type": "space",
+    "category": "activity",
+    "source_url": "https://www.daejeon.go.kr/ani/AniContentsHtmlView.do?menuSeq=7368",
+    "checked_at": "2026-09-25",
+    "confirmed_summary": "체고 40cm 이상인 반려견의 공간 이용을 공식 시설 안내에서 확인.",
+    "review_status": "partial",
+    "pet_allowed": true,
+    "pending": [
+      "보호자/일행당 허용 마릿수",
+      "체중 제한 유무",
+      "체고·견종·등록/접종을 현재 5개 입력으로 판별 불가",
+      "방문일 운영 여부"
+    ],
+    "active": false
+  },
+  {
+    "id": "park_indoor",
+    "venue_id": "tour_2930677",
+    "name": "대전반려동물공원",
+    "offering_name": "실내놀이터",
+    "scope_type": "space",
+    "category": "activity",
+    "source_url": "https://www.daejeon.go.kr/ani/AniContentsHtmlView.do?menuSeq=7368",
+    "checked_at": "2026-09-25",
+    "confirmed_summary": "체고 40cm 미만; 실내 매너밴드인 반려견의 공간 이용을 공식 시설 안내에서 확인.",
+    "review_status": "partial",
+    "pet_allowed": true,
+    "pending": [
+      "보호자/일행당 허용 마릿수",
+      "체중 제한 유무",
+      "체고·견종·등록/접종을 현재 5개 입력으로 판별 불가",
+      "방문일 운영 여부"
+    ],
+    "active": false
+  },
+  {
+    "id": "park_agility_park",
+    "venue_id": "tour_2930677",
+    "name": "대전반려동물공원",
+    "offering_name": "어질리티 파크",
+    "scope_type": "space",
+    "category": "activity",
+    "source_url": "https://www.daejeon.go.kr/ani/AniContentsHtmlView.do?menuSeq=7368",
+    "checked_at": "2026-09-25",
+    "confirmed_summary": "대형견만 입장; 체고 40cm 이상인 반려견의 공간 이용을 공식 시설 안내에서 확인.",
+    "review_status": "partial",
+    "pet_allowed": true,
+    "pending": [
+      "보호자/일행당 허용 마릿수",
+      "체중 제한 유무",
+      "체고·견종·등록/접종을 현재 5개 입력으로 판별 불가",
+      "방문일 운영 여부"
+    ],
+    "active": false
+  },
+  {
+    "id": "program_behavior",
+    "venue_id": "tour_2930677",
+    "name": "대전반려동물공원",
+    "offering_name": "행동교정교육",
+    "scope_type": "program",
+    "category": "activity",
+    "source_url": "https://www.daejeon.go.kr/ani/AniContentsHtmlView.do?menuSeq=7369",
+    "checked_at": "2026-09-25",
+    "confirmed_summary": "2026년 하반기 9~11월 운영 안내에 포함. OK예약 선착순 접수, 대전 시민 우선.",
+    "review_status": "partial",
+    "pet_allowed": true,
+    "pending": [
+      "현재 모집 회차·시간·잔여석",
+      "마릿수·체중/체고 조건",
+      "외지인 신청 자격",
+      "실제 반려견 참여/동반 범위",
+      "소요시간"
+    ],
+    "active": false
+  },
+  {
+    "id": "program_agility_class",
+    "venue_id": "tour_2930677",
+    "name": "대전반려동물공원",
+    "offering_name": "반려견 스포츠 체험교육",
+    "scope_type": "program",
+    "category": "activity",
+    "source_url": "https://www.daejeon.go.kr/ani/AniContentsHtmlView.do?menuSeq=7369",
+    "checked_at": "2026-09-25",
+    "confirmed_summary": "2026년 하반기 9~11월 운영 안내에 포함. OK예약 선착순 접수, 대전 시민 우선.",
+    "review_status": "partial",
+    "pet_allowed": true,
+    "pending": [
+      "현재 모집 회차·시간·잔여석",
+      "마릿수·체중/체고 조건",
+      "외지인 신청 자격",
+      "실제 반려견 참여/동반 범위",
+      "소요시간"
+    ],
+    "active": false
+  },
+  {
+    "id": "program_snack",
+    "venue_id": "tour_2930677",
+    "name": "대전반려동물공원",
+    "offering_name": "수제간식 만들기",
+    "scope_type": "program",
+    "category": "activity",
+    "source_url": "https://www.daejeon.go.kr/ani/AniContentsHtmlView.do?menuSeq=7369",
+    "checked_at": "2026-09-25",
+    "confirmed_summary": "2026년 하반기 9~11월 운영 안내에 포함. OK예약 선착순 접수, 대전 시민 우선.",
+    "review_status": "partial",
+    "pet_allowed": null,
+    "pending": [
+      "현재 모집 회차·시간·잔여석",
+      "마릿수·체중/체고 조건",
+      "외지인 신청 자격",
+      "실제 반려견 참여/동반 범위",
+      "소요시간"
+    ],
+    "active": false
+  },
+  {
+    "id": "program_socialization",
+    "venue_id": "tour_2930677",
+    "name": "대전반려동물공원",
+    "offering_name": "반려견 통합사회화",
+    "scope_type": "program",
+    "category": "activity",
+    "source_url": "https://www.daejeon.go.kr/ani/AniContentsHtmlView.do?menuSeq=7369",
+    "checked_at": "2026-09-25",
+    "confirmed_summary": "2026년 하반기 9~11월 운영 안내에 포함. OK예약 선착순 접수, 대전 시민 우선.",
+    "review_status": "partial",
+    "pet_allowed": null,
+    "pending": [
+      "현재 모집 회차·시간·잔여석",
+      "마릿수·체중/체고 조건",
+      "외지인 신청 자격",
+      "실제 반려견 참여/동반 범위",
+      "소요시간"
+    ],
+    "active": false
+  }
+]

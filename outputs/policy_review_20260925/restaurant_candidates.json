@@ -1,0 +1,2248 @@
+[
+  {
+    "venue_id": "food_2ee8d60cf53b",
+    "name": "견우재",
+    "address": "대전광역시 동구 대동천좌안5길 19(소제동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_001"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_e042844306ba",
+    "name": "그로브소제(grovesoje)",
+    "address": "대전광역시 동구 수향길 25(소제동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_002"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_a785a515c98a",
+    "name": "낮밤",
+    "address": "대전광역시 동구 동대전로131번길 8-10(1층 자양동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_003"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_0a9215789e0d",
+    "name": "노프레임커피",
+    "address": "대전광역시 동구 홍도로46번길 100(1층 용전동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_004"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_452eac02ccf8",
+    "name": "대전버거(TAEJON BURGER)",
+    "address": "대전광역시 동구 동광장로 86(1,2층 소제동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_005"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_58376e11c752",
+    "name": "레이크 뷰",
+    "address": "대전광역시 동구 회남로275번길 197-6(1층 신촌동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_006"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_d22d58d1526f",
+    "name": "롤라 Lolla",
+    "address": "대전광역시 동구 회남로275번길 123(신촌동411-1 신촌동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_007"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_0f52fe9558cd",
+    "name": "루트커피 복합터미널점",
+    "address": "대전광역시 동구 동서대로 1677(1층 102,103호 용전동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_008"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_a40e8667f6e2",
+    "name": "몽베르트",
+    "address": "대전광역시 동구 충정로 37(1층 가양동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_009"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_f66536217c43",
+    "name": "별빛이흐르는카페",
+    "address": "대전광역시 동구 동대전로110번길 176(대동, 지하1층)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_010"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_d9d44940bb22",
+    "name": "샤를몽탁",
+    "address": "대전광역시 동구 회남로 172(1층, 2층 신하동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_011"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_02ee98ccc6a9",
+    "name": "아트사이트 소제 카페",
+    "address": "대전광역시 동구 철갑3길 15(소제동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_012"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_4a651f714029",
+    "name": "엘 깜뽀 데 떼레노",
+    "address": "대전광역시 동구 대동천좌안5길 31(1,2층 소제동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_013"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_091fc58117a1",
+    "name": "코어카페 CORE CAFE",
+    "address": "대전광역시 동구 옥천로 56-1(2층 신흥동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_014"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_a6d918222240",
+    "name": "풍류 소제",
+    "address": "대전광역시 동구 수향길 31(1층 소제동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_015"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_1d7371b7deec",
+    "name": "헤레디움카페(Heredium cafe)",
+    "address": "대전광역시 동구 대전로 735(1층 인동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_016"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_48e1b3ee15c8",
+    "name": "후루룩 대전",
+    "address": "대전광역시 동구 철갑2길 16(1층 소제동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_017"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_6ec2a96fa85a",
+    "name": "원조황소삼춘네본점",
+    "address": "대전광역시 중구 대흥로157번길 35(1층 대흥동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_018"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_6265a9a36e08",
+    "name": "점선면",
+    "address": "대전광역시 중구 부용로 44(1층 부사동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_019"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_66137208ae82",
+    "name": "(주)식사 다이너 대전점",
+    "address": "대전광역시 서구 둔산로31번길 56(2층, 둔산동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_020"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_f938632ce2b6",
+    "name": "2020메이드인코리아 오푼(두잔)",
+    "address": "대전광역시 서구 도솔로388번길 28(5층, 괴정동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_021"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_5c4e21728a81",
+    "name": "when we love(웬위럽)",
+    "address": "대전광역시 서구 월평새뜸로20번길 14(1층 월평동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_022"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_b9f7c2e02cee",
+    "name": "경기미당 관저점",
+    "address": "대전광역시 서구 관저동로 85(1층 일부호 관저동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_023"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_0bbb59969388",
+    "name": "곱집사 둔산직영점",
+    "address": "대전광역시 서구 둔산중로32번길 35(1층 104,105호 둔산동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_024"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_8ee914281c67",
+    "name": "글림(gleam)",
+    "address": "대전광역시 서구 용소로40번길 39(1층 일부호 도안동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_025"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_c934b024bf22",
+    "name": "금시월",
+    "address": "대전광역시 서구 용소로46번길 11(몽펠리에 1층 일부호 도안동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_026"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_153f9a6e76c0",
+    "name": "눕시(NUPTSE)",
+    "address": "대전광역시 서구 대덕대로 129(1층 일부호 갈마동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_027"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_1669727fad1e",
+    "name": "댕라운지",
+    "address": "대전광역시 서구 대덕대로317번길 20(6층 601호 월평동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_028"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_0447c147d8da",
+    "name": "댕스파크",
+    "address": "대전광역시 서구 장안로 26-12(1층 흑석동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_029"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_4e6cc7ee933c",
+    "name": "더돈하우스",
+    "address": "대전광역시 서구 둔산남로105번길 22(둔산동,2층)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_030"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_8b8dc079850d",
+    "name": "데이오프",
+    "address": "대전광역시 서구 도안중로305번안길 59(1층 도안동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_031"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_eb6f94a7e1ef",
+    "name": "디자인온.TOOD",
+    "address": "대전광역시 서구 상보안길 105(1층 괴곡동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_032"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_986cc7e850f9",
+    "name": "라온 RAON",
+    "address": "대전광역시 서구 관저북로13번길 23-12(108,109호 관저동, 한빛빌딩)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_033"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_2e869eab5434",
+    "name": "라이커블",
+    "address": "대전광역시 서구 둔산남로200번길 24(1층 탄방동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_034"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_4204e56e27c9",
+    "name": "베르가못",
+    "address": "대전광역시 서구 도안동로31번길 19-15(1층 도안동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_035"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_0a9127cba600",
+    "name": "붕어브레드",
+    "address": "대전광역시 서구 관저북로 41(1층 일부호 관저동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_036"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_1a0034fbeb36",
+    "name": "브린(brin)",
+    "address": "대전광역시 서구 한밭대로656번길 20(1층 일부호 갈마동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_037"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_6ac94cbd7845",
+    "name": "소유토 카페",
+    "address": "대전광역시 서구 도솔로 423(1층 일부호 탄방동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_038"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_b760983ca867",
+    "name": "솜카페&뭉들이놀이터",
+    "address": "대전광역시 서구 배재로 203(1동 1층 일부호 도마동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_039"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_f6bb52b150a4",
+    "name": "스테이블",
+    "address": "대전광역시 서구 관저남로25번길 23-21(1층 관저동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_040"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_56bf27cc6d44",
+    "name": "옘(Hjem)",
+    "address": "대전광역시 서구 도솔로 457(1층 일부호 탄방동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_041"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_815e46726868",
+    "name": "왓츠인마이포카치아",
+    "address": "대전광역시 서구 용소로50번길 13(1층 일부호 도안동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_042"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_df6a38e36411",
+    "name": "이니셜 initial",
+    "address": "대전광역시 서구 도안북로118번길 73(1층 도안동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_043"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_ee77b253f22d",
+    "name": "이브리 Ivry",
+    "address": "대전광역시 서구 도안중로311번길 64(1층 도안동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_044"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_fe95068c8ebb",
+    "name": "정가네 보리굴비 솥밥정식",
+    "address": "대전광역시 서구 만년로68번길 45(1층 일부호 만년동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_045"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_b52ed14dabbb",
+    "name": "체리쉬온(cherish on)",
+    "address": "대전광역시 서구 구봉산북로7번길 52-9(1층 관저동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_046"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_a883b8397533",
+    "name": "코너델리",
+    "address": "대전광역시 서구 원도안로207번길 25-17(1층 도안동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_047"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_f5f1ab1e6c13",
+    "name": "탄탄9.2.",
+    "address": "대전광역시 서구 가장로 93(괴정동,1층)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_048"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_cb88b33d14dc",
+    "name": "탑 브릭스 배재대점",
+    "address": "대전광역시 서구 도솔6길 48(1층 도마동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_049"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_de0f6a482518",
+    "name": "티티엠(ttm)",
+    "address": "대전광역시 서구 계룡로 381(2층 일부호 갈마동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_050"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_31b9da2b9768",
+    "name": "파스톤",
+    "address": "대전광역시 서구 원도안로241번길 24-12(1층 일부호 도안동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_051"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_c728842fa125",
+    "name": "팔도커피",
+    "address": "대전광역시 서구 월평로 71(1층 일부호 월평동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_052"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_54f78a53a6e7",
+    "name": "헨크",
+    "address": "대전광역시 서구 둔산남로189번길 24(1층 둔산동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_053"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_1d8aeaec67cf",
+    "name": "가배로스터스",
+    "address": "대전광역시 유성구 어은로42번길 21-10(지상1층 어은동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_054"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_c0df55efad07",
+    "name": "그루그루",
+    "address": "대전광역시 유성구 반석로 136-28(지상1층 반석동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_055"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_3776a1513cb2",
+    "name": "까사 드 까페",
+    "address": "대전광역시 유성구 봉명서로 9(지상 1층 봉명동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_056"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_7ea30a50f6c3",
+    "name": "미들슬로우 궁동점",
+    "address": "대전광역시 유성구 농대로15번길 3(지상1층 궁동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_057"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_b1a23edd6180",
+    "name": "샌드스톤",
+    "address": "대전광역시 유성구 상대동로 52(지상1층 상대동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_058"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_4b51e7cc46b5",
+    "name": "소소림",
+    "address": "대전광역시 유성구 농대로15번길 3(지상1층 궁동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_059"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_75677b9b7a26",
+    "name": "와요커피 대전상대동점",
+    "address": "대전광역시 유성구 상대복용로29번길 9-17(113호, 상대동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_060"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_e70b477f3f95",
+    "name": "울댕카페 파쏘 북대전점",
+    "address": "대전광역시 유성구 동서대로 184-45(1동 지상1층 덕명동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_061"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_3425357d9e5f",
+    "name": "장수순대",
+    "address": "대전광역시 유성구 대정남로 16(지상1층 대정동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_062"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_8911051fc70a",
+    "name": "카페니치어은점",
+    "address": "대전광역시 유성구 농대로8번길 7(지상1층 어은동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_063"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_07e27afb5697",
+    "name": "콩월",
+    "address": "대전광역시 유성구 덕명서로2번길 19(지상1층 덕명동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_064",
+      "dj_20260907_065"
+    ],
+    "business_types": [
+      "일반음식점",
+      "제과점영업"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_e32914580352",
+    "name": "텍스트가든",
+    "address": "대전광역시 유성구 문지로 6-1(지상1층 도룡동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_066"
+    ],
+    "business_types": [
+      "제과점영업"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_b5e0f743a621",
+    "name": "퍼피스 그린",
+    "address": "대전광역시 유성구 송정길84번길 66(지상1층 송정동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_067"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_327dad29180c",
+    "name": "스틸리듬(STILL RHYTHM)",
+    "address": "대전광역시 대덕구 동서대로1754번길 23(1층 비래동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_068"
+    ],
+    "business_types": [
+      "휴게음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  },
+  {
+    "venue_id": "food_00a8895b629f",
+    "name": "캡프로젝트",
+    "address": "대전광역시 대덕구 중리로53번길 42(1층 중리동)",
+    "category": "restaurant",
+    "latitude": null,
+    "longitude": null,
+    "registration_ids": [
+      "dj_20260907_069"
+    ],
+    "business_types": [
+      "일반음식점"
+    ],
+    "checked_at": "2026-09-25",
+    "pet_allowed": true,
+    "policy_status": "partial",
+    "max_dogs": null,
+    "max_weight_kg": null,
+    "dogs_unlimited": false,
+    "weight_unlimited": false,
+    "allowed_space": null,
+    "serves_meals": null,
+    "source_url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0096&menuSeq=1631&ntatcSeq=1521961064",
+    "active": false,
+    "pending": [
+      "정확한 좌표",
+      "식사 메뉴 제공 여부",
+      "실내/테라스 등 동반 공간",
+      "마릿수·체중 및 견종 제한",
+      "영업시간·휴무·예약",
+      "영업 지속 여부"
+    ]
+  }
+]

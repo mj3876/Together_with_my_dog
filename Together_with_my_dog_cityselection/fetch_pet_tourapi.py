@@ -28,6 +28,18 @@ SOURCE_URL = "https://api.visitkorea.or.kr/"
 SERVICE_NAME = "한국관광공사_반려동물_동반여행_서비스"
 DEFAULT_AREA_CODES = ["2", "3", "6", "32", "37"]
 DEFAULT_CONTENT_TYPE_IDS = ["32", "39"]
+# [지역 선정 기준 점검 2026-09-24]
+# 실제 분석 입력: runs/pet_api_20260919_183904/raw/*.json (10개 응답).
+# areaCode는 이 서비스의 관광지역 코드(2 인천, 3 대전, 6 부산, 32 강원, 37 전북)다.
+# 방문자 API의 행정지역 코드(대전 30 등)와 직접 조인하면 안 된다.
+# contenttypeid=32는 숙박, 39는 음식점으로 분석한다. 전체 업소 수가 아닌 등록 콘텐츠 수다.
+# 목록 응답 항목: contentid 콘텐츠 ID, title 이름, addr1/addr2 기본/상세 주소,
+# areacode/sigungucode 관광지역/시군구 코드, mapx/mapy 경도/위도,
+# cat1/cat2/cat3 및 lclsSystm1/2/3 분류 코드, lDongRegnCd/lDongSignguCd 법정동 계열 코드,
+# firstimage/firstimage2 이미지, cpyrhtDivCd 저작권 구분, tel 연락처, zipcode 우편번호,
+# createdtime/modifiedtime 콘텐츠 생성/수정 시각, mlevel 지도 레벨.
+# 이 목록에는 반려견 마릿수·체중·객실별 허용 규정이 없다. 빈 문자열은 미제공 값이다.
+# header.resultCode는 응답 상태, body.totalCount/pageNo/numOfRows는 전체 건수/페이지/페이지 크기다.
 PLACE_FIELDS = [
     "content_id", "content_type_id", "title", "addr1", "addr2",
     "area_code", "sigungu_code", "mapx", "mapy", "query_area_code",
@@ -46,6 +58,10 @@ def field_value(row, *names):
 
 
 def normalise_place(row, *, query_area_code, query_content_type_id, source_file):
+    # 실제 원문 25개 필드 중 집계·추적에 필요한 9개를 뽑아 snake_case 열명으로 통일한다.
+    # query_* 2개와 source_file은 API 원문 필드가 아니라 수집기가 추가한 출처 정보다.
+    # contenttypeid가 비면 요청의 유형을 대신 쓴다. 값 검증/영업 확인/중복 제거는 하지 않는다.
+    # source_file은 해당 지역·유형 조회의 모든 페이지 목록이므로 다중 페이지일 때 행별 단일 출처는 아니다.
     return {
         "content_id": field_value(row, "content_id", "contentid"),
         "content_type_id": field_value(row, "content_type_id", "contenttypeid") or query_content_type_id,
@@ -140,6 +156,9 @@ def make_params(area_code, content_type_id, page, page_size):
 
 
 def fetch_query(client, output, query_number, area_code, content_type_id, page_size, manifest):
+    # 원문 저장: --output/raw/qNN_pNNNN.json 또는 .xml. 파일명의 q번호는 조회 순서다.
+    # 어느 지역·업종인지는 manifest.queries와 pages.request로 확인한다.
+    # 응답 전체 건수만큼 페이지를 받은 뒤 normalise_place()로 places.csv용 행을 만든다.
     all_rows = []
     page = 1
     total_count = None

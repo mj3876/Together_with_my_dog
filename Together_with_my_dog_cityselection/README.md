@@ -1,6 +1,6 @@
 # 우리 개와 끝까지 함께 — 대전 반려견 여행 서비스
 
-> 지역 선정·분석 코드 6개와 이 문서는 `Together_with_my_dog_cityselection/`에 있습니다. 아래 명령은 모두 상위 저장소 루트 `Together_with_my_dog/`에서 실행합니다. 서비스 소스와 `.secrets/`, `data/`, `runs/`는 저장소 루트 기준입니다.
+> 지역 선정·분석 코드 7개와 이 문서는 `Together_with_my_dog_cityselection/`에 있습니다. 아래 명령은 모두 상위 저장소 루트 `Together_with_my_dog/`에서 실행합니다. 서비스 소스와 `.secrets/`, `data/`, `runs/`는 저장소 루트 기준입니다.
 
 Python/FastAPI로 구현한 로컬 실행 서비스입니다. **대전 출발 위치, 여행 전체 일수, 반려견 수, 각 반려견 체중, 대전 종료 위치**만 입력하면 전체 이동시간이 짧은 **여행 코스 하나**를 제공합니다. 설계 원본은 [Notion 구현 가이드](https://app.notion.com/p/3e04a247b914812b8349e7052dd002b4)에서 관리합니다.
 
@@ -10,7 +10,7 @@ Python 3.10 이상을 사용합니다. 아래는 PowerShell 기준이며 활성�
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pip install -r config/requirements.txt
 .\.venv\Scripts\python.exe -m scripts.run_service --demo
 ```
 
@@ -24,7 +24,7 @@ Git Bash에서는 `.venv/Scripts/python.exe -m scripts.run_service --demo`를 �
 
 ```powershell
 # .env가 없을 때 한 번만 복사하고, 편집기에서 실제 키를 입력합니다.
-Copy-Item .env.example .env
+Copy-Item config/.env.example .env
 .\.venv\Scripts\python.exe -m scripts.run_service
 ```
 
@@ -159,18 +159,30 @@ Copy-Item .env.example .env
 
 ## 2. 환경과 코드 다운로드
 
-아래의 기존 분석 스크립트는 Python **3.10 이상**과 표준 라이브러리만 사용합니다. FastAPI 서비스는 문서 상단의 `requirements.txt` 설치가 필요합니다. 키 입력 GUI는 `tkinter`가 있는 Python 설치에서 사용할 수 있으며, 없으면 터미널 입력을 사용합니다.
+아래의 기존 분석 스크립트는 Python **3.10 이상**과 표준 라이브러리만 사용합니다. FastAPI 서비스는 문서 상단의 `config/requirements.txt` 설치가 필요합니다. 키 입력 GUI는 `tkinter`가 있는 Python 설치에서 사용할 수 있으며, 없으면 터미널 입력을 사용합니다.
 
 | 파일 | 역할 |
 |---|---|
 | `configure_tourapi_key.py` | 인증키를 마스킹 입력받아 로컬 파일에 저장 |
 | `fetch_tourapi.py` | 방문자 API 호출·JSON/XML 응답 처리·일자 검증·월별 집계 |
+| `summarize_actual_visitors.py` | 기존 전국 12개월 방문자 수집본의 지역별 순위·중복 행정구 제외표·숙박비율 입력 대기 CSV 생성 |
 | `fetch_pet_tourapi.py` | 반려동물 동반 숙박·음식점 전체 페이지 수집 |
 | `prepare_city_comparison.py` | 방문자 원문과 숙박비율 CSV를 지역·월 기준으로 결합 |
 | `select_development_region.py` | 관광수요 점수와 가중치별 순위 계산 |
 | `analyze_pet_supply.py` | 시설 중복 제거·지역 분류·수요 결합·부족순위 계산 |
 
-서로 공통 함수를 가져오므로 **6개 파일을 같은 폴더에 유지**합니다. `select_development_region.py`는 수집기에서도 월 계산에 사용합니다.
+공통 함수를 참조하는 수집·분석 파일은 같은 폴더에 유지합니다. `select_development_region.py`는 수집기에서도 월 계산에 사용합니다. `summarize_actual_visitors.py`는 표준 라이브러리만 사용하는 독립 집계 도구이며, 과거 전국 분석을 재현하기 위해 저장소 루트에서 이 폴더로 이동했습니다. 현재 5개 후보 도시·11개월 비교는 `prepare_city_comparison.py`를 사용합니다.
+
+전국 12개월 집계를 다시 실행하려면 저장소 루트에서 다음처럼 입력 경로를 지정합니다. `--output`은 아직 존재하지 않는 새 폴더여야 합니다. 이 명령은 저장된 수집본을 읽으며 API를 다시 호출하지 않습니다.
+
+```powershell
+python .\Together_with_my_dog_cityselection\summarize_actual_visitors.py `
+  --input .\runs\api_visitors_2025_live_01 `
+  --sido .\runs\api_live_sido_20260914_01\available_regions.csv `
+  --output .\runs\actual_visitors_2025_recheck
+```
+
+수집 완료 상태와 월별 파일 해시를 확인한 뒤 `visitor_volume_ranking.csv`, `excluded_overlapping_districts.csv`, `region_monthly_pending_overnight.csv`를 생성하고 요약 보고서를 터미널에 출력합니다. 숙박비율은 빈칸으로 남기며 최종 개발 지역을 선정하지 않습니다.
 
 아래 명령은 Windows PowerShell 기준입니다. Git이 설치돼 있다면 원하는 작업 위치에서 실행합니다.
 
@@ -394,6 +406,6 @@ region_code,region_name,region_level,month,visitors,overnight_pct,visitor_source
 
 ## 7. GitHub 공개 범위
 
-관리할 파일은 **`Together_with_my_dog_cityselection/` 안의 Python 스크립트 6개, README, `.gitignore`**, 저장소 루트의 **`.gitignore`, `app/`, `scripts/`, `requirements.txt`, `.env.example`**입니다. 루트 `.gitignore`는 공개할 폴더와 서비스 소스만 허용하고, 지역 선정 폴더의 `.gitignore`는 해당 폴더 안의 파일 8개만 허용합니다. 인증키·실제 `.env`·가상환경·데이터·DB·실행 결과는 계속 제외합니다.
+지역 선정 코드는 `Together_with_my_dog_cityselection/`, 서비스 코드는 `app/`와 `scripts/`, 서비스 설정 예시와 의존성 목록은 `config/.env.example`과 `config/requirements.txt`에서 관리합니다. 문서는 `docs/`, 공유할 분석 결과와 WBS는 `outputs/`에 둡니다. 루트 `.gitignore`는 저장소 전체의 제외 규칙을 적용하므로 루트에 유지합니다. 인증키·실제 `.env`·가상환경·원본 데이터(`data/`)·수집 및 실행 자료(`runs/`)·DB는 제외합니다. 실제 설정 파일은 `config/.env.example`을 저장소 루트의 `.env`로 복사해 사용합니다.
 
 로컬 `.secrets/`, `data/`, `runs/`, `region_monthly.csv`, 캐시·가상환경은 업로드하지 않습니다. 이미 추적 중인 파일은 `.gitignore`만으로 제외되지 않으므로 `git ls-files`와 `git diff --cached --name-only`에서 업로드 목록을 확인합니다. 다른 사용자는 위 3~4절에 따라 자신의 키와 자료를 준비합니다.
