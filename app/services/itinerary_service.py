@@ -28,15 +28,38 @@ def find_best(trip, candidates, routes, settings, replacement=None):
         if lodging and not permitted(lodging, "lodging"):
             continue
         memo = {}
-        day_cache = {}
+        options_by_day = {}
+        for day in range(1, trip.trip_days + 1):
+            options = []
+            for restaurant in restaurants:
+                if not permitted(restaurant, 'restaurant', day):
+                    continue
+                for activity in activities:
+                    if not permitted(activity, 'activity', day):
+                        continue
+                    if time.monotonic() > deadline:
+                        raise SearchLimitError('후보 조합 계산 시간 한도에 도달했습니다.')
+                    for reverse in (False, True):
+                        plan = make_day(day, trip, lodging, restaurant, activity, reverse, routes, settings)
+                        if plan:
+                            options.append(plan)
+            options.sort(key=lambda d: (d.total_drive_seconds, d.max_leg_seconds, tuple(s.place.id for s in d.stops)))
+            options_by_day[day] = options
+        if any(not options for options in options_by_day.values()):
+            continue
+        # An admissible lower bound: allow venue/program reuse only for the bound.
+        # Actual plans still enforce uniqueness. This never excludes a better course.
+        remaining_min = {trip.trip_days + 1: 0}
+        for day in range(trip.trip_days, 0, -1):
+            remaining_min[day] = remaining_min[day + 1] + options_by_day[day][0].total_drive_seconds
 
         def visit(day, used_r, used_a, plans, cost):
             nonlocal states, best, best_rank
+            if best_rank is not None and cost + remaining_min[day] > best_rank[0]:
+                return
             states += 1
             if states > settings.max_search_states or time.monotonic() > deadline:
                 raise SearchLimitError("후보 조합이 계산 한도를 초과했습니다. 운영자가 데이터 범위·계산 한도를 조정해야 합니다.")
-            if best_rank is not None and cost > best_rank[0]:
-                return
             if day > trip.trip_days:
                 key = rank_key(lodging, plans)
                 if best_rank is None or key < best_rank:
@@ -48,23 +71,11 @@ def find_best(trip, candidates, routes, settings, replacement=None):
             if state in memo and memo[state] < cost:
                 return
             memo[state] = min(cost, memo.get(state, cost))
-            options = []
-            for restaurant in restaurants:
-                if restaurant.venue_id in used_r or not permitted(restaurant, "restaurant", day):
+            for plan in options_by_day[day]:
+                if best_rank is not None and cost + plan.total_drive_seconds + remaining_min[day + 1] > best_rank[0]:
+                    break
+                if plan.restaurant.venue_id in used_r or plan.activity.id in used_a:
                     continue
-                for activity in activities:
-                    if activity.id in used_a or not permitted(activity, "activity", day):
-                        continue
-                    for reverse in (False, True):
-                        cache_key = (day, restaurant.id, activity.id, reverse)
-                        if cache_key not in day_cache:
-                            day_cache[cache_key] = make_day(day, trip, lodging, restaurant, activity, reverse, routes, settings)
-                        plan = day_cache[cache_key]
-                        if plan:
-                            options.append(plan)
-            # Explore cheap branches first for a useful bound, but still compare all.
-            options.sort(key=lambda d: (d.total_drive_seconds, d.max_leg_seconds, tuple(s.place.id for s in d.stops)))
-            for plan in options:
                 visit(day + 1, used_r | {plan.restaurant.venue_id}, used_a | {plan.activity.id},
                       [*plans, plan], cost + plan.total_drive_seconds)
 

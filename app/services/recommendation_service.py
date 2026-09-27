@@ -33,6 +33,13 @@ def recommend(trip, engine, settings, replacement=None, route_service=None):
         return Recommendation(status="route_unavailable", reasons=["자동차 이동시간 연결이 준비되지 않았습니다. 운영자가 경로 API 설정을 확인해야 합니다."])
     routes = route_service or RouteService(settings)
     try:
+        if hasattr(routes, 'prefetch'):
+            restaurants, activities = candidates['restaurant'], candidates['activity']
+            lodging_points = candidates['lodging'] if trip.trip_days > 1 else []
+            pairs = [(a,b) for r in restaurants for t in activities for a,b in ((r,t),(t,r))]
+            pairs += [(a,b) for a in [trip.start_point,*lodging_points] for b in [*restaurants,*activities]]
+            pairs += [(a,b) for a in [*restaurants,*activities] for b in [trip.end_point,*lodging_points]]
+            routes.prefetch(pairs)
         result = find_best(trip, candidates, routes, settings, replacement)
         if result is None:
             return Recommendation(status="route_unavailable" if routes.missing else "no_match",
@@ -43,7 +50,7 @@ def recommend(trip, engine, settings, replacement=None, route_service=None):
         requirements = ["날짜를 지정하지 않은 계획입니다. 실제 영업·체험 회차·예약 재고는 방문 전에 확인해 주세요.",
                         "동반 인원을 입력받지 않았습니다. 객실 정원과 프로그램 참가 인원을 확인해 주세요."]
         for place in places:
-            requirements.extend(f"{place.name}: {r}" for r in [*place.policy.requirements, place.schedule_note])
+            requirements.extend(f"{place.name}: {r}" for r in [*place.planning_notes, *place.policy.requirements, place.schedule_note])
         basis = ["자동차 기준 · 조회 시점의 참고 이동시간", "하루 식사 1회·체험 1개, 숙소는 거점 연박",
                  "일차별 10:00 시작 예시 · 식사 60분 · 구간당 준비 10분 · 하루 8시간 이내",
                  "마지막 날은 숙소 체크아웃 시각에 맞춰 출발 예시를 앞당길 수 있습니다.",
@@ -52,10 +59,15 @@ def recommend(trip, engine, settings, replacement=None, route_service=None):
             basis.append("일부 경로를 조회하지 못해 이동정보가 확보된 조합만 비교했습니다.")
         if settings.mode == "demo":
             basis.insert(0, "데모: 모든 업체·규정·이동시간은 가상입니다. 실제 방문용으로 사용할 수 없습니다.")
+        reference = any(p.planning_mode == 'reference' for p in places)
+        if reference:
+            basis.insert(0, '참고 계획: 미확인 마릿수·체중 제한은 적용하지 않으며, 기록된 제한은 적용합니다.')
+        if any(p.duration_is_estimated for p in places):
+            basis.append('소요시간이 없는 체험은 표시된 기본 시간을 일정 계산에 사용했습니다.')
         itinerary = Itinerary(
             request=trip, nights=trip.trip_days - 1, lodging_room=lodging, days=days,
             total_drive_seconds=total, max_leg_seconds=max(d.max_leg_seconds for d in days),
-            planning_basis=basis, reasons=[f"반려견 {trip.dog_count}마리의 각 체중 조건에 맞는 장소",
+            planning_basis=basis, reasons=[('기록된 반려견 제한을 적용하고, 미확인 제한은 제외하지 않은 참고 코스' if reference else f"반려견 {trip.dog_count}마리의 각 체중 조건에 맞는 장소"),
                                          f"{trip.trip_days}일 전체 예상 주행 {round(total / 60)}분",
                                          "비교 가능한 조합 중 전체 주행시간이 가장 짧은 코스"],
             visit_requirements=list(dict.fromkeys(requirements)), is_demo=settings.mode == "demo")

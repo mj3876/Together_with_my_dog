@@ -5,11 +5,15 @@ import uvicorn
 
 def main():
     parser = argparse.ArgumentParser(description="대전 반려견 여행 서비스를 로컬에서 실행합니다.")
-    parser.add_argument("--demo", action="store_true", help="키 없이 가상 장소·가상 이동시간으로 체험")
+    modes = parser.add_mutually_exclusive_group()
+    modes.add_argument("--demo", action="store_true", help="키 없이 가상 장소·가상 이동시간으로 체험")
+    modes.add_argument("--live", action="store_true", help="실제 DB·경로 API 모드로 실행")
     parser.add_argument("--port", type=int, default=8000)
     args = parser.parse_args()
     if args.demo:
         os.environ["APP_MODE"] = "demo"
+    elif args.live:
+        os.environ["APP_MODE"] = "live"
     uvicorn.run("app.main:app", host="127.0.0.1", port=args.port)
 
 

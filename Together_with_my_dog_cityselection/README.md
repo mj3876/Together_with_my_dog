@@ -11,12 +11,14 @@ Python 3.10 이상을 사용합니다. 아래는 PowerShell 기준이며 활성�
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r config/requirements.txt
-.\.venv\Scripts\python.exe -m scripts.run_service --demo
+.\.venv\Scripts\python.exe -m scripts.run_service --live
 ```
 
 브라우저에서 **http://127.0.0.1:8000**을 엽니다. API 문서는 **http://127.0.0.1:8000/docs**입니다. 종료는 실행 터미널에서 `Ctrl+C`입니다. 이미 `.venv`를 준비했다면 마지막 명령만 실행하면 됩니다.
 
-Git Bash에서는 `.venv/Scripts/python.exe -m scripts.run_service --demo`를 사용합니다.
+Git Bash에서는 `.venv/Scripts/python.exe -m scripts.run_service --live`를 사용합니다.
+
+실제 서비스 전환 현황과 정규화 DB·카카오 키 점검 명령은 [전환 작업 현황](../docs/live_transition_status.md)을 참고하세요. 실제 모드는 검증된 장소와 API 설정이 필요하며, 데이터가 부족하면 부족 사유를 표시합니다. 가상 데이터로 화면을 체험하려는 경우에만 `--live` 대신 `--demo`를 사용합니다.
 
 **데모 모드:** API 키 없이 동작합니다. 가상 숙소 2곳·식당 4곳·체험 4개와 가상 이동시간을 사용하며, 화면과 저장 결과에 데모임을 표시합니다. 별도 메모리 DB를 사용하므로 실제 DB에 섞이지 않습니다. 기본 위치 목록에서 출발·종료 지점을 선택하면 최대 4일 여행을 체험할 수 있습니다. 실제 방문용으로 사용할 수 없습니다.
 
