@@ -32,6 +32,7 @@
   function detail(place) {
     const content = node('div'); content.append(node('span', category(place.category), 'eyebrow'), node('h2', place.name), node('p', place.address), node('p', place.description));
     if (place.product_name) content.append(node('h3', place.product_name));
+    for (const note of (place.planning_notes || [])) content.append(node('p', note, 'notice'));
     const policy = place.policy, info = node('section', undefined, 'info-panel');
     info.append(node('h3', '반려견 동반 규정'), node('p', `마릿수: ${policy.dogs_unlimited ? '제한 없음' : policy.max_dogs ? `최대 ${policy.max_dogs}마리` : '미확인'}`),
       node('p', `각 체중: ${policy.weight_unlimited ? '제한 없음' : policy.max_weight_kg ? `${policy.max_weight_kg}kg ${policy.weight_operator === 'lt' ? '미만' : '이하'}` : '미확인'}`),
@@ -58,6 +59,8 @@
     const card = node('li', undefined, `stop-card ${place.category === 'lodging' ? 'lodging-card' : ''}`);
     const head = node('header'); head.append(node('span', category(place.category), 'category-tag'), node('span', start === null ? '거점 연박' : `${clock(start)} – ${clock(end)}`));
     card.append(head, node('h3', place.name), node('p', place.product_name || place.address));
+    if (place.duration_is_estimated) card.append(node('p', `체험 시간은 기본 ${place.duration_minutes}분으로 계산했어요.`));
+    if (place.planning_mode === 'reference') card.append(node('p', '일부 이용 조건 미확인 · 장소 상세에서 확인'));
     const actions = node('div', undefined, 'card-buttons'); actions.append(button('장소 상세 보기', 'text-button', () => detail(place)), button(`${category(place.category)} 바꾸기`, 'text-button', () => replace(place.category, day)));
     card.append(actions); return card;
   }

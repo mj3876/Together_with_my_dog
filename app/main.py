@@ -12,7 +12,7 @@ from app.api import pages, recommendations, places, itineraries
 
 def create_app(settings=None, engine=None):
     settings = settings or Settings.from_env()
-    database = engine or make_engine(settings.database_path, memory=settings.mode == "demo")
+    database = engine or make_engine(settings.database_path, memory=settings.mode == "demo", backend=settings.database_backend)
     if settings.mode == "demo":
         upsert_places(database, demo_places())
 
@@ -48,8 +48,15 @@ def create_app(settings=None, engine=None):
 
     @app.get("/healthz")
     def health():
+        from app.services.catalog_status import catalog_status
         return {"status": "ok", "version": "0.1.0", "mode": settings.mode,
-                "places": len(all_places(database)), "routing_connected": bool(settings.mobility_key) or settings.mode == "demo"}
+                "places": len(all_places(database)),
+                "database_backend": getattr(database, "dog_backend", "legacy"),
+                "catalog": catalog_status(database),
+                "location_configured": bool(settings.kakao_key),
+                "routing_configured": bool(settings.mobility_key),
+                "routing_connected": None if settings.mode == "live" else False,
+                "routing_check": "not_checked" if settings.mode == "live" else "demo_synthetic"}
 
     return app
 

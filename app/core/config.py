@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[2]
 class Settings:
     mode: str = "live"
     database_path: str = str(ROOT / "data/app.db")
+    database_backend: str = "legacy"
     kakao_key: str = field(default="", repr=False)
     mobility_key: str = field(default="", repr=False)
     signing_key: str = field(default_factory=lambda: secrets.token_hex(32), repr=False)
@@ -28,6 +29,9 @@ class Settings:
         mode = os.getenv("APP_MODE", "live")
         if mode not in {"live", "demo"}:
             raise ValueError("APP_MODE must be live or demo")
+        backend = os.getenv("DATABASE_BACKEND", "legacy")
+        if backend not in {"legacy", "normalized"}:
+            raise ValueError("DATABASE_BACKEND must be legacy or normalized")
         key = os.getenv("LOCATION_SIGNING_KEY", "")
         if not key:
             path = ROOT / ".secrets/location_signing.key"
@@ -41,6 +45,7 @@ class Settings:
         path = Path(os.getenv("DATABASE_PATH", "data/app.db"))
         return cls(
             mode=mode, database_path=str(path if path.is_absolute() else ROOT / path),
+            database_backend=backend,
             kakao_key=os.getenv("KAKAO_REST_API_KEY", ""),
             mobility_key=os.getenv("KAKAO_MOBILITY_API_KEY", ""), signing_key=key,
             max_route_requests=max(1, int(os.getenv("MAX_ROUTE_REQUESTS", "500"))),

@@ -50,6 +50,9 @@ class Place(Point):
     official_url: HttpUrl | None = None
     price_note: str = ""
     is_demo: bool = False
+    planning_mode: Literal["verified", "reference"] = "verified"
+    planning_notes: list[str] = Field(default_factory=list)
+    duration_is_estimated: bool = False
 
     @model_validator(mode="after")
     def schedule_window(self):
